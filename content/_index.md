@@ -9,7 +9,7 @@ chapter: false
 ### Student Information:
 &emsp; **Full Name:** Bui Quoc An
 
-&emsp; **Phone Number:** *(update phone number)*
+&emsp; **Phone Number:** 123
 
 &emsp; **Email:** *(update email)*
 
