@@ -1,7 +1,7 @@
 ---
 title: "WEEK 7 WORKLOG"
-date: "2025-11-10"
-weight: 1
+date: "2026-06-08"
+weight: 7
 chapter: false
 pre: " <b> 1.7 </b> "
 ---
@@ -10,11 +10,10 @@ pre: " <b> 1.7 </b> "
 
 ### **Week 7 Objectives**
 
-* Tìm hiểu và triển khai kiến trúc Serverless (phi máy chủ) bằng **AWS Lambda** và **API Gateway**.
-* Viết template CloudFormation để tự động hóa việc triển khai hàm Lambda và endpoint API.
-* Tìm hiểu tính năng nâng cao của CloudFormation: **StackSets**, để triển khai tài nguyên (S3) đồng bộ trên nhiều tài khoản và region.
-* Bắt đầu tìm hiểu một công cụ IaC mới: **Terraform** (HCL syntax).
-* Thực hành các lệnh cơ bản của Terraform (`init`, `plan`, `apply`) và học cách quản lý cấu hình bằng **biến (variables)** và file `.tfvars`.
+* Nghiên cứu các phương pháp bảo mật chuỗi cung ứng phần mềm và chia sẻ kiến thức với cộng đồng.
+* Thực hành trực quan hóa kiến trúc bảo mật và mô phỏng kịch bản phản ứng sự cố mạng (Incident Response) trên AWS.
+* Triển khai tự động hóa quy trình sao lưu và kiểm thử phục hồi dữ liệu bằng sự kết hợp giữa AWS Backup, Lambda và SNS.
+* Nắm vững các phương pháp quản trị hệ thống qua AWS Management Console, bảo mật định danh và tương tác hệ thống an toàn (CLI, SDK).
 
 ---
 
@@ -22,25 +21,18 @@ pre: " <b> 1.7 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Tìm hiểu Serverless**: Học về AWS Lambda, viết template CloudFormation (tạo IAM Role, Lambda Function) và tích hợp API Gateway. | 20/10/2025 | 20/10/2025 | |
-| 2 (Thứ Ba) | **CloudFormation StackSets**: Tìm hiểu StackSets, viết template (tạo S3) và deploy StackSet ra nhiều tài khoản/region. | 21/10/2025 | 21/10/2025 | |
-| 3 (Thứ Tư) | **Bắt đầu với Terraform**: Viết file `main.tf` đầu tiên (khai báo provider "aws", resource "aws_s3_bucket"). Chạy `terraform init` và `plan`. | 22/10/2025 | 22/10/2025 | |
-| 4 (Thứ Năm) | **Hoàn thiện & Dọn dẹp (CloudFormation)**: Triển khai, kiểm tra (SSH/HTTP) một stack hoàn chỉnh (VPC+EC2) và học cách xóa stack (`delete-stack`). | 23/10/2025 | 23/10/2025 | |
-| 5 (Thứ Sáu) | **Hoàn thành Terraform**: Chạy `terraform apply` để tạo S3 bucket. Học cách dùng **variables** và file `.tfvars` để quản lý tên bucket. | 24/10/2025 | 24/10/2025 | |
+| 1 (Thứ Hai) | **Bảo mật chuỗi cung ứng phần mềm**: Nghiên cứu AWS Well-Architected cho vòng đời SDLC (CI/CD, dependencies). Biên soạn và đăng tải bài viết chia sẻ kiến thức trên cộng đồng Facebook AWS Vietnam. | 01/06/2026 | 01/06/2026 | [AWS Security Blog](https://aws.amazon.com/vi/blogs/security/well-architected-best-practices-for-software-supply-chain-security/) |
+| 2 (Thứ Ba) | **Mô phỏng kịch bản bảo mật AWS**: Sử dụng Draw.io thiết kế sơ đồ VPC. Trực quan hóa kịch bản tấn công (SSH Brute Force/Nmap), luồng logs tới CloudWatch và phản ứng sự cố chặn IP Hacker qua Subnet ACL. | 02/06/2026 | 02/06/2026 | [Draw.io Diagram](https://app.diagrams.net/) |
+| 3 (Thứ Tư) | **Tự động hóa sao lưu & khôi phục**: Cấu hình AWS Backup Plan tự động. Tích hợp Lambda để chạy thử nghiệm khôi phục, kiểm tra tính toàn vẹn và dọn dẹp tài nguyên; cấu hình SNS gửi thông báo tiến trình. | 03/06/2026 | 03/06/2026 | [AWS Study Group](https://000013.awsstudygroup.com/) |
+| 4 (Thứ Năm) | **Quản trị AWS Management Console**: Phân biệt Root User và IAM User, thiết lập MFA. Thực hành tương tác AWS CLI và SDK an toàn, hiểu rõ nguyên tắc bảo mật tuyệt đối Access Key/Secret Access Key. | 04/06/2026 | 04/06/2026 | [Video Link](https://www.youtube.com/watch?v=95quNuhvMT0&t=51s) |
 
 ---
 
 ### **Week 7 Achievements**
 
-* Nắm vững khái niệm về kiến trúc **Serverless** và lợi ích của nó.
-* Triển khai thành công hàm **AWS Lambda** (Node.js) và cấu hình **IAM Role** (cho phép ghi log) hoàn toàn bằng template **CloudFormation**.
-* Tích hợp thành công Lambda với **API Gateway** (sử dụng `AWS_PROXY`) để tạo một endpoint API có thể truy cập công khai.
-* Nắm vững và triển khai thành công **CloudFormation StackSets**, hiểu rõ cách dùng nó để quản lý và đồng bộ tài nguyên trên nhiều tài khoản AWS.
-* Bắt đầu học và làm quen với một công cụ IaC phổ biến khác là **Terraform**.
-* Viết thành công file cấu hình Terraform (HCL) đầu tiên để tạo tài nguyên `aws_s3_bucket`.
-* Nắm vững vòng đời cơ bản của Terraform:
-    * `terraform init`: Để khởi tạo provider.
-    * `terraform plan`: Để xem trước các thay đổi.
-    * `terraform apply`: Để áp dụng và tạo tài nguyên thực tế.
-* Biết cách tham số hóa cấu hình Terraform bằng cách sử dụng **variables** (khai báo trong `.tf`) và quản lý giá trị biến (trong `.tfvars`).
-* Ôn lại quy trình dọn dẹp tài nguyên bằng AWS CLI (`aws cloudformation delete-stack`).
+* Hoàn thành xuất sắc 100% kế hoạch nghiên cứu tài liệu, chia sẻ bài viết cộng đồng, vẽ sơ đồ kiến trúc nâng cao và thực hành các bài lab tự động hóa hệ thống theo đúng tiến độ được giao.
+* **Trực quan hóa kiến trúc (Architecture Diagramming)**: Làm chủ công cụ thiết kế sơ đồ hạ tầng để mô tả chi tiết và sinh động luồng xử lý sự cố an ninh mạng (Incident Response) một cách tường minh và chuyên nghiệp.
+* **Tư duy Tự động hóa & Khôi phục thảm họa (Disaster Recovery)**: Nâng cao năng lực triển khai hạ tầng tự động hóa quy trình backup/restore thông qua việc kết hợp các dịch vụ AWS Backup, Lambda và SNS, đảm bảo dữ liệu hệ thống luôn có khả năng phục hồi an toàn.
+* **Quản trị hạ tầng và Truyền thông kỹ thuật (Technical Governance)**: Rèn luyện khả năng chuyển dịch thông tin từ tài liệu kỹ thuật phức tạp thành bài viết cộng đồng dễ hiểu, đồng thời củng cố vững chắc quy trình phân quyền và tương tác hệ thống an toàn (Console, CLI, SDK).
+* **Kinh nghiệm rút ra**: Một hạ tầng công nghệ toàn diện không chỉ cần đảm bảo vận hành ổn định ngày qua ngày, mà quan trọng hơn là phải thiết lập được cơ chế bảo mật chuỗi cung ứng nghiêm ngặt kết hợp với quy trình kiểm thử dự phòng tự động hóa được thực hiện liên tục.
+* **Định hướng tuần tới**: Tiếp tục đào sâu nghiên cứu các giải pháp tự động hóa quản trị nâng cao, tối ưu hóa các quy trình triển khai ứng dụng an toàn theo mô hình phát triển hiện đại.

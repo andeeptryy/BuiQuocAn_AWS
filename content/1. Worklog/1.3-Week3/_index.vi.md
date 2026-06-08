@@ -1,7 +1,7 @@
 ---
 title: "WEEK 3 WORKLOG"
-date: "2025-11-10"
-weight: 1
+date: "2026-05-09"
+weight: 3
 chapter: false
 pre: " <b> 1.3 </b> "
 ---
@@ -10,10 +10,10 @@ pre: " <b> 1.3 </b> "
 
 ### **Week 3 Objectives**
 
-* Hiểu và triển khai dịch vụ lưu trữ hybrid **AWS Storage Gateway** (cài đặt, kích hoạt).
-* Hiểu và triển khai dịch vụ bảo mật **AWS WAF** (Web Application Firewall) để bảo vệ ứng dụng web.
-* Nắm vững và thực hành các phương pháp quản lý tài nguyên AWS bằng cách sử dụng **Tags** và **Resource Groups**.
-* Tìm hiểu về quy trình và các bước cơ bản để chuẩn bị cho một buổi Workshop kỹ thuật.
+* Làm chủ các tài nguyên điện toán cốt lõi trên AWS, phân biệt rõ ứng dụng thực tế giữa môi trường tùy biến cao (Amazon EC2) và môi trường triển khai nhanh (Amazon Lightsail).
+* Nghiên cứu chuyên sâu các hệ thống lưu trữ AWS, phân biệt chính xác giữa Lưu trữ khối (EBS), Lưu trữ tệp (EFS, FSx) và Lưu trữ đối tượng (S3).
+* Tìm hiểu quy trình dịch chuyển máy chủ toàn diện lên nền tảng đám mây thông qua dịch vụ AWS Application Migration Service (MGN).
+* Hiểu rõ kiến trúc của Amazon S3, tập trung vào khả năng mở rộng vô hạn, độ bền dữ liệu và cách quản lý vòng đời thông qua các lớp lưu trữ (Storage Classes).
 
 ---
 
@@ -21,19 +21,17 @@ pre: " <b> 1.3 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Triển khai AWS Storage Gateway**: Chuẩn bị môi trường (S3 Bucket, EC2) và tiến hành cài đặt, kích hoạt (activate) Storage Gateway. | 22/09/2025 | 22/09/2025 | |
-| 2 (Thứ Ba) | **Lab 26 – AWS WAF**: Triển khai ứng dụng web trên S3 và cấu hình AWS WAF với Web ACLs, sử dụng AWS Managed Rules để bảo vệ. | 23/09/2025 | 23/09/2025 | |
-| 3 (Thứ Tư) | **Lab 27 – Manage Resources**: Thực hành tạo, sửa, xóa Tags trên EC2 instance. Sử dụng Tag Editor và Resource Groups để quản lý tài nguyên. | 24/09/2025 | 24/09/2025 | |
-| 4 (Thứ Năm) | **Tìm hiểu quy trình Workshop**: Dành thời gian xem và tìm hiểu các hướng dẫn, các bước cơ bản để thực hiện một buổi workshop. | 25/09/2025 | 25/09/2025 | |
+| 1 (Thứ Ba) | **Amazon EC2, EBS và Lightsail**: Học về các loại EC2 instance và tính năng của EBS (Volume, Snapshot). So sánh sự linh hoạt của EC2 với giải pháp chi phí thấp của Lightsail. | 05/05/2026 | 05/05/2026 | [Video Link](https://youtu.be/e7XeKdOVq40) |
+| 2 (Thứ Tư) | **Amazon EFS / FSx & AWS MGN**: Nghiên cứu EFS và các tùy chọn FSx (Windows/Lustre). Tìm hiểu quy trình chuyển đổi MGN: cài đặt agent, replicate dữ liệu máy nguồn và cutover. | 06/05/2026 | 06/05/2026 | [Video Link](https://youtu.be/hFVYG8WqfU0) |
+| 3 (Thứ Sáu) | **Dịch vụ lưu trữ AWS: Amazon S3**: Khám phá khái niệm Object Storage. Nghiên cứu độ bền 99.999999999% (11 số 9), khả năng mở rộng và các lớp lưu trữ (Standard, IA, Glacier). | 08/05/2026 | 08/05/2026 | [Video Link](https://youtu.be/_yunukwcAwc) |
 
 ---
 
 ### **Week 3 Achievements**
 
-* Triển khai và kích hoạt thành công **AWS Storage Gateway** trên EC2, hiểu rõ vai trò của nó như một cầu nối lưu trữ hybrid cloud (kết nối on-premises với S3).
-* Triển khai thành công một ứng dụng web và bảo vệ nó bằng **AWS WAF**.
-* Nắm vững cách cấu hình **Web ACLs** và áp dụng các bộ quy tắc quản lý sẵn (AWS Managed Rules) để chống lại các mối đe dọa web phổ biến (như OWASP Top 10).
-* Nắm vững các thao tác tạo, sửa, xóa **Tags** trên tài nguyên AWS (EC2) để định danh và tổ chức.
-* Sử dụng thành thạo **Tag Editor** và **Resource Groups** để nhóm và quản lý các tài nguyên liên quan một cách logic.
-* Nắm được quy trình và các bước cơ bản để chuẩn bị và tổ chức một buổi workshop kỹ thuật.
-* Tiếp tục củng cố kỹ năng xử lý sự cố, đặc biệt là các lỗi liên quan đến **Security Group** (ví dụ: mở port 443 outbound cho Storage Gateway) và làm quen với các công cụ quản lý của AWS.
+* Hoàn thành 100% tiến độ nghiên cứu lý thuyết và thực hành, nắm vững hệ sinh thái điện toán và lưu trữ toàn diện trên AWS.
+* Phân biệt rõ rệt Amazon EC2 và Amazon Lightsail, có khả năng lựa chọn đúng dịch vụ điện toán dựa trên độ phức tạp và ngân sách của dự án.
+* Phân loại và nhận biết chính xác tình huống sử dụng tối ưu (Use cases) cho các loại hình lưu trữ: EBS (Block), EFS/FSx (File) và S3 (Object).
+* Thực hành thành thạo các thao tác cốt lõi: khởi tạo EC2, gắn kết EBS Volume, tạo S3 Bucket, tải dữ liệu lên lưu trữ và quản lý phân quyền an toàn.
+* Nắm bắt được tư duy chuyển đổi hệ thống (Cloud Migration) qua AWS MGN, hiểu rõ quy trình kỹ thuật từ lúc sao chép máy nguồn cho đến khi chính thức chạy trên AWS (cutover).
+* Tiếp tục củng cố kỹ năng vận hành thực tế thông qua việc thao tác trực tiếp trên giao diện AWS Console.

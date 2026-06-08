@@ -1,7 +1,7 @@
 ---
 title: "WEEK 4 WORKLOG"
-date: "2025-11-10"
-weight: 1
+date: "2026-05-14"
+weight: 4
 chapter: false
 pre: " <b> 1.4 </b> "
 ---
@@ -10,10 +10,9 @@ pre: " <b> 1.4 </b> "
 
 ### **Week 4 Objectives**
 
-* Lên ý tưởng, xác định yêu cầu và thiết kế kiến trúc AWS cho dự án cuối khóa.
-* Triển khai hạ tầng mạng AWS cơ bản (VPC, Subnets, IGW, NAT Gateway, Route Tables).
-* Triển khai máy chủ web (EC2, NGINX) và ứng dụng web đơn giản (HTML/CSS) lên hạ tầng đã tạo.
-* Nắm vững quy trình thiết kế, triển khai và cấu hình một ứng dụng web hoàn chỉnh trên AWS.
+* Nắm vững các khái niệm nền tảng về mạng trên AWS, trọng tâm là Amazon Virtual Private Cloud (VPC), các thành phần cốt lõi và cách quản lý địa chỉ IP.
+* Khám phá và triển khai các kiến trúc chịu lỗi, có tính sẵn sàng cao thông qua việc kết hợp Elastic Load Balancing (ELB) và Auto Scaling Group (ASG).
+* Củng cố toàn diện các kỹ năng đám mây cơ bản qua bài thực hành tổng hợp: từ quản trị định danh (IAM), bảo mật lưu trữ (S3), triển khai máy chủ (EC2) đến giám sát hệ thống (CloudWatch).
 
 ---
 
@@ -21,26 +20,18 @@ pre: " <b> 1.4 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Lên ý tưởng & Yêu cầu dự án**: Nghiên cứu, chọn đề tài, và liệt kê các yêu cầu chức năng/kỹ thuật cho dự án cuối khóa. | 29/09/2025 | 29/09/2025 | |
-| 2 (Thứ Ba) | **Thiết kế kiến trúc AWS**: Vẽ sơ đồ kiến trúc (VPC, Subnets, EC2, S3, IAM Roles) và thiết kế chính sách đặt tên/gắn thẻ. | 30/09/2025 | 30/09/2025 | |
-| 3 (Thứ Tư) | **Triển khai hạ tầng mạng (Networking)**: Tạo VPC, Public/Private Subnets, Internet Gateway, NAT Gateway, và cấu hình Route Tables. | 01/10/2025 | 01/10/2025 | |
-| 4 (Thứ Năm) | **Triển khai máy chủ web**: Tạo EC2 instance, cấu hình Security Group (HTTP/HTTPS), và cài đặt web server NGINX. | 02/10/2025 | 02/10/2025 | |
-| 5 (Thứ Sáu) | **Triển khai ứng dụng**: Chuẩn bị mã nguồn (HTML/CSS), tải lên EC2, và cấu hình NGINX để phục vụ trang web. | 03/10/2025 | 03/10/2025 | |
+| 1 (Thứ Hai) | **Tổng quan AWS Networking & VPC căn bản**: Nghiên cứu các thành phần VPC (Public/Private Subnet, Route Table, IGW, NAT Gateway). Phân biệt Security Group vs NACL và ôn tập mô hình kiến trúc 3 lớp (3-tier). | 11/05/2026 | 11/05/2026 | [Video Link](https://www.youtube.com/watch?v=uAQCm4sm_1c) |
+| 2 (Thứ Ba) | **AWS Load Balancer & Auto Scaling**: Tìm hiểu các loại ELB (ALB, NLB, CLB). Thực hành mô phỏng Auto Scaling Group (ASG) bao gồm Launch Template, Scaling Policies và Health Check. | 12/05/2026 | 12/05/2026 | AWS Load Balancer & Auto Scaling (YouTube) |
+| 3 (Thứ Tư) | **Thực hành Lab: AWS Cloud Fundamentals**: Tạo IAM User (nguyên tắc least privilege). Cấu hình S3 Bucket bảo mật (Versioning, Encryption). Triển khai web server trên EC2, mở port SG và quan sát CloudWatch metrics. | 13/05/2026 | 13/05/2026 | [AWS Study Group Lab](https://000004.awsstudygroup.com/) |
 
 ---
 
 ### **Week 4 Achievements**
 
-* Hoàn thành việc lên ý tưởng, chọn đề tài (Triển khai trang web tin tức đơn giản), và vạch ra các yêu cầu kỹ thuật cho dự án cuối khóa.
-* Thiết kế thành công sơ đồ kiến trúc AWS tổng quan, bao gồm VPC, Subnets, EC2, S3, IAM Role.
-* Thiết kế được chính sách đặt tên và gắn thẻ (tagging) tài nguyên để quản lý hiệu quả.
-* Triển khai thành công hạ tầng mạng AWS (Networking) từ đầu, bao gồm:
-    * **VPC** và các **Public/Và Private Subnets**.
-    * **Internet Gateway (IGW)** cho Public Subnet.
-    * **NAT Gateway** cho Private Subnet.
-    * Cấu hình **Route Tables** tương ứng cho các subnet.
-* Triển khai và cấu hình thành công một máy chủ web trên **EC2**, bao gồm:
-    * Cấu hình **Security Group** để cho phép truy cập HTTP/HTTPS.
-    * Cài đặt và cấu hình web server **NGINX**.
-* Triển khai thành công một trang web HTML/CSS đơn giản lên máy chủ NGINX.
-* Khắc phục được các sự cố phổ biến khi triển khai (lỗi phân quyền file, cấu hình NAT Gateway, cấu hình NGINX).
+* Hiểu rõ cấu trúc tiêu chuẩn của một VPC và nắm bắt best practice trong việc phân chia không gian mạng (Subnetting) và quản lý CIDR.
+* Phân tích và thiết lập thành công định tuyến giữa các subnet qua Route Table; phân biệt rõ cách hoạt động của tường lửa trạng thái (Security Group) và tường lửa không trạng thái (NACL).
+* Nắm vững nguyên lý hoạt động của các bộ cân bằng tải (ALB và NLB) trong việc phân phối lưu lượng của các kiến trúc ứng dụng hiện đại.
+* Nắm bắt mô hình tự động mở rộng/thu nhỏ tài nguyên (ASG) dựa theo tải CPU và traffic thực tế, đảm bảo ứng dụng luôn đạt tính sẵn sàng cao (HA).
+* Thực hành thành thạo quy trình triển khai hạ tầng từ con số 0: quản trị an toàn IAM User/Group/Policy và thiết lập S3 theo chuẩn bảo mật (Private Blocks, SSE-S3 Encryption).
+* Triển khai thành công EC2 instance, thiết lập kết nối SSH, chạy ứng dụng web cơ bản và sử dụng CloudWatch để giám sát log hiệu quả.
+* Hoàn thiện tư duy nền tảng vững chắc về AWS Networking, sẵn sàng tiến bước vào các chủ đề mạng nâng cao như VPC Peering, Transit Gateway hoặc ECS/EKS.

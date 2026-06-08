@@ -1,191 +1,96 @@
 ---
-title: "AI/ML/GenAI on AWS Workshop"
-date: "2025-11-15"
-weight: 1
+title: "FCAJ Community Day - Conference Call"
+date: "2026-05-23"
+weight: 2
 chapter: false
-pre: " <b> 4.1. </b> "
+pre: " <b> 4.2. </b> "
 ---
 
-
-# Summary Report: “AI/ML/GenAI on AWS Workshop”
+# Summary Report: “FCAJ Community Day – Conference Call”
 
 ### Event Objectives
 
-- Provide an overview of the **AI/ML/GenAI ecosystem on AWS**.  
-- Introduce **Amazon SageMaker** for end-to-end Machine Learning workflows.  
-- Deliver core knowledge and hands-on insights into **Generative AI** through Amazon Bedrock.  
-- Enable networking opportunities between students and AWS experts.  
-- Highlight AI/ML trends in Vietnam and the essential skills required for career development in the field.
+- Deepen understanding of how "context" enhances Generative AI and reduces hallucination errors in real-world applications.
+- Explore emerging career paths and essential skills within the AI/GenAI and AWS ecosystem.
+- Facilitate networking and knowledge exchange with cloud engineers, developers, and the AWS community in Ho Chi Minh City.
+- Experience a large-scale tech conference and stay updated on the latest Cloud, Serverless, and AI trends.
 
 ---
 
 ### Agenda Overview
 
-**⏰ Time:** 8:30 AM – 12:00 PM, Saturday, November 15, 2025  
-**📍 Location:** AWS Vietnam Office  
+**⏰ Time:** 9:00 AM – 12:00 PM, Saturday, May 23, 2026
+**📍 Location:** Bitexco Financial Tower, HCMC (Floor 36 – Exclusive Livestream Area for Invited Guests)
 
 ---
 
 ## Key Highlights
 
-### 1. Welcome & Introduction (8:30 – 9:00 AM)
+### 1. Welcome & 36th-Floor Experience (8:30 – 9:00 AM)
 
-- Participant check-in and networking.  
-- Workshop overview and learning objectives.  
-- Ice-breaker activities to encourage group interaction.  
-- Introduction to the current AI/ML landscape in Vietnam.
-
----
-
-### 2. AWS AI/ML Services Overview (9:00 – 10:30 AM)
-
-The workshop provided a comprehensive introduction to the **full AI Services ecosystem on AWS**, focusing on pre-trained APIs and ready-to-use intelligent capabilities.
-
-## **1. AI Services (Pre-trained APIs – no training required)**  
-These fully managed AI services support a variety of tasks including recognition, analysis, text extraction, speech processing, and content understanding.
+- Settled into the designated viewing area on the 36th floor for invited guests.
+- Received event materials and engaged in early networking sessions.
+- Enjoyed a high-quality livestream setup directly connected to the main stage on the 26th floor.
 
 ---
 
-### 🔹 Computer Vision
+### 2. Context Is Everything: Making AI Actually Work for You (9:00 – 09:30 AM)
 
-**Amazon Rekognition**  
-- Facial recognition  
-- Image and video analysis  
-- Object and scene detection  
-- Text-in-image extraction  
+This session was the core focus of the morning, explaining why powerful AI models still fail without proper contextual grounding.
 
----
+**The Meaning of "Context" in Modern AI**
+- Emphasized the difference between generating a "syntactically correct" response and a "purposefully accurate" one.
+- Supplying context (user data, interaction history, operational environment) helps AI understand true intent and significantly reduces hallucinations when handling complex requests.
 
-### 🔹 Document AI / Text Extraction
+**From Prompts to Memory: The Second AI Brain**
+- Explored the evolution from traditional prompt-based GenAI to modern systems equipped with context, memory, and long-term personalization capabilities.
 
-**Amazon Textract**  
-- Extract text, tables, and forms from scanned documents/PDFs  
-- Advanced OCR with structural understanding  
+**Practical Application & Mindset**
+- Shared strategies for building effective AI apps, such as optimizing prompts based on workflows and integrating Vector Databases for knowledge processing.
+- Highlighted the importance of continuously monitoring and fine-tuning models based on user logs.
 
-**Amazon Comprehend**  
-- Natural Language Processing (NLP)  
-- Sentiment analysis  
-- Entity recognition  
-- Keyphrase extraction  
-- Topic modeling  
+**Career Insights for Developers**
+- Introduced roles shaping the future of IT, including Prompt Engineer, AI Integrator, and Data & Context Pipeline Engineer. 
+- Connecting these industry trends with academic studies provides a clear roadmap for transitioning from the university environment directly into enterprise IT roles.
+- Actionable advice: Engage with the AWS community, master Amazon Bedrock/Lambda/CloudWatch, and build independent LLM projects.
 
 ---
 
-### 🔹 Speech & Voice
+### 3. Broadening the Cloud Horizon (09:30 AM – 12:00 PM)
 
-**Amazon Transcribe**  
-- Speech-to-Text conversion  
-- Automatic speech recognition  
-- Speaker identification and timestamps  
+The remainder of the conference provided rapid-fire insights into various cloud and AI domains:
 
-**Amazon Polly**  
-- Text-to-Speech (TTS)  
-- Natural-sounding neural voices  
-
----
-
-### 🔹 Chatbot & Conversation AI
-
-**Amazon Lex**  
-- Conversational chatbot development  
-- Intent classification and slot filling  
-
-**Amazon Connect Contact Lens**  
-- Call analytics for contact centers  
-- Sentiment and behavior analysis  
+- **36 hrs with LotusHacks**: A journey of building the UTMorpho product from zero to reality during a hackathon sprint.
+- **Amazon CloudFront**: Leveraging Edge networks for cost optimization, security, and enhanced performance.
+- **Amazon Quick Ecosystem**: Building intelligent workflows and dashboards using natural language.
+- **LLM Determinism**: Understanding inference optimizations and why `Temperature=0` does not guarantee perfect determinism.
+- **Enterprise-Grade Multi-Agent Systems**: Blueprinting virtual credit committees and establishing guardrails for banking startups.
 
 ---
 
-### 🔹 Personalization & Recommendations
+### 4. Networking & Lucky Draw (Ongoing)
 
-**Amazon Personalize**  
-- Personalized product recommendation  
-- Powered by Amazon.com’s recommendation technology  
-
----
-
-### 🔹 Fraud Detection
-
-**Amazon Fraud Detector**  
-- Detect fraudulent activities  
-- Predict abnormal or risky behavior  
-
----
-
-### 🔹 Forecasting & Time-series
-
-**Amazon Forecast**  
-- Demand and sales forecasting  
-- ML-powered time-series analysis  
-
----
-
-### 🔹 Search
-
-**Amazon Kendra**  
-- Enterprise semantic search  
-- Natural language question answering  
-
----
-
-### 🔹 Translation
-
-**Amazon Translate**  
-- High-quality neural machine translation  
-
----
-
-### Amazon SageMaker – ML Platform
-
-The workshop also explored **Amazon SageMaker** as a powerful ML development platform, including:
-
-- Data preparation and labeling  
-- Model training and tuning  
-- Deployment, monitoring, and optimization  
-- End-to-end MLOps pipelines  
-
-**Live Demo: SageMaker Studio**  
-- Hands-on demonstration from notebook workflows to model deployment.
-
----
-
-### 3. Coffee Break (10:30 – 10:45 AM)
-
-A short networking break between participants and AWS mentors.
-
----
-
-### 4. Generative AI with Amazon Bedrock (10:45 AM – 12:00 PM)
-
-- Overview of Foundation Models: Claude, Llama, Titan  
-- Prompt Engineering techniques: Chain-of-thought, Few-shot examples  
-- **RAG Architecture** and Knowledge Bases  
-- **Bedrock Agents** for multi-step automation  
-- **Guardrails** for safe and compliant AI applications  
-- **Live Demo:** Building a Generative AI chatbot with Bedrock  
+- Participated in 10 lucky draw sessions exclusively held for the 36th-floor attendees, creating an energetic atmosphere.
+- Exchanged insights with fellow students, developers, and cloud engineers regarding AWS learning journeys, cloud certifications, and practical Serverless/GenAI projects.
 
 ---
 
 ## Key Takeaways
 
-### AI/ML on AWS
-- AWS provides a wide range of AI Services suitable for real-world applications.  
-- SageMaker supports a standardized, scalable ML lifecycle from data preparation to deployment.  
+### AI Implementation
+- Supplying the correct context is the ultimate key to transforming an AI from a basic answering machine into a reliable, enterprise-grade assistant.
 
-### Generative AI
-- Each Foundation Model offers unique strengths depending on the use case.  
-- RAG is essential for integrating enterprise data into GenAI applications.
+### Career Orientation
+- Expanding beyond traditional development, the tech industry is rapidly prioritizing engineers who can orchestrate data pipelines and integrate AI solutions effectively.
 
-### Bedrock Ecosystem
-- Bedrock Agents enable automation of complex workflows.  
-- Guardrails ensure safe, responsible, and compliant AI usage.  
+### Community & Networking
+- Engaging with professionals in the AWS ecosystem bridges the gap between theoretical knowledge and practical, real-world deployment challenges.
 
 ---
 
 ### Some event photos
-*Add your event photos here*
+*Add your event photos here (Check-in at Bitexco, Livestream screen, Networking moments)*
 
 ---
 
-> The workshop delivered a comprehensive overview of AI/ML/GenAI on AWS, with practical insights into applying AI Services, SageMaker, and Bedrock in real-world scenarios. It serves as a strong foundation for participants to further explore career opportunities in AI and Machine Learning.
-
+> The FCAJ Community Day provided a highly practical perspective on how AI operates in the real world, emphasizing context over sheer computing power. The exclusive 36th-floor experience and the vibrant networking sessions offered immense inspiration for my ongoing journey into the Cloud and AI sector.

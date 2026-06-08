@@ -1,7 +1,7 @@
 ---
 title: "WEEK 6 WORKLOG"
-date: "2025-11-10"
-weight: 1
+date: "2026-05-31"
+weight: 6
 chapter: false
 pre: " <b> 1.6 </b> "
 ---
@@ -10,11 +10,10 @@ pre: " <b> 1.6 </b> "
 
 ### **Week 6 Objectives**
 
-* Take a deep dive into **Infrastructure as Code (IaC)** using **AWS CloudFormation**.
-* Master YAML syntax and the structure of a CloudFormation Template (including `Parameters`, `Resources`, `Outputs`).
-* Write templates to automate the creation of single resources (S3 Bucket) and a complex network (VPC, Subnet, IGW).
-* Extend the template to automate the deployment of a full web server (EC2, Security Group).
-* Master the stack lifecycle management process (create, update, delete) using the AWS Console and CLI.
+* Master AWS cost optimization mindsets, utilizing flexible pricing models (Spot Instances, Serverless) and automated budget controls.
+* Understand the architecture and deployment of Amazon FSx for Windows File Server to build highly available and secure cloud storage.
+* Enhance identity and access management security by implementing IAM Permission Boundaries to prevent privilege escalation.
+* Deploy centralized monitoring and automated incident response systems using Amazon CloudWatch and Container Insights.
 
 ---
 
@@ -22,24 +21,18 @@ pre: " <b> 1.6 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **Learn CloudFormation & YAML**: Study sections (Parameters, Resources) and YAML syntax. Write a simple S3 Bucket template. | 13/10/2025 | 13/10/2025 | |
-| 2 (Tue) | **Deploy Stack & Parameters**: Deploy the S3 stack. Add `Parameters` (e.g., custom bucket name) to the template and learn to update the stack. | 14/10/2025 | 14/10/2025 | |
-| 3 (Wed) | **Write Network Template**: Write a new template for network infrastructure (VPC, Public Subnet, IGW, Route Table). Use `Outputs`. | 15/10/2025 | 15/10/2025 | |
-| 4 (Thu) | **Write EC2 Template**: Extend the network template, adding `Resources` for a Security Group (SSH, HTTP) and an EC2 instance (specifying AMI). | 16/10/2025 | 16/10/2025 | |
-| 5 (Fri) | **Deploy & Cleanup**: Deploy the complete stack (VPC + EC2). Test SSH/HTTP access. Learn to delete the stack (`aws cloudformation delete-stack`). | 17/10/2025 | 17/10/2025 | |
+| 1 (Mon) | **Cost Optimization on AWS**: Studied cloud provisioning vs. on-premises, Spot Instances, Serverless architectures, AWS Budgets, and the AWS Well-Architected Framework. | 25/05/2026 | 25/05/2026 | [Video Link](https://www.youtube.com/watch?v=UIw8UxGZCHA) |
+| 2 (Tue) | **Amazon FSx for Windows**: Researched FSx core components, VPC isolation, Elastic Network Interfaces (ENI) for performance, and Multi-AZ replication for High Availability. | 26/05/2026 | 26/05/2026 | [AWS Study Group](https://000025.awsstudygroup.com/) |
+| 3 (Wed) | **IAM Permission Boundary**: Practiced setting up permission boundaries to calculate effective permissions and prevent privilege escalation across scaling teams. | 27/05/2026 | 27/05/2026 | [AWS Study Group](https://000030.awsstudygroup.com/) |
+| 4 (Thu) | **AWS CloudWatch Workshop**: Deployed centralized monitoring for logs and metrics. Configured alerts to reduce MTTR and utilized CloudWatch Container Insights for microservices (EKS/ECS). | 28/05/2026 | 28/05/2026 | [AWS Study Group](https://000036.awsstudygroup.com/) |
 
 ---
 
 ### **Week 6 Achievements**
 
-* Mastered YAML syntax and the structure of an **AWS CloudFormation** template (including `Parameters`, `Resources`, `Outputs`).
-* Successfully wrote a template to automate the creation of an **S3 Bucket**.
-* Proficiently used `Parameters` to customize resources at deployment (e.g., bucket name, AMI ID), increasing template flexibility.
-* Successfully wrote a complex, multi-resource template to build a complete network infrastructure, including:
-    * **VPC** and **Public Subnet**.
-    * **Internet Gateway (IGW)** and **Route Table** (with associations).
-* Extended the template to automatically deploy a complete web server, including:
-    * **Security Group** (allowing SSH port 22 and HTTP port 80).
-    * **EC2 Instance** (using `!Ref` to link to the created Subnet and Security Group).
-* Mastered the stack management lifecycle: deploy (`create-stack`), update (`update-stack`), and delete (`delete-stack`) via both AWS Console and **AWS CLI**.
-* Troubleshot common CloudFormation errors: YAML indentation, S3 global unique names, region-specific AMIs, and resource dependencies on deletion.
+* Successfully completed 100% of the planned theoretical research and practical labs on the AWS cloud platform.
+* **Cloud Architecture**: Shifted mindset from traditional physical infrastructure management to scalable, automated, and serverless cloud architectures.
+* **Security & Compliance**: Solidified risk control skills by enforcing the Principle of Least Privilege using IAM Permission Boundaries.
+* **Operations & Cost Management**: Mastered the combination of continuous performance monitoring (CloudWatch, Container Insights) and automated cost control (AWS Budgets) to ensure stable and cost-effective operations.
+* **Key Takeaway**: Realized that a successful enterprise technology solution must balance technical performance (accuracy, speed) with strict data security and budget optimization.
+* **Next Steps**: Prepared to tackle advanced AWS services and apply deployment, monitoring, and authorization workflows to real-world corporate projects.

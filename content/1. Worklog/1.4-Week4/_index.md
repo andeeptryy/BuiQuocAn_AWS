@@ -1,7 +1,7 @@
 ---
 title: "WEEK 4 WORKLOG"
-date: "2025-11-10"
-weight: 1
+date: "2026-05-14"
+weight: 4
 chapter: false
 pre: " <b> 1.4 </b> "
 ---
@@ -10,10 +10,9 @@ pre: " <b> 1.4 </b> "
 
 ### **Week 4 Objectives**
 
-* Conceptualize, design, and define requirements for the final project's AWS architecture.
-* Deploy a basic AWS network infrastructure (VPC, Subnets, IGW, NAT Gateway, Route Tables).
-* Deploy a web server (EC2, NGINX) and a simple web application (HTML/CSS) onto the created infrastructure.
-* Master the process of designing, deploying, and configuring a complete web application on AWS.
+* Master the fundamentals of AWS Networking, focusing on Amazon Virtual Private Cloud (VPC), its core components, and IP addressing.
+* Understand and implement high-availability and fault-tolerant architectures utilizing Elastic Load Balancing (ELB) and Auto Scaling Groups (ASG).
+* Consolidate foundational cloud skills through hands-on practice, integrating IAM, Amazon S3, EC2 deployments, and CloudWatch monitoring.
 
 ---
 
@@ -21,25 +20,18 @@ pre: " <b> 1.4 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **Project Ideation & Requirements**: Research, select a topic, and list functional/technical requirements for the final project. | 29/09/2025 | 29/09/2025 | |
-| 2 (Tue) | **Design AWS Architecture**: Draw the architecture diagram (VPC, Subnets, EC2, S3, IAM) and design a naming/tagging policy. | 30/09/2025 | 30/09/2025 | |
-| 3 (Wed) | **Deploy Network Infrastructure**: Create VPC, Public/Private Subnets, Internet Gateway, NAT Gateway, and configure Route Tables. | 01/10/2025 | 01/10/2025 | |
-| 4 (Thu) | **Deploy Web Server**: Launch EC2 instance, configure Security Group (HTTP/HTTPS), and install NGINX web server. | 02/10/2025 | 02/10/2025 | |
-| 5 (Fri) | **Deploy Application**: Prepare source code (HTML/CSS), upload to EC2, and configure NGINX to serve the website. | 03/10/2025 | 03/10/2025 | |
+| 1 (Mon) | **AWS Networking & VPC Basics**: Researched Amazon VPC components (Public/Private Subnets, Route Tables, IGW, NAT Gateway). Compared Security Groups with Network ACLs and reviewed the 3-tier architecture. | 11/05/2026 | 11/05/2026 | [Video Link](https://www.youtube.com/watch?v=uAQCm4sm_1c) |
+| 2 (Tue) | **AWS Load Balancer & Auto Scaling**: Studied ALB, NLB, and CLB. Simulated an Auto Scaling Group (ASG) workflow involving Launch Templates, Scaling Policies, and Health Checks. | 12/05/2026 | 12/05/2026 | AWS Load Balancer & Auto Scaling (YouTube) |
+| 3 (Wed) | **Lab: AWS Cloud Fundamentals**: Applied least privilege in IAM. Configured secure S3 buckets (Versioning, SSE-S3 encryption). Launched an EC2 web server, configured SG rules (HTTP/HTTPS), and monitored logs via CloudWatch. | 13/05/2026 | 13/05/2026 | [AWS Study Group Lab](https://000004.awsstudygroup.com/) |
 
 ---
 
 ### **Week 4 Achievements**
 
-* Completed the planning phase for the final project (deploying a simple news website).
-* Designed a complete AWS architecture diagram and a corresponding resource tagging policy.
-* Successfully deployed a custom AWS network infrastructure from scratch, including:
-    * **VPC** with **Public and Private Subnets**.
-    * **Internet Gateway (IGW)** for the Public Subnet.
-    * **NAT Gateway** for the Private Subnet.
-    * **Route Tables** configured for both subnets.
-* Successfully deployed and configured a web server on **EC2**, including:
-    * Configuring a **Security Group** to allow HTTP/HTTPS traffic.
-    * Installing and configuring the **NGINX** web server.
-* Successfully deployed a simple HTML/CSS website onto the NGINX server.
-* Troubleshot and resolved common deployment issues (e.g., file permissions, NAT Gateway routing, NGINX configuration).
+* Grasped the structure of a standard VPC and applied best practices for subnetting and IP Addressing (CIDR).
+* Successfully configured routing between subnets using Route Tables and clearly distinguished the use cases for stateful Security Groups versus stateless NACLs.
+* Gained a deep understanding of ELB routing mechanisms (Application vs. Network Load Balancers) within modern architectures.
+* Effectively configured Auto Scaling Groups to dynamically scale resources based on CPU utilization and traffic patterns, ensuring High Availability.
+* Attained practical proficiency in deploying foundational cloud infrastructures from scratch, including secure identity management (IAM) and encrypted storage (S3).
+* Successfully launched an EC2-hosted web server, verified network access via Security Groups, and utilized CloudWatch for system metrics analysis.
+* Built a solid networking foundation, well-prepared to tackle advanced topics such as VPC Peering, Transit Gateway, and container orchestration (ECS/EKS).

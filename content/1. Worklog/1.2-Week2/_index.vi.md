@@ -1,7 +1,7 @@
 ---
 title: "WEEK 2 WORKLOG"
-date: "2025-11-10"
-weight: 1
+date: "2026-04-30"
+weight: 2
 chapter: false
 pre: " <b> 1.2 </b> "
 ---
@@ -10,9 +10,9 @@ pre: " <b> 1.2 </b> "
 
 ### **Week 2 Objectives**
 
-* Hiểu và thực hành về dịch vụ giám sát **AWS CloudWatch** (Metrics, Alarms, Logs, Dashboards, Agent).
-* Tìm hiểu và thực hành về quản lý đa tài khoản với **AWS Organizations** (OUs, creating accounts, inviting accounts, member vs. management roles).
-* Tìm hiểu và triển khai **AWS Storage Gateway**, tích hợp với S3 và EC2.
+* Tìm hiểu và triển khai chiến lược quản trị đa tài khoản (multi-account) bằng dịch vụ AWS Organizations.
+* Triển khai giải pháp lưu trữ lai (hybrid storage) bằng cách kết hợp AWS Storage Gateway, Amazon S3 và Amazon EC2.
+* Kiểm soát truy cập chéo và thiết lập ranh giới bảo mật giữa các tài khoản thông qua tính năng IAM Switch Role và Service Control Policies (SCPs).
 
 ---
 
@@ -20,22 +20,17 @@ pre: " <b> 1.2 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Lab 08 – AWS CloudWatch (Phần 1)**: Cấu hình EC2; tạo CloudWatch Alarm (CPU Utilization) và CloudWatch Dashboard. | 15/09/2025 | 15/09/2025 | |
-| 2 (Thứ Ba) | **Lab 08 – AWS CloudWatch (Phần 2)**: Cài đặt và cấu hình CloudWatch Agent trên EC2 để thu thập và đẩy logs ứng dụng lên CloudWatch Logs. | 16/09/2025 | 16/09/2025 | |
-| 3 (Thứ Tư) | **Tìm hiểu AWS Organizations (Phần 1)**: Tạo tài khoản thành viên (member account) mới và cấu trúc các tài khoản bằng Organizational Units (OUs). | 17/09/2025 | 17/09/2025 | |
-| 4 (Thứ Năm) | **Triển khai AWS Storage Gateway**: Chuẩn bị S3 Bucket; khởi tạo EC2 instance và cài đặt Storage Gateway. | 18/09/2025 | 18/09/2025 | |
-| 5 (Thứ Sáu) | **Tìm hiểu AWS Organizations (Phần 2)**: Mời một tài khoản AWS có sẵn tham gia vào Organization; thực hành truy cập (switch role) giữa tài khoản quản lý và tài khoản thành viên. | 19/09/2025 | 19/09/2025 | |
+| 1 (Thứ Hai) | **Tìm hiểu AWS Organizations (Phần 1)**: Nghiên cứu tổng quan và lợi ích của AWS Organizations. Thực hành tạo tài khoản thành viên (member account) và cấu trúc nhóm tài khoản bằng Organizational Units (OUs). | 27/04/2026 | 27/04/2026 | |
+| 2 (Thứ Ba) | **Triển khai AWS Storage Gateway**: Chuẩn bị S3 Bucket, khởi tạo máy ảo EC2 instance để cài đặt Storage Gateway, thực hiện cấu hình ban đầu và kết nối thành công với lưu trữ S3. | 28/04/2026 | 28/04/2026 | |
+| 3 (Thứ Tư) | **Tìm hiểu AWS Organizations (Phần 2)**: Mời tài khoản có sẵn tham gia vào Organization. Thực hành Switch Role giữa Management Account và Member Account, nghiên cứu cơ chế giới hạn quyền bằng SCP. | 29/04/2026 | 29/04/2026 | |
 
 ---
 
 ### **Week 2 Achievements**
 
-* Nắm vững cách theo dõi, tạo cảnh báo (Alarms) và trực quan hóa (Dashboards) cho tài nguyên EC2 bằng **CloudWatch Metrics**.
-* Cài đặt và cấu hình thành công **CloudWatch Agent** để thu thập và đẩy logs từ EC2 lên **CloudWatch Logs** một cách tập trung.
-* Hiểu rõ sự khác biệt và tầm quan trọng của Metrics (giám sát) và Logs (ghi log) trong vận hành hệ thống.
-* Nắm vững khái niệm và lợi ích của **AWS Organizations** trong việc quản lý đa tài khoản.
-* Thực hành thành công việc tạo mới tài khoản (member account) và mời tài khoản có sẵn vào Organization.
-* Hiểu và cấu trúc được các tài khoản bằng **Organizational Units (OUs)**.
-* Thực hành thành công việc truy cập chéo (switch role) giữa tài khoản quản lý (management) và tài khoản thành viên (member).
-* Triển khai và cấu hình cơ bản thành công **AWS Storage Gateway** trên một EC2 instance.
-* Khắc phục được các sự cố kết nối liên quan đến **IAM Roles** và **Security Groups** khi EC2 tương tác với các dịch vụ khác (S3, CloudWatch, Storage Gateway), củng cố kiến thức Tuần 1.
+* Hoàn thành đúng tiến độ 100% các công việc cấu hình và bài thực hành được giao trong tuần.
+* Nắm vững kiến thức nền tảng về AWS Organizations và mô hình hoạt động thực tế của AWS Storage Gateway.
+* Tạo, sắp xếp và phân nhóm tài khoản thành công theo cấu trúc quản trị tập trung Organizational Units (OUs).
+* Cài đặt và thiết lập kết nối ổn định giữa Storage Gateway (được host trên EC2) và không gian lưu trữ S3 Bucket.
+* Thực hiện thành thạo việc chuyển đổi phiên làm việc chéo (Switch Role) và hiểu rõ cách vận hành SCP trong việc quản trị bảo mật cho nhiều tài khoản.
+* Nâng cao kỹ năng thao tác độc lập trên giao diện AWS Management Console và hình thành tư duy quản trị hệ thống đa tài khoản chuyên nghiệp.

@@ -1,7 +1,7 @@
 ---
 title: "WEEK 3 WORKLOG"
-date: "2025-11-10"
-weight: 1
+date: "2026-05-09"
+weight: 3
 chapter: false
 pre: " <b> 1.3 </b> "
 ---
@@ -10,10 +10,10 @@ pre: " <b> 1.3 </b> "
 
 ### **Week 3 Objectives**
 
-* Understand and deploy the **AWS Storage Gateway** hybrid storage service (installation, activation).
-* Understand and deploy the **AWS WAF** (Web Application Firewall) security service to protect a web application.
-* Master and practice AWS resource management methods using **Tags** and **Resource Groups**.
-* Learn the basic procedures for preparing a technical Workshop.
+* Master the core AWS compute resources and understand the trade-offs between highly configurable instances (Amazon EC2) and simplified deployments (Amazon Lightsail).
+* Deep dive into AWS storage paradigms, specifically distinguishing between Block Storage (EBS), File Storage (EFS, FSx), and Object Storage (S3).
+* Learn the end-to-end server migration process to the cloud using AWS Application Migration Service (MGN).
+* Understand the architecture of Amazon S3, focusing on its high durability, scalability, and lifecycle management across different storage classes.
 
 ---
 
@@ -21,19 +21,17 @@ pre: " <b> 1.3 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **Deploy AWS Storage Gateway**: Prepare environment (S3 Bucket, EC2) and proceed with Storage Gateway installation and activation. | 22/09/2025 | 22/09/2025 | |
-| 2 (Tue) | **Lab 26 – AWS WAF**: Deploy a web app on S3 and configure AWS WAF with Web ACLs, using AWS Managed Rules for protection. | 23/09/2025 | 23/09/2025 | |
-| 3 (Wed) | **Lab 27 – Manage Resources**: Practice creating, editing, and deleting Tags on EC2. Use Tag Editor and Resource Groups to manage resources. | 24/09/2025 | 24/09/2025 | |
-| 4 (Thu) | **Learn Workshop Process**: Spend time researching and understanding the guides and basic steps for conducting a workshop. | 25/09/2025 | 25/09/2025 | |
+| 1 (Tue) | **Amazon EC2, EBS, and Lightsail**: Studied EC2 instance types and EBS capabilities (Volumes, Snapshots, throughput). Compared EC2's flexibility with Lightsail's low-cost, rapid deployment model. | 05/05/2026 | 05/05/2026 | [Video Link](https://youtu.be/e7XeKdOVq40) |
+| 2 (Wed) | **Amazon EFS / FSx & AWS MGN**: Researched EFS auto-scaling and FSx options (Windows/Lustre). Learned the MGN migration workflow including agent installation, replication, and cutover. | 06/05/2026 | 06/05/2026 | [Video Link](https://youtu.be/hFVYG8WqfU0) |
+| 3 (Fri) | **AWS Storage Service: Amazon S3**: Explored S3 concepts (Object storage). Studied its 99.999999999% durability, unlimited scalability, and various storage classes (Standard, IA, Glacier). | 08/05/2026 | 08/05/2026 | [Video Link](https://youtu.be/_yunukwcAwc) |
 
 ---
 
 ### **Week 3 Achievements**
 
-* Successfully deployed and activated **AWS Storage Gateway** on EC2, understanding its role as a hybrid cloud storage bridge (connecting on-premises to S3).
-* Successfully deployed a web application and protected it using **AWS WAF**.
-* Mastered how to configure **Web ACLs** and apply **AWS Managed Rules** to defend against common web threats (like the OWASP Top 10).
-* Mastered the operations of creating, editing, and deleting **Tags** on AWS resources (EC2) for identification and organization.
-* Proficiently used the **Tag Editor** and **Resource Groups** to logically group and manage related resources.
-* Learned the basic process and steps for preparing and organizing a technical workshop.
-* Continued to strengthen troubleshooting skills, especially for **Security Group** issues (e.g., opening port 443 outbound for Storage Gateway).
+* Successfully completed all planned tasks, gaining a comprehensive understanding of the AWS compute and storage ecosystems.
+* Clearly differentiated between Amazon EC2 and Amazon Lightsail, demonstrating the ability to select the appropriate compute service based on project complexity and budget.
+* Mastered the distinction and optimal use cases for different storage types: EBS (Block), EFS/FSx (File), and S3 (Object).
+* Practiced hands-on operations including launching EC2 instances, attaching EBS volumes, creating S3 buckets, uploading objects, and managing permissions.
+* Gained practical knowledge of cloud migration strategies using AWS MGN, understanding the technical phases from source replication to the final AWS cutover.
+* Improved operational skills and hands-on proficiency within the AWS Management Console.

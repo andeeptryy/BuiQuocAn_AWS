@@ -1,7 +1,7 @@
 ---
 title: "WEEK 2 WORKLOG"
-date: "2025-11-10"
-weight: 1
+date: "2026-04-30"
+weight: 2
 chapter: false
 pre: " <b> 1.2 </b> "
 ---
@@ -10,9 +10,9 @@ pre: " <b> 1.2 </b> "
 
 ### **Week 2 Objectives**
 
-* Understand and practice with the **AWS CloudWatch** monitoring service (Metrics, Alarms, Logs, Dashboards, Agent).
-* Learn and practice multi-account management with **AWS Organizations** (OUs, creating accounts, inviting accounts).
-* Deploy and understand **AWS Storage Gateway**.
+* Explore and implement multi-account management strategies using AWS Organizations.
+* Deploy a hybrid storage solution utilizing AWS Storage Gateway, Amazon S3, and Amazon EC2.
+* Understand cross-account access and enforce security boundaries using IAM Switch Role and Service Control Policies (SCPs).
 
 ---
 
@@ -20,22 +20,17 @@ pre: " <b> 1.2 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **Lab 08 – AWS CloudWatch (Part 1)**: Configure EC2; create CloudWatch Alarm (CPU) and CloudWatch Dashboard. | 15/09/2025 | 15/09/2025 | |
-| 2 (Tue) | **Lab 08 – AWS CloudWatch (Part 2)**: Install and configure the CloudWatch Agent on EC2 to collect and push application logs. | 16/09/2025 | 16/09/2025 | |
-| 3 (Wed) | **Learn AWS Organizations (Part 1)**: Create a new member account and structure accounts using Organizational Units (OUs). | 17/09/2025 | 17/09/2025 | |
-| 4 (Thu) | **Deploy AWS Storage Gateway**: Prepare S3 Bucket; launch EC2 instance and install Storage Gateway. | 18/09/2025 | 18/09/2025 | |
-| 5 (Fri) | **Learn AWS Organizations (Part 2)**: Invite an existing AWS account to the Organization; practice `Switch Role` access. | 19/09/2025 | 19/09/2025 | |
+| 1 (Mon) | **AWS Organizations (Part 1)**: Researched AWS Organizations overview and benefits. Practiced creating member accounts, setting up Organizational Units (OUs), and structuring accounts. | 27/04/2026 | 27/04/2026 | |
+| 2 (Tue) | **Deploy AWS Storage Gateway**: Prepared an Amazon S3 Bucket, launched an EC2 instance to host the gateway, and successfully configured the initial connection between Storage Gateway and S3. | 28/04/2026 | 28/04/2026 | |
+| 3 (Wed) | **AWS Organizations (Part 2)**: Invited an existing AWS account to the Organization and confirmed the invitation. Practiced Switch Role between Management and Member accounts, and studied Service Control Policies (SCPs) to restrict permissions. | 29/04/2026 | 29/04/2026 | |
 
 ---
 
 ### **Week 2 Achievements**
 
-* Mastered how to monitor, create Alarms, and visualize (Dashboards) EC2 resources using **CloudWatch Metrics**.
-* Successfully installed and configured the **CloudWatch Agent** to collect and centralize logs from EC2 into **CloudWatch Logs**.
-* Clearly understood the difference and importance of Metrics (monitoring) vs. Logs (logging).
-* Mastered the concepts and benefits of **AWS Organizations** for multi-account management.
-* Successfully practiced creating new member accounts and inviting existing accounts into an Organization.
-* Understood and structured accounts using **Organizational Units (OUs)**.
-* Successfully practiced cross-account access using **Switch Role**.
-* Performed a basic deployment and configuration of **AWS Storage Gateway** on an EC2 instance.
-* Troubleshot and resolved connectivity issues related to **IAM Roles** and **Security Groups**, reinforcing Week 1 knowledge.
+* Successfully met the weekly schedule by completing all three planned administrative and deployment tasks.
+* Gained a solid understanding of the AWS Organizations platform and the operational model of AWS Storage Gateway.
+* Successfully created member accounts and structured them logically into Organizational Units (OUs).
+* Configured and established a stable hybrid storage connection between an EC2-hosted Storage Gateway and an S3 Bucket.
+* Effectively performed cross-account access using IAM Switch Role and understood how to apply SCPs for centralized governance.
+* Improved practical skills in navigating the AWS Management Console and developed a robust multi-account administration mindset.

@@ -1,7 +1,7 @@
 ---
 title: "WEEK 6 WORKLOG"
-date: "2025-11-10"
-weight: 1
+date: "2026-05-31"
+weight: 6
 chapter: false
 pre: " <b> 1.6 </b> "
 ---
@@ -10,11 +10,10 @@ pre: " <b> 1.6 </b> "
 
 ### **Week 6 Objectives**
 
-* Tìm hiểu sâu về **Infrastructure as Code (IaC)** bằng cách sử dụng **AWS CloudFormation**.
-* Nắm vững cú pháp YAML và cấu trúc của một CloudFormation Template (bao gồm `Parameters`, `Resources`, `Outputs`).
-* Viết template để tự động hóa việc tạo tài nguyên đơn lẻ (S3 Bucket) và một hạ tầng mạng phức tạp (VPC, Subnet, IGW, Route Table).
-* Mở rộng template để tự động triển khai một máy chủ web hoàn chỉnh (EC2, Security Group) vào hạ tầng mạng đã tạo.
-* Nắm vững quy trình quản lý vòng đời của stack (tạo, cập nhật, xóa) bằng AWS Console và AWS CLI.
+* Nắm bắt tư duy tối ưu hóa chi phí trên AWS, sử dụng linh hoạt các mô hình thanh toán (Spot Instances, Serverless) và thiết lập AWS Budgets.
+* Tìm hiểu kiến trúc lưu trữ tệp đám mây Amazon FSx for Windows, đảm bảo tính sẵn sàng cao và khả năng cô lập bảo mật trong mạng VPC.
+* Nâng cao kỹ năng quản trị bảo mật thông qua việc thiết lập IAM Permission Boundary để tính toán quyền hạn thực tế và ngăn chặn leo thang đặc quyền.
+* Triển khai hệ thống giám sát tập trung và phản hồi tự động bằng Amazon CloudWatch và CloudWatch Container Insights.
 
 ---
 
@@ -22,24 +21,18 @@ pre: " <b> 1.6 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Tìm hiểu CloudFormation & YAML**: Nghiên cứu các section (Parameters, Resources, Outputs) và cú pháp YAML. Viết template đơn giản tạo S3 Bucket. | 13/10/2025 | 13/10/2025 | |
-| 2 (Thứ Ba) | **Triển khai Stack & Parameters**: Deploy stack S3. Thêm `Parameters` (ví dụ: tùy chỉnh tên Bucket) vào template và học cách cập nhật stack. | 14/10/2025 | 14/10/2025 | |
-| 3 (Thứ Tư) | **Viết template Mạng**: Viết template mới tạo hạ tầng mạng (VPC, Public Subnet, IGW, Route Table). Sử dụng `Outputs` để hiển thị IDs. | 15/10/2025 | 15/10/2025 | |
-| 4 (Thứ Năm) | **Viết template EC2**: Mở rộng template mạng, thêm `Resources` cho Security Group (SSH, HTTP) và EC2 instance (chỉ định AMI, Type). | 16/10/2025 | 16/10/2025 | |
-| 5 (Thứ Sáu) | **Triển khai & Dọn dẹp**: Deploy stack hoàn chỉnh (VPC + Subnet + EC2). Kiểm tra SSH/HTTP. Học cách xóa stack (`aws cloudformation delete-stack`). | 17/10/2025 | 17/10/2025 | |
+| 1 (Thứ Hai) | **Tối ưu hóa chi phí AWS (Cost Optimization)**: Nắm bắt tư duy cấp phát tài nguyên, sử dụng Spot Instances/Serverless, cấu hình AWS Budgets và áp dụng công cụ AI sinh checklist tối ưu chi phí. | 25/05/2026 | 25/05/2026 | [Video Link](https://www.youtube.com/watch?v=UIw8UxGZCHA) |
+| 2 (Thứ Ba) | **Kiến trúc lưu trữ Amazon FSx**: Phân tích kiến trúc FSx, giao thức SMB, cách triển khai an toàn trong VPC, sử dụng ENI để tăng tốc độ truy xuất và cơ chế đồng bộ Multi-AZ. | 26/05/2026 | 26/05/2026 | [AWS Study Group](https://000025.awsstudygroup.com/) |
+| 3 (Thứ Tư) | **Kiểm soát phân quyền (Permission Boundary)**: Thiết lập ranh giới quyền hạn IAM để đóng lỗ hổng bảo mật, ngăn chặn leo thang đặc quyền (Privilege Escalation) khi quy mô nhân sự mở rộng. | 27/05/2026 | 27/05/2026 | [AWS Study Group](https://000030.awsstudygroup.com/) |
+| 4 (Thứ Năm) | **Hệ thống giám sát CloudWatch**: Triển khai thu thập logs/metrics tập trung. Thiết lập cảnh báo (Alerts) để giảm MTTR và dùng Container Insights giám sát tài nguyên vi dịch vụ (Microservices). | 28/05/2026 | 28/05/2026 | [AWS Study Group](https://000036.awsstudygroup.com/) |
 
 ---
 
 ### **Week 6 Achievements**
 
-* Nắm vững cú pháp YAML và cấu trúc của một template **AWS CloudFormation** (bao gồm `Parameters`, `Resources`, `Outputs`).
-* Viết thành công template CloudFormation để tự động hóa việc tạo các tài nguyên đơn lẻ (như **S3 Bucket**).
-* Sử dụng thành thạo `Parameters` để tùy chỉnh tài nguyên khi triển khai (ví dụ: tên S3 Bucket, AMI ID, Instance Type), giúp tăng tính linh hoạt và tái sử dụng của template.
-* Viết thành công một template phức tạp, liên kết nhiều tài nguyên để xây dựng hạ tầng mạng hoàn chỉnh, bao gồm:
-    * **VPC** và **Public Subnet**.
-    * **Internet Gateway (IGW)** và **Route Table** (cùng các association).
-* Mở rộng template để tự động triển khai một máy chủ web, bao gồm:
-    * **Security Group** (cho phép SSH port 22 và HTTP port 80).
-    * **EC2 Instance** (sử dụng `!Ref` để liên kết với Subnet và Security Group đã tạo).
-* Nắm vững quy trình quản lý stack: triển khai (`create-stack`), cập nhật (`update-stack`) và xóa (`delete-stack`) bằng cả AWS Console và **AWS CLI**.
-* Khắc phục được các lỗi phổ biến khi làm việc với CloudFormation, như lỗi cú pháp YAML (thụt lề), tên S3 Bucket (duy nhất toàn cầu), AMI ID (theo region), và lỗi khi xóa stack (do tài nguyên phụ thuộc).
+* Đã hoàn thành tốt 100% tiến độ nghiên cứu lý thuyết và thực hành (Lab) trên nền tảng đám mây AWS theo đúng kế hoạch được giao.
+* **Tư duy hệ thống (Cloud Architecture)**: Chuyển đổi linh hoạt từ tư duy quản lý hạ tầng vật lý truyền thống sang quản trị hạ tầng đám mây; ưu tiên tính mở rộng, tự động hóa và mô hình Serverless.
+* **Quản trị và Bảo mật (Security & Compliance)**: Củng cố vững chắc kỹ năng kiểm soát rủi ro thông qua việc áp dụng nguyên tắc đặc quyền tối thiểu (Least Privilege) với IAM Permission Boundary.
+* **Tối ưu hóa Vận hành (Operations & Cost Management)**: Kết hợp thành thạo giữa việc giám sát hiệu suất liên tục (CloudWatch, Container Insights) và kiểm soát chi phí tự động (AWS Budgets) để đảm bảo hệ thống chạy ổn định nhất với chi phí thấp nhất.
+* **Kinh nghiệm rút ra**: Quá trình làm Lab giúp nhận thức sâu sắc rằng: Một giải pháp công nghệ tốt đối với doanh nghiệp không chỉ nằm ở khía cạnh kỹ thuật (chạy đúng, tốc độ cao), mà còn phải thỏa mãn được hai yếu tố cực kỳ quan trọng là an toàn dữ liệu và tối ưu hóa ngân sách.
+* **Định hướng tuần tới**: Tiếp tục nghiên cứu các dịch vụ nâng cao của AWS, đồng thời sẵn sàng nhận các task công việc thực tế để áp dụng quy trình triển khai, giám sát và phân quyền vào dự án chung của công ty.

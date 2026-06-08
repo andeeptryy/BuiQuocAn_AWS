@@ -1,7 +1,7 @@
 ---
 title: "WEEK 7 WORKLOG"
-date: "2025-11-10"
-weight: 1
+date: "2026-06-08"
+weight: 7
 chapter: false
 pre: " <b> 1.7 </b> "
 ---
@@ -10,11 +10,10 @@ pre: " <b> 1.7 </b> "
 
 ### **Week 7 Objectives**
 
-* Learn and deploy a **Serverless** architecture using **AWS Lambda** and **API Gateway**.
-* Automate the Serverless deployment using a CloudFormation template.
-* Learn the advanced CloudFormation feature **StackSets** to deploy resources across multiple accounts/regions.
-* Begin learning a new IaC tool: **Terraform** (HCL syntax).
-* Practice basic Terraform commands (`init`, `plan`, `apply`) and learn configuration management with **variables**.
+* Research software supply chain security best practices and contribute knowledge to the community.
+* Simulate and visually map out AWS security incident response scenarios using architecture diagrams.
+* Automate backup workflows and recovery testing processes utilizing AWS Backup, Lambda, and SNS.
+* Master AWS Management Console administration, identity management, and secure interaction methods (CLI, SDK).
 
 ---
 
@@ -22,24 +21,18 @@ pre: " <b> 1.7 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **Learn Serverless**: Study AWS Lambda, write CloudFormation (for IAM Role, Lambda Function) and integrate API Gateway. | 20/10/2025 | 20/10/2025 | |
-| 2 (Tue) | **CloudFormation StackSets**: Learn StackSets, write an S3 template, and deploy it to multiple accounts/regions. | 21/10/2025 | 21/10/2025 | |
-| 3 (Wed) | **Start Terraform**: Write the first `main.tf` file (AWS provider, `aws_s3_bucket` resource). Run `terraform init` and `plan`. | 22/10/2025 | 22/10/2025 | |
-| 4 (Thu) | **CloudFormation Cleanup**: (Consolidation day) Deploy, test (SSH/HTTP), and delete a complete stack (`delete-stack`). | 23/10/2025 | 23/10/2025 | |
-| 5 (Fri) | **Complete Terraform Intro**: Run `terraform apply` to create S3 bucket. Learn to use `variables` and `.tfvars` files. | 24/10/2025 | 24/10/2025 | |
+| 1 (Mon) | **Software Supply Chain Security**: Researched AWS Well-Architected best practices for SDLC security (CI/CD, dependencies). Synthesized findings into a technical blog post shared with the AWS Vietnam community. | 01/06/2026 | 01/06/2026 | [AWS Security Blog](https://aws.amazon.com/vi/blogs/security/well-architected-best-practices-for-software-supply-chain-security/) |
+| 2 (Tue) | **Security Incident Simulation**: Visualized AWS security architecture using Draw.io. Simulated Incident Response (IR) for SSH Brute Force/Nmap scans, mapping log flows to CloudWatch and blocking IPs via Subnet ACL rules. | 02/06/2026 | 02/06/2026 | [Draw.io Diagram](https://app.diagrams.net/) |
+| 3 (Wed) | **Automated Backup & Recovery Testing**: Configured automated AWS Backup plans. Integrated AWS Lambda to automate recovery validation testing and resource cleanup, with Amazon SNS for real-time status notifications. | 03/06/2026 | 03/06/2026 | [AWS Study Group](https://000013.awsstudygroup.com/) |
+| 4 (Thu) | **Console Administration & Interactions**: Studied IAM best practices (Root vs. IAM Users, MFA hardware keys). Practiced secure system interactions using AWS CLI and Python SDK, emphasizing Access Key protection. | 04/06/2026 | 04/06/2026 | [Video Link](https://www.youtube.com/watch?v=95quNuhvMT0&t=51s) |
 
 ---
 
 ### **Week 7 Achievements**
 
-* Mastered the concept of **Serverless** architecture.
-* Successfully deployed an **AWS Lambda** function (Node.js) and configured an **IAM Role** (for logging) entirely using **CloudFormation**.
-* Successfully integrated the Lambda function with **API Gateway** (using `AWS_PROXY`) to create a public-facing API endpoint.
-* Mastered and successfully deployed **CloudFormation StackSets**, understanding how to use it for resource synchronization across multiple accounts.
-* Began learning a new IaC tool, **Terraform**, and its HCL syntax.
-* Successfully wrote the first Terraform configuration to create an `aws_s3_bucket` resource.
-* Mastered the basic Terraform workflow:
-    * `terraform init`: To initialize the provider.
-    * `terraform plan`: To preview changes.
-    * `terraform apply`: To create the resources.
-* Learned to parameterize Terraform configurations using **variables** (in `.tf` files) and manage their values (in `.tfvars` files).
+* Successfully completed 100% of the weekly plan, including document research, community sharing, advanced architecture diagramming, and automated system labs.
+* **Architecture Diagramming**: Mastered infrastructure design tools to clearly and professionally visualize cybersecurity Incident Response flows.
+* **Automation & Disaster Recovery**: Enhanced capabilities in deploying automated backup/restore infrastructures by integrating AWS Backup, Lambda, and SNS, ensuring reliable data recovery.
+* **Technical Governance & Communication**: Developed the ability to translate complex technical documentation into accessible community articles, while solidifying secure access workflows across the Console, CLI, and SDK.
+* **Key Takeaway**: Realized that a comprehensive technology infrastructure requires not only daily operational stability but, more importantly, a strict supply chain security mechanism combined with continuous, automated recovery testing.
+* **Next Steps**: Continue to dive deep into advanced administrative automation solutions and optimize secure application deployment processes following modern development models.

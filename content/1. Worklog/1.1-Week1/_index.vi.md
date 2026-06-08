@@ -1,6 +1,6 @@
 ---
 title: "WEEK 1 WORKLOG"
-date: "2025-11-10"
+date: "2026-04-23"
 weight: 1
 chapter: false
 pre: " <b> 1.1 </b> "
@@ -10,10 +10,11 @@ pre: " <b> 1.1 </b> "
 
 ### **Week 1 Objectives**
 
-* Hiểu và thực hành về các khái niệm cốt lõi của AWS IAM (Users, Groups, Roles, Policies).
-* Tìm hiểu, triển khai và quản trị dịch vụ Amazon EC2 (Launch instances, Security Groups, Snapshots, AMIs).
-* Triển khai kiến trúc ứng dụng có tính sẵn sàng cao (High Availability) và tự động co giãn (Scalability) bằng cách sử dụng Elastic Load Balancer (ELB) và Auto Scaling Group (ASG).
-* Hiểu và áp dụng IAM Role như một phương pháp bảo mật để cấp quyền cho EC2 truy cập các dịch vụ AWS khác (như S3).
+* Nắm bắt giá trị cốt lõi, lộ trình học tập và 6 nguyên tắc nền tảng của chương trình đào tạo First Cloud AI Journey (FCAJ).
+* Làm quen với các khái niệm cơ bản về Điện toán đám mây, Hạ tầng toàn cầu của AWS (Region, AZ, Edge Location) và các dịch vụ chủ chốt.
+* Tìm hiểu các phương thức tương tác và quản lý tài nguyên AWS an toàn thông qua Management Console, CLI và SDK.
+* Khám phá sự tích hợp của Generative AI (AWS Kiro) trong quy trình phát triển phần mềm hiện đại và phương pháp lập trình Spec-Driven Development.
+* Hiểu rõ các chiến lược Tối ưu hóa chi phí và 6 trụ cột của tiêu chuẩn AWS Well-Architected Framework để thiết kế hệ thống hiệu quả, bền vững.
 
 ---
 
@@ -21,25 +22,22 @@ pre: " <b> 1.1 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Lab 02 – Introduction to AWS IAM**: Thực hành tạo và quản lý IAM Users, Groups, Roles, và Policies; thực hiện Switch Role. | 08/09/2025 | 08/09/2025 | |
-| 2 (Thứ Ba) | **Tìm hiểu và triển khai Amazon EC2**: Khởi chạy EC2 instance (Windows & Linux); cài đặt Apache web server; thực hành tạo Snapshot và AMI. | 09/09/2025 | 09/09/2025 | |
-| 3 (Thứ Tư) | **Thực hành Lab về Security Group**: Cấu hình Security Group (stateful firewall) để cho phép và chặn truy cập (HTTP, SSH) vào EC2 instance. | 10/09/2025 | 10/09/2025 | |
-| 4 (Thứ Năm) | **Triển khai hệ thống tự động co giãn**: Cấu hình Launch Template, Auto Scaling Group (với chính sách co giãn theo CPU), và Application Load Balancer (ALB) để phân phối tải. | 11/09/2025 | 11/09/2025 | |
-| 5 (Thứ Sáu) | **Lab: Gán IAM Role cho EC2 truy cập S3**: Tạo IAM Role với quyền S3 read-only và gán cho EC2; sử dụng AWS CLI để kiểm tra truy cập an toàn. | 12/09/2025 | 12/09/2025 | |
+| 1 (Thứ Sáu) | **Kickoff chương trình FCAJ**: Tham gia buổi định hướng FCAJ. Tìm hiểu cấu trúc chương trình, 6 nguyên tắc cốt lõi (Builder, Teamwork, Resilience...) và hoạt động cộng đồng. | 17/04/2026 | 17/04/2026 | E3-05.01 |
+| 2 (Thứ Bảy) | **Thiết lập tài khoản & Nghiên cứu**: Tạo tài khoản AWS, nhận $100 credit thực hành, tìm hiểu các dịch vụ cốt lõi (EC2, VPS) và tham khảo dự án mẫu. | 18/04/2026 | 18/04/2026 | [AWS Study Group](https://awsstudygroup.com/) |
+| 3 (Chủ Nhật) | **Module 01-01 (Cloud Basics)**: Học về vai trò của GenAI, khái niệm Cloud Computing (CAPEX vs OPEX), Hạ tầng toàn cầu AWS, AWS WAF và Route 53. | 19/04/2026 | 19/04/2026 | [Video Link](https://www.youtube.com/watch?v=qVCF7UjYC5s) |
+| 4 (Thứ Hai) | **Module 01-02 (Management Console)**: Tìm hiểu quản lý định danh (Root user vs IAM user) và các công cụ tương tác AWS (Console, Support Center, CLI, SDK). | 20/04/2026 | 20/04/2026 | [Video Link](https://www.youtube.com/watch?v=95quNuhvMT0) |
+| 5 (Thứ Ba) | **Module 01-03 (GenAI & Kiro)**: Nghiên cứu xu hướng phát triển của Autonomous Agents, phương pháp Spec-Driven Development và hệ sinh thái AWS Kiro IDE/CLI. | 21/04/2026 | 21/04/2026 | [Video Link](https://www.youtube.com/watch?v=uAQCm4sm_1c) |
+| 6 (Thứ Tư) | **Module 01-04 (Cost Optimization)**: Học các nguyên tắc tiết kiệm chi phí trên AWS như Right-Sizing, dùng Spot/Reserved instances, Serverless và AWS Budgets. | 22/04/2026 | 22/04/2026 | [Video Link](https://www.youtube.com/watch?v=UIw8UxGZCHA) |
+| 7 (Thứ Năm) | **AWS Well-Architected Framework**: Nghiên cứu 6 trụ cột kiến trúc hệ thống, phân biệt rõ sự khác nhau giữa Vận hành xuất sắc và Độ tin cậy. | 23/04/2026 | 23/04/2026 | [AWS Docs](https://docs.aws.amazon.com/wellarchitected/) |
 
 ---
 
 ### **Week 1 Achievements**
 
-* Nắm vững các khái niệm cơ bản và thao tác thực tế với **AWS IAM**, hiểu rõ sự khác biệt giữa User, Group, Role và Policy.
-* Triển khai và quản trị thành công máy ảo **Amazon EC2**, bao gồm:
-    * Khởi chạy instance từ các AMI khác nhau (Linux, Windows).
-    * Cài đặt và cấu hình một web server (Apache) cơ bản.
-    * Thực hiện sao lưu và nhân bản instance bằng Snapshots và AMIs.
-* Hiểu rõ và cấu hình thành thạo **Security Group** để bảo mật instance, áp dụng nguyên tắc đặc quyền tối thiểu (Principle of Least Privilege).
-* Triển khai hoàn chỉnh một kiến trúc ứng dụng có tính sẵn sàng cao (HA) và tự động co giãn bằng cách kết hợp:
-    * **Launch Templates** để đảm bảo tính nhất quán.
-    * **Application Load Balancer (ALB)** để phân phối tải.
-    * **Auto Scaling Groups (ASG)** để tự động thêm/bớt instance dựa trên tải CPU.
-* Hiểu và áp dụng được phương pháp bảo mật tốt nhất (best practice) khi cho phép EC2 tương tác với các dịch vụ khác (S3) thông qua **IAM Roles**, thay vì lưu trữ access key dài hạn.
-* Cải thiện kỹ năng sử dụng AWS Management Console và các lệnh cơ bản của AWS CLI.
+* Thiết lập thành công tài khoản cá nhân và nhận credit, chuẩn bị sẵn sàng cho các bài thực hành (Hands-on Labs) trên hệ thống thực tế.
+* Nắm vững sự chuyển dịch cơ bản từ hạ tầng On-premise sang Điện toán đám mây, đặc biệt là lợi ích chuyển đổi từ chi phí đầu tư (CAPEX) sang chi phí vận hành linh hoạt (OPEX).
+* Hiểu rõ cấu trúc vật lý của Hạ tầng toàn cầu AWS (Data Center, AZ, Region, Local Zone) để thiết kế các kiến trúc có tính sẵn sàng cao (High Availability).
+* Nhận diện được các công cụ quản trị tài nguyên AWS (Management Console, CLI, SDK) và nắm vững nguyên tắc bảo mật cốt lõi khi phân tách quyền hạn giữa Root User và IAM User.
+* Cập nhật xu hướng dịch chuyển trong lập trình nhờ Generative AI, hiểu khái niệm Autonomous Agents và phương pháp phát triển phần mềm an toàn thông qua Spec-Driven Development với AWS Kiro.
+* Nắm được các chiến lược Tối ưu hóa chi phí thiết yếu như: chọn đúng kích thước tài nguyên (Right-sizing), ưu tiên kiến trúc Serverless, và sử dụng AWS Budgets/Allocation Tags để kiểm soát ngân sách tự động.
+* Thành thạo 6 trụ cột của AWS Well-Architected Framework, phân biệt rõ rệt giữa Vận hành xuất sắc (tối ưu quy trình, con người, tự động hóa) và Độ tin cậy (kiến trúc chịu lỗi, tự phục hồi, không có single point of failure).

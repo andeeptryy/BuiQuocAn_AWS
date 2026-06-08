@@ -1,190 +1,96 @@
 ---
-title: "AI/ML/GenAI on AWS Workshop"
-date: "2025-11-15"
-weight: 1
+title: "FCAJ Community Day - Conference Call"
+date: "2026-05-23"
+weight: 2
 chapter: false
-pre: " <b> 4.1. </b> "
+pre: " <b> 4.2. </b> "
 ---
 
-# Summary Report: “AI/ML/GenAI on AWS Workshop”
+# Summary Report: “FCAJ Community Day – Conference Call”
 
 ### Event Objectives
 
-- Giới thiệu tổng quan về hệ sinh thái **AI/ML/GenAI trên AWS**.  
-- Hướng dẫn sử dụng **Amazon SageMaker** cho toàn bộ vòng đời Machine Learning.  
-- Cung cấp kiến thức nền tảng và thực hành về **Generative AI** thông qua Amazon Bedrock.  
-- Tạo cơ hội networking giữa sinh viên và chuyên gia AWS.  
-- Định hướng xu hướng AI/ML tại Việt Nam cùng các kỹ năng cần thiết để tham gia ngành.
+- Hiểu sâu sắc vai trò của "ngữ cảnh" (context) trong việc nâng cao độ chính xác và giảm thiểu lỗi của Generative AI.
+- Mở rộng góc nhìn về các cơ hội nghề nghiệp và kỹ năng cần thiết trong hệ sinh thái AI và nền tảng AWS.
+- Xây dựng mạng lưới kết nối (networking) với các kỹ sư đám mây, nhà phát triển phần mềm và cộng đồng AWS tại TP.HCM.
+- Trải nghiệm không khí của một sự kiện công nghệ quy mô lớn, cập nhật các xu hướng mới nhất về Cloud, Serverless và AI.
 
 ---
 
 ### Agenda Overview
 
-**Thời gian:** 8:30 AM – 12:00 PM, Thứ Bảy ngày 15/11/2025  
-**Địa điểm:** AWS Vietnam Office  
+**⏰ Thời gian:** 9:00 AM – 12:00 PM, Thứ Bảy ngày 23/05/2026
+**📍 Địa điểm:** Tòa nhà Bitexco Financial Tower, TP.HCM (Tầng 36 – Khu vực xem livestream dành cho khách mời)
 
 ---
 
 ## Key Highlights
 
-### 1. Welcome & Introduction (8:30 – 9:00 AM)
+### 1. Welcome & 36th-Floor Experience (8:30 – 9:00 AM)
 
-- Check-in và networking giữa người tham dự.  
-- Giới thiệu mục tiêu, nội dung trọng tâm.  
-- Hoạt động ice-breaker gắn kết nhóm.  
-- Tổng quan về xu hướng AI/ML tại Việt Nam.
-
----
-
-### 2. AWS AI/ML Services Overview (9:00 – 10:30 AM)
-
-Buổi workshop giới thiệu **toàn bộ hệ sinh thái AI Services của AWS**, bao gồm các dịch vụ AI “dùng ngay” (Pre-trained APIs) và các công cụ hỗ trợ phân tích dữ liệu đa phương tiện.
-
-## **1. AI Services (Pre-trained APIs – xử lý trực tiếp không cần training)**  
-Đây là lớp dịch vụ AI fully managed cho các tác vụ nhận dạng, phân tích, xử lý ngôn ngữ và đa phương tiện.
+- Ổn định chỗ ngồi tại khu vực riêng biệt trên tầng 36 dành cho khách mời danh dự.
+- Nhận tài liệu sự kiện và tham gia các hoạt động giao lưu đầu giờ.
+- Trải nghiệm hệ thống livestream trực tiếp với chất lượng âm thanh và hình ảnh xuất sắc, kết nối thẳng từ sân khấu chính ở tầng 26.
 
 ---
 
-### 🔹 Computer Vision
+### 2. Context Is Everything: Making AI Actually Work for You (9:00 – 09:30 AM)
 
-**Amazon Rekognition**  
-- Nhận diện khuôn mặt  
-- Phân tích ảnh & video  
-- Phát hiện đối tượng, cảnh  
-- Nhận diện text trong ảnh/video (Text-in-image)  
+Đây là phiên trình bày trọng tâm nhất, giải thích lý do các mô hình AI mạnh mẽ vẫn có thể thất bại nếu thiếu đi ngữ cảnh.
 
----
+**Ý nghĩa của "Context" trong AI hiện đại**
+- Nhấn mạnh sự khác biệt cốt lõi giữa việc AI "trả lời đúng cú pháp" và "trả lời trúng mục đích".
+- Việc cung cấp đầy đủ bối cảnh (dữ liệu người dùng, môi trường vận hành, lịch sử tương tác) giúp AI hiểu đúng ý định và giảm thiểu triệt để hiện tượng "hallucination" (ảo giác AI).
 
-### 🔹 Document AI / Text Extract
+**Từ Prompts đến Memory: Khái niệm Second AI Brain**
+- Khám phá sự tiến hóa từ hệ thống AI chỉ dựa vào câu lệnh (prompt-based) sang hệ thống thế hệ mới có khả năng lưu trữ bộ nhớ và cá nhân hóa dài hạn.
 
-**Amazon Textract**  
-- Trích xuất text, bảng, form từ tài liệu scan/PDF  
-- OCR nâng cao + phân tích cấu trúc  
+**Ứng dụng thực tế & Mindset làm việc**
+- Các mẹo tối ưu hóa việc xây dựng ứng dụng AI: Cung cấp đúng loại context, thiết kế prompt theo luồng công việc (workflow), và kết hợp Vector Database để xử lý tri thức chuyên sâu.
+- Quan trọng nhất là việc theo dõi log người dùng để tinh chỉnh hệ thống liên tục.
 
-**Amazon Comprehend**  
-- NLP: xử lý ngôn ngữ tự nhiên  
-- Sentiment analysis  
-- Entity recognition  
-- Keyphrase extraction  
-- Topic modeling  
+**Góc nhìn nghề nghiệp cho định hướng tương lai**
+- Giới thiệu các vị trí mới đang khát nhân lực như Prompt Engineer, AI Integrator, và Data & Context Pipeline Engineer. 
+- Việc định hình rõ các cơ hội nghề nghiệp này giúp chuẩn bị tốt hơn cho con đường chuyển tiếp từ môi trường đại học sang làm việc tại các dự án IT thực tế của doanh nghiệp.
+- Lời khuyên hành động: Tham gia cộng đồng AWS, làm chủ Amazon Bedrock/Lambda/CloudWatch và tự tay xây dựng các dự án LLM nhỏ.
 
 ---
 
-### 🔹 Speech & Voice
+### 3. Broadening the Cloud Horizon (09:30 AM – 12:00 PM)
 
-**Amazon Transcribe**  
-- Speech → Text  
-- Tự động nhận dạng giọng nói  
-- Tách speaker, timestamp  
+Phần còn lại của sự kiện mang đến góc nhìn đa dạng về các giải pháp và dịch vụ đám mây:
 
-**Amazon Polly**  
-- Text → Giọng nói (TTS)  
-- Nhiều giọng đọc tự nhiên (Neural TTS)  
-
----
-
-### 🔹 Chatbot & Conversation AI
-
-**Amazon Lex**  
-- Xây dựng chatbot hội thoại tự nhiên  
-- Intent classification, slot filling  
-
-**Amazon Connect Contact Lens**  
-- Phân tích hội thoại call center  
-- Sentiment, analytics  
+- **36 hrs with LotusHacks**: Hành trình phát triển sản phẩm UTMorpho từ con số 0 trong cuộc thi hackathon.
+- **Amazon CloudFront**: Tối ưu hóa chi phí, bảo mật và hiệu suất ứng dụng web từ hệ thống mạng biên (Edge Network).
+- **Hệ sinh thái Amazon Quick**: Xây dựng luồng công việc và dashboard thông minh chỉ bằng ngôn ngữ tự nhiên.
+- **Tính tất định của LLM (Determinism)**: Hiểu về cơ chế tối ưu inference và tại sao thiết lập `Temperature=0` vẫn không đảm bảo đầu ra giống hệt nhau 100%.
+- **Enterprise-Grade Multi-Agent System**: Xây dựng kiến trúc hội đồng tín dụng ảo và cơ chế Guardrails an toàn cho các startup ngành ngân hàng.
 
 ---
 
-### 🔹 Personalization & Recommendations
+### 4. Networking & Lucky Draw (Xuyên suốt sự kiện)
 
-**Amazon Personalize**  
-- Gợi ý sản phẩm cá nhân hóa  
-- Công nghệ nền tảng của Amazon.com  
-
----
-
-### 🔹 Fraud Detection
-
-**Amazon Fraud Detector**  
-- Phát hiện gian lận  
-- Dự đoán hành vi bất thường  
-
----
-
-### 🔹 Forecasting & Time-series
-
-**Amazon Forecast**  
-- Dự báo nhu cầu, doanh số  
-- ML không yêu cầu kinh nghiệm thuật toán  
-
----
-
-### 🔹 Search
-
-**Amazon Kendra**  
-- Enterprise semantic search  
-- Natural language Q&A  
-
----
-
-### 🔹 Translation
-
-**Amazon Translate**  
-- Dịch thuật đa ngôn ngữ chất lượng cao  
-
----
-
-### Amazon SageMaker – ML Platform
-
-Ngoài AI Services, sự kiện cũng trình bày hệ thống chi tiết về **Amazon SageMaker**:
-
-- Data preparation & labeling  
-- Model training & tuning  
-- Deployment & monitoring  
-- Integrated MLOps pipelines  
-
-**Live Demo: SageMaker Studio**  
-- Hướng dẫn triển khai mô hình từ notebook đến endpoint.  
-
----
-
-### 3. Coffee Break (10:30 – 10:45 AM)
-
-Networking nhẹ giữa mentor và người tham dự.
-
----
-
-### 4. Generative AI with Amazon Bedrock (10:45 AM – 12:00 PM)
-
-- Giới thiệu Foundation Models: Claude, Llama, Titan  
-- Kỹ thuật Prompt Engineering & Few-shot  
-- Kiến trúc **RAG** và Knowledge Base  
-- **Bedrock Agents** cho workflow nhiều bước  
-- **Guardrails** cho ứng dụng AI an toàn  
-- **Live Demo:** Chatbot GenAI dùng Bedrock  
+- Khuấy động không khí với 10 lượt rút thăm trúng thưởng (Lucky Draw) dành riêng cho khách mời tại tầng 36.
+- Giao lưu sôi nổi với cộng đồng sinh viên và kỹ sư đang làm việc trên AWS; cùng thảo luận về lộ trình thi chứng chỉ Cloud, các dự án thực tế về Serverless và GenAI.
 
 ---
 
 ## Key Takeaways
 
-### AI/ML on AWS
-- AWS cung cấp bộ AI Services đa dạng, dễ dùng và phù hợp nhiều bài toán thực tế.  
-- SageMaker giúp chuẩn hóa toàn bộ chu trình ML.  
+### AI Implementation
+- Ngữ cảnh (Context) chính là chìa khóa quyết định để biến một mô hình ngôn ngữ thông thường thành một trợ lý AI đáng tin cậy, đủ tiêu chuẩn áp dụng trong doanh nghiệp.
 
-### Generative AI
-- Mỗi Foundation Model có thế mạnh riêng.  
-- RAG là chìa khóa để đưa dữ liệu nội bộ vào GenAI an toàn.  
+### Career Orientation
+- Ngành công nghệ đang dịch chuyển, mở ra nhiều cơ hội lớn cho những nhân sự đa năng không chỉ biết viết code mà còn có tư duy tích hợp AI và quản trị luồng dữ liệu một cách linh hoạt.
 
-### Bedrock Ecosystem
-- Bedrock Agents cho phép tự động hóa quy trình.  
-- Guardrails đảm bảo an toàn khi triển khai ứng dụng AI.  
+### Community & Networking
+- Việc tiếp xúc với các chuyên gia trong hệ sinh thái AWS giúp thu hẹp khoảng cách giữa lý thuyết học thuật và những bài toán triển khai kiến trúc hạ tầng thực tiễn.
 
 ---
 
 ### Some event photos
-*Add your event photos here*
+*Thêm hình ảnh sự kiện của bạn tại đây (Hình check-in Bitexco, màn hình livestream, hình ảnh networking...)*
 
 ---
 
-> Buổi workshop mang lại góc nhìn toàn diện về AI/ML/GenAI trên AWS, đặc biệt là cách ứng dụng AI Services, SageMaker và Bedrock trong thực tế doanh nghiệp. Đây là bước đệm quan trọng giúp người tham dự tự tin bước vào lĩnh vực AI/ML.
-
+> Sự kiện FCAJ Community Day đã cung cấp những góc nhìn công nghệ cực kỳ sắc bén, đặc biệt là tư duy ưu tiên ngữ cảnh thay vì chỉ chạy đua theo sức mạnh của các mô hình AI. Trải nghiệm trọn vẹn tại không gian tầng 36 cùng sự nhiệt huyết của cộng đồng AWS đã truyền cho tôi nguồn động lực to lớn trên con đường phát triển chuyên môn sắp tới.
