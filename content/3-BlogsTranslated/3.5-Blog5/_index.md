@@ -1,28 +1,59 @@
 ---
-title: "Blog 2"
-date: "2025-09-08"
-weight: 1
+title: "Blog 2: Verifiable Blockchain Key Management"
+date: "2026-06-18"
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# How an infrastructure developer leverages AI certification to drive innovation
-<span class="meta-info">by Tim Trsar | on 04 AUG 2025  | in</span> [AWS Training and Certification](https://aws.amazon.com/blogs/training-and-certification/category/aws-training-and-certification/), [Best Practices](https://aws.amazon.com/blogs/training-and-certification/category/post-types/best-practices/), [Generative AI](https://aws.amazon.com/blogs/training-and-certification/category/artificial-intelligence/generative-ai/) | [Permalink](https://aws.amazon.com/blogs/publicsector/integrate-ai-powered-coding-assistance-in-secure-environments-using-continue-and-amazon-bedrock/) 
+# [SECURITY/Web3] Building secure, verifiable blockchain key management on AWS Nitro Enclaves at Turnkey
+<span class="meta-info">By Harshvardhan Chunawala and Jack Kearney | On June 08, 2026 | In</span> [Web3](https://aws.amazon.com/blogs/web3/), [Security](https://aws.amazon.com/blogs/web3/category/security-identity-compliance/security/), [AWS Nitro Enclaves](https://aws.amazon.com/ec2/nitro/nitro-enclaves/) | [Original AWS Blog](https://aws.amazon.com/vi/blogs/web3/building-secure-verifiable-blockchain-key-management-on-aws-nitro-enclaves-at-turnkey/)
 
-At Amazon Web Services (AWS), we’re committed to democratizing [generative AI](https://aws.amazon.com/generative-ai/), making it accessible to professionals across all roles. Alexandra Fernandez, an infrastructure developer at a leading financial company, exemplifies how [AWS Certification](https://aws.amazon.com/certification/) programs are empowering technology professionals to embrace AI transformation, even before it becomes a requirement in their current roles.
+Hello AWS Study Group VN community!
 
-With 4 years of cloud technology experience, Alexandra recognized early that AI would fundamentally change how we work. “Whether you’re a writer, a social media manager, or a software engineer, AI will become an essential tool for increasing productivity,” she explains. This forward-thinking mindset aligns with how AWS has pioneered cloud computing so anyone can access powerful technology.
+The continuous string of private key compromises has made "Key Management" a massive headache for Web3/DeFi developers. 
 
-## Applying knowledge to real-world projects
-As a member of the [AWS Community Builders](https://builder.aws.com/connect/community/community-builders) program, Alexandra didn’t wait for AI to become mandatory in her role. Instead, she proactively pursued the [AWS Certified AI Practitioner certification](https://aws.amazon.com/certification/certified-ai-practitioner/), applying her knowledge to real-world projects. She’s currently working on Kiu, a virtual agent powered by [Amazon Bedrock](https://aws.amazon.com/bedrock/), designed to accelerate [Amazon Web Services (AWS)](https://aws.amazon.com/aws/) learning and strengthen community connections. This practical application demonstrates how AWS is democratizing generative AI through Amazon Bedrock, making it a seamless way to build and scale generative AI applications.
+I recently read a technical blog from the AWS Web3 Blog on how Turnkey completely resolves this issue by combining cryptography with the hardware infrastructure of **AWS Nitro Enclaves**. Here are the core highlights:
 
-Alexandra’s journey with AWS began 3 years ago when she won third place in the [AWS DeepRacer](https://aws.amazon.com/deepracer/) competition at the [AWS Summit](https://aws.amazon.com/events/summits/?ams%23interactive-card-vertical%23pattern-data-1911509906.filter=%257B%2522filters%2522%253A%255B%255D%257D) in Atlanta. This experience sparked her interest in [machine learning (ML)](https://aws.amazon.com/ai/machine-learning/) with AWS, leading to a methodical approach to certification: starting with [AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/), progressing to [AWS Certified AI Practitioner](https://aws.amazon.com/certification/certified-ai-practitioner/), and most recently [AWS Certified Machine Learning Engineer – Associate](https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/), planning for more advanced ML certifications. This structured path reflects the AWS commitment to providing the most comprehensive set of data and AI services in the industry.
+## 1. The Key Management Challenge
+Traditional <span class='highlight-code'>transaction signing</span> processes often force developers into difficult tradeoffs between security and operational efficiency:
+- **Do-It-Yourself (DIY) Infrastructure:** Requires massive capital expenditure and introduces high compliance risks.
+- **Third-party Custodians:** Reduces direct control over assets and lacks operational transparency.
+- **Standard Software Infrastructure:** <span class='highlight-code'>Raw keys</span> are highly vulnerable to extraction through <span class='highlight-code'>memory dumps</span> or <span class='highlight-code'>log files</span> if the ecosystem is compromised.
 
-The impact of AWS Certification extends beyond individual achievement. As part of the AWS community, Alexandra actively contributes to both English- and Spanish-speaking AWS communities, sharing her knowledge and helping others prepare for an AI-driven future. This exemplifies the strength of the AWS community, which includes millions of customers and over 100,000 partners globally.
+## 2. AWS Nitro Enclaves Isolation Mechanism
+Turnkey implements an **Enclave-Native Key Management** model, shifting all sensitive operations—including key generation, digital signing, and policy execution—into AWS Nitro Enclaves:
+- **Hardware Isolation:** The enclave environment has no persistent storage, no interactive access (no SSH), and no external internet connectivity.
+- **Secure Communication:** Data is transmitted exclusively via an internal <span class='highlight-code'>VSOCK</span> channel. Configuration keys are decrypted only in RAM at the exact moment of transaction signing and are immediately purged. Neither Turnkey's system administrators nor AWS can access the raw keys.
 
-## Proactive and prepared
-“It’s about being prepared before these changes become mandatory,” Alexandra notes. Her experience shows how professionals use AWS Certification programs to stay ahead of technological developments while building practical skills. She’s already implementing prompt engineering and [Retrieval Augmented Generation (RAG)]( Retrieval Augmented Generation (RAG)) techniques in her projects, demonstrating how AWS provides the tools and training needed to transform ideas into reality.
+## 3. Cryptographic Key Generation and Storage
+The system utilizes a <span class='highlight-code'>Hierarchical Deterministic Wallet (HD Wallet)</span> model to manage derivative key structures:
+- **Seed Generation:** Uses a highly secure random number generator provided by the hardware <span class='highlight-code'>Nitro Security Module (NSM)</span>.
+- **Symmetric Encryption:** The root <span class='highlight-code'>Seed</span> string is encrypted using a master secret called the <span class='highlight-code'>Quorum Key</span> before being persisted to the database.
+- **Transaction Signing:** The ciphertext is loaded into the enclave, temporarily decrypted in RAM to execute the cryptographic signing instruction, and then securely discarded. Raw keys are never written to disk.
 
-Alexandra’s story reflects a broader trend we’re seeing across industries: professionals taking initiative to build AI capabilities before they become essential job requirements. With AWS offering over 60% more services and 40% more features than the next closest cloud provider, we’re providing professionals like Fernandez the tools and training they need to drive innovation in their organizations.
+## 4. Architecture: Separation of State and Data Flow
+To simplify, Turnkey's architecture is divided into two distinct zones: The External Management Zone (untrusted) and the Internal Compute Zone (strictly trusted).
 
-For technology professionals looking to follow Alexandra’s path, AWS offers comprehensive certification programs that provide practical, hands-on experience with cutting-edge AI technologies. As Fernandez’s experience shows, the journey to AI expertise doesn’t require an AI-specific role—it requires curiosity, dedication, and [the right learning resources](https://aws.amazon.com/training/learn-about/generative-ai/).
+![Turnkey Architecture](/images/3-Blogs/Blog-3/image_0d024a.png)
+<span class="meta-info">*Figure 1: Turnkey Infrastructure & Data Flow*</span>
+
+- **External (AWS Cloud Infrastructure):** When a user sends a request via API Gateway, an <span class='highlight-code'>Amazon EC2</span> instance (Coordinator) processes it. State data and encrypted root keys are stored in the <span class='highlight-code'>Aurora Database</span>. Background tasks like the Async Queue, Redis, Updater, Heartbeat, and Webhook Notifiers only synchronize the system and send alerts. This zone is entirely oblivious to raw keys.
+- **Internal (AWS Nitro Enclave):** The EC2 server forwards sensitive commands down to the Enclave via an internal <span class='highlight-code'>gRPC/VSOCK</span> channel. Within this isolated environment, processing is fully self-contained across 5 steps:
+  1. **TLS Fetcher:** Establishes secure outbound network connections from within.
+  2. **Parser:** Extracts and parses transaction data.
+  3. **Policy Engine:** Verifies if the transaction complies with user-defined rules (limits, blocklists, etc.).
+  4. **Notarizer:** Cryptographically authenticates valid transactions after they pass the policy engine.
+  5. **Signer:** Fetches the encrypted key from the database, temporarily decrypts it in RAM to sign the transaction, and instantly wipes all traces.
+
+## 5. Mathematical Remote Attestation
+Turnkey shifts the paradigm from a *trust-based* model to a *verifiable* model based on:
+- **Remote Attestation:** AWS provides a cryptographically signed attestation document verified by hardware to prove that the executing code inside the enclave hasn't been tampered with or implanted with malware.
+- **Reproducible Builds:** The system operates on <span class='highlight-code'>QuorumOS</span>—a minimalist operating system. Independent third parties can compile the source code from scratch to verify the integrity of the deployed system.
+
+## Real-world Applications
+- **Embedded Wallets:** Integrating non-custodial wallets into decentralized applications with enterprise-grade security standards.
+- **AI Agent Transactions:** Empowering AI agents to execute automated on-chain transactions based on pre-set policies without ever exposing the configuration keys.
+
+### Conclusion
+Turnkey's solution leverages AWS Nitro Enclaves to establish a closed-loop key processing workflow entirely in RAM, automatically freeing memory post-execution. The strict separation between state storage and the isolated hardware execution environment ensures digital assets remain protected even if the host infrastructure is breached. Simultaneously, through remote attestation and reproducible builds, the system allows users to independently verify the integrity and transparency of the entire cryptographic process.

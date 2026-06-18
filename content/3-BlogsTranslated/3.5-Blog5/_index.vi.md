@@ -1,29 +1,59 @@
 ---
-title: "Blog 2"
-date: "2025-09-08"
-weight: 1
+title: "Blog 2: Verifiable Blockchain Key Management"
+date: "2026-06-18"
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# Cách một nhà phát triển hạ tầng tận dụng chứng chỉ AI để thúc đẩy đổi mới
-<span class="meta-info">Tác giả: Tim Trsar | ngày: 04 tháng 08, 2025 | in</span> [AWS Training and Certification](https://aws.amazon.com/blogs/training-and-certification/category/aws-training-and-certification/), [Best Practices](https://aws.amazon.com/blogs/training-and-certification/category/post-types/best-practices/), [Generative AI](https://aws.amazon.com/blogs/training-and-certification/category/artificial-intelligence/generative-ai/) | [Permalink](https://aws.amazon.com/blogs/publicsector/integrate-ai-powered-coding-assistance-in-secure-environments-using-continue-and-amazon-bedrock/) 
+# [SECURITY/Web3] Building secure, verifiable blockchain key management on AWS Nitro Enclaves at Turnkey
+<span class="meta-info">Tác giả: Harshvardhan Chunawala and Jack Kearney | ngày: 08 tháng 06, 2026 | in</span> [Web3](https://aws.amazon.com/blogs/web3/), [Security](https://aws.amazon.com/blogs/web3/category/security-identity-compliance/security/), [AWS Nitro Enclaves](https://aws.amazon.com/ec2/nitro/nitro-enclaves/) | [Original AWS Blog](https://aws.amazon.com/vi/blogs/web3/building-secure-verifiable-blockchain-key-management-on-aws-nitro-enclaves-at-turnkey/)
 
-Tại Amazon Web Services (AWS), chúng tôi cam kết dân chủ hóa trí tuệ nhân tạo sinh [generative AI](https://aws.amazon.com/generative-ai/),giúp công nghệ này trở nên dễ tiếp cận với các chuyên gia ở mọi lĩnh vực. Alexandra Fernandez, một nhà phát triển hạ tầng tại một công ty tài chính hàng đầu, là minh chứng cho cách các chương trình [AWS Certification](https://aws.amazon.com/certification/) đang trao quyền cho các chuyên gia công nghệ để đón nhận sự chuyển đổi AI, ngay cả khi điều đó chưa phải là yêu cầu trong vai trò hiện tại của họ.
-Với 4 năm kinh nghiệm trong công nghệ điện toán đám mây, Alexandra sớm nhận ra rằng AI sẽ làm thay đổi căn bản cách chúng ta làm việc. “Dù bạn là nhà văn, quản lý mạng xã hội hay kỹ sư phần mềm, AI sẽ trở thành công cụ thiết yếu để tăng năng suất,” cô giải thích. Tư duy tiến bộ này phù hợp với cách AWS tiên phong trong điện toán đám mây, giúp bất kỳ ai cũng có thể tiếp cận công nghệ mạnh mẽ.
+Chào anh em AWS Study Group VN!
 
+Các vụ lộ private key liên tục diễn ra khiến bài toán "Quản lý khóa (Key Management)" trở thành nỗi đau đầu lớn cho dev Web3/DeFi. 
 
-## Áp dụng kiến thức vào dự án thực tế
-Là thành viên của chương trình [AWS Community Builders](https://builder.aws.com/connect/community/community-builders) Alexandra không chờ đến khi AI trở thành yêu cầu bắt buộc trong công việc. Thay vào đó, cô chủ động theo đuổi [AWS Certified AI Practitioner certification](https://aws.amazon.com/certification/certified-ai-practitioner/) và áp dụng kiến thức vào các dự án thực tế. Hiện tại, cô đang phát triển Kiu, một trợ lý ảo được hỗ trợ bởi [Amazon Bedrock](https://aws.amazon.com/bedrock/), nhằm thúc đẩy việc học về [Amazon Web Services (AWS)](https://aws.amazon.com/aws/) và tăng cường kết nối cộng đồng. Việc ứng dụng thực tiễn này cho thấy AWS đang dân chủ hóa AI sinh thông qua Amazon Bedrock, giúp việc xây dựng và mở rộng các ứng dụng AI sinh trở nên liền mạch và dễ dàng.
+Mình vừa đọc bài blog kỹ thuật từ AWS Web3 Blog về cách Turnkey giải quyết triệt để vấn đề này nhờ kết hợp mật mã học và hạ tầng phần cứng **AWS Nitro Enclaves**. Dưới đây là các điểm cốt lõi:
 
-Hành trình của Alexandra với AWS bắt đầu cách đây 3 năm, khi cô giành giải ba trong cuộc thi  [AWS DeepRacer](https://aws.amazon.com/deepracer/) tại hội nghị [AWS Summit](https://aws.amazon.com/events/summits/?ams%23interactive-card-vertical%23pattern-data-1911509906.filter=%257B%2522filters%2522%253A%255B%255D%257D) ở Atlanta. Trải nghiệm này đã khơi dậy niềm đam mê của cô với lĩnh vực học máy [machine learning (ML)](https://aws.amazon.com/ai/machine-learning/)  trên nền tảng AWS, dẫn đến một lộ trình học tập có phương pháp: bắt đầu với chứng chỉ [AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/), progressing tiếp theo là [AWS Certified AI Practitioner](https://aws.amazon.com/certification/certified-ai-practitioner/), và gần nhất là [AWS Certified Machine Learning Engineer – Associate](https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/), với kế hoạch tiếp tục theo đuổi các chứng chỉ ML nâng cao hơn. Lộ trình có cấu trúc này phản ánh cam kết của AWS trong việc cung cấp bộ dịch vụ dữ liệu và AI toàn diện nhất trong ngành.
+## 1. Thách thức trong kiến trúc quản lý khóa hiện tại
+Quá trình ký giao dịch (<span class='highlight-code'>transaction signing</span>) thông thường đòi hỏi sự cân nhắc giữa bảo mật và hiệu suất vận hành:
+- **Tự xây dựng hạ tầng (DIY):** Yêu cầu chi phí lớn và đối mặt với rủi ro cao về mặt tuân thủ (compliance).
+- **Ủy thác cho bên thứ ba (Custodians):** Làm giảm quyền kiểm soát trực tiếp và thiếu tính minh bạch về mặt vận hành.
+- **Hạ tầng phần mềm thông thường:** Khóa thô (<span class='highlight-code'>raw keys</span>) có nguy cơ bị khai thác thông qua kết xuất bộ nhớ (<span class='highlight-code'>memory dumps</span>) hoặc tệp tin nhật ký (<span class='highlight-code'>log files</span>) khi hệ sinh thái bị xâm nhập.
 
-Tác động của các chứng chỉ AWS vượt xa thành tích cá nhân. Là một phần của cộng đồng AWS, Alexandra tích cực đóng góp cho cả cộng đồng nói tiếng Anh và tiếng Tây Ban Nha, chia sẻ kiến thức và giúp người khác chuẩn bị cho một tương lai do AI dẫn dắt. Điều này thể hiện sức mạnh của cộng đồng AWS, nơi quy tụ hàng triệu khách hàng và hơn 100.000 đối tác trên toàn cầu.
+## 2. Cơ chế cô lập của AWS Nitro Enclaves
+Turnkey triển khai mô hình mã hóa tích hợp enclave (**Enclave-Native Key Management**), chuyển toàn bộ các tác vụ nhạy cảm bao gồm khởi tạo khóa, ký số và thực thi chính sách vào môi trường AWS Nitro Enclaves:
+- **Cô lập phần cứng:** Môi trường enclave không có lưu trữ vĩnh viễn, không hỗ trợ truy cập tương tác (no SSH) và không kết nối Internet.
+- **Giao tiếp an toàn:** Dữ liệu được truyền qua kênh ảo nội bộ <span class='highlight-code'>VSOCK</span>. Khóa cấu hình chỉ được giải mã trong RAM tại thời điểm ký giao dịch và được xóa ngay lập tức. Quản trị viên hệ thống của Turnkey hoặc AWS đều không thể tiếp cận khóa thô.
 
+## 3. Quy trình khởi tạo và lưu trữ dữ liệu mật mã
+Hệ thống sử dụng mô hình ví cây phân cấp (<span class='highlight-code'>Hierarchical Deterministic Wallet - HD Wallet</span>) để quản lý cấu trúc khóa phái sinh:
+- **Khởi tạo dữ liệu gốc:** Sử dụng bộ sinh số ngẫu nhiên an toàn được cung cấp bởi phần cứng <span class='highlight-code'>Nitro Security Module (NSM)</span>.
+- **Mã hóa đối xứng:** Chuỗi <span class='highlight-code'>Seed</span> gốc được mã hóa thông qua khóa <span class='highlight-code'>Quorum Key</span> trước khi lưu trữ vào cơ sở dữ liệu.
+- **Ký giao dịch:** Bản mã được nạp vào enclave, giải mã tạm thời trong RAM để thực hiện lệnh ký mật mã, sau đó xóa bỏ. Khóa thô không bao giờ được ghi xuống đĩa lưu trữ (disk).
 
-## Chủ động và sẵn sàng
-“Điều quan trọng là phải chuẩn bị trước khi những thay đổi này trở thành bắt buộc,” Alexandra chia sẻ. Kinh nghiệm của cô cho thấy cách các chuyên gia công nghệ sử dụng chương trình chứng chỉ của AWS để đi trước các xu hướng công nghệ, đồng thời xây dựng kỹ năng thực tiễn. Cô đã bắt đầu áp dụng các kỹ thuật như Prompt Engineering và [Retrieval Augmented Generation (RAG)](https://aws.amazon.com/what-is/retrieval-augmented-generation/) vào các dự án của mình, minh chứng cho việc AWS cung cấp đầy đủ công cụ và đào tạo để biến ý tưởng thành hiện thực.
+## 4. Kiến trúc phân tách trạng thái và luồng dữ liệu hệ thống
+Để dễ hiểu, kiến trúc của Turnkey được chia làm hai phần tách biệt: Phân vùng quản lý bên ngoài (không an toàn tuyệt đối) và Phân vùng tính toán bên trong (an toàn tuyệt đối).
 
-Câu chuyện của Alexandra phản ánh một xu hướng rộng hơn đang diễn ra trong nhiều ngành nghề: các chuyên gia chủ động xây dựng năng lực AI trước khi nó trở thành yêu cầu thiết yếu trong công việc. Với việc AWS cung cấp hơn 60% dịch vụ và 40% tính năng nhiều hơn so với nhà cung cấp đám mây gần nhất, chúng tôi đang trao cho các chuyên gia như Fernandez những công cụ và chương trình đào tạo cần thiết để thúc đẩy đổi mới trong tổ chức của họ.
+![Turnkey Architecture](/images/3-Blogs/Blog-3/image_0d024a.png)
+<span class="meta-info">*Hình 1: Kiến trúc và Luồng dữ liệu của Turnkey*</span>
 
-Đối với những chuyên gia công nghệ muốn đi theo con đường của Alexandra, AWS cung cấp các chương trình chứng chỉ toàn diện, mang lại trải nghiệm thực tế với các công nghệ AI tiên tiến. Như kinh nghiệm của Fernandez cho thấy, hành trình trở thành chuyên gia AI không nhất thiết phải bắt đầu từ một vai trò chuyên về AI—mà cần sự tò mò, kiên trì và [tài nguyên học tập phù hợp](https://aws.amazon.com/vi/training/learn-about/ai/).
+- **Bên ngoài (Hạ tầng AWS Cloud):** Khi người dùng gửi yêu cầu qua API Gateway, máy chủ <span class='highlight-code'>Amazon EC2</span> (Coordinator) sẽ tiếp nhận và xử lý. Các dữ liệu trạng thái và bản khóa gốc đã mã hóa được lưu ở <span class='highlight-code'>Aurora Database</span>. Các tác vụ nền khác như hàng đợi bất đồng bộ (Async Queue), Redis, Updater, Heartbeat và Notifier chỉ làm nhiệm vụ đồng bộ hệ thống và gửi thông báo (Webhook Targets). Phân vùng này hoàn toàn không biết khóa thô là gì.
+- **Bên trong (AWS Nitro Enclave):** Máy chủ EC2 chuyển các lệnh nhạy cảm xuống Enclave qua kênh nội bộ <span class='highlight-code'>gRPC/VSOCK</span>. Trong môi trường cô lập này, luồng xử lý diễn ra khép kín qua 5 bước:
+  1. **TLS Fetcher:** Tạo kết nối mạng bảo mật từ bên trong.
+  2. **Parser:** Bóc tách dữ liệu giao dịch.
+  3. **Policy Engine:** Kiểm tra giao dịch có vi phạm các quy tắc (hạn mức, danh sách chặn...) của người dùng hay không.
+  4. **Notarizer:** Ký chứng nhận giao dịch hợp lệ sau khi vượt qua bộ máy chính sách.
+  5. **Signer:** Lấy bản mã hóa khóa từ database, giải mã tạm thời trong RAM để ký số giao dịch rồi lập tức xóa sạch dấu vết.
+
+## 5. Cơ chế xác thực từ xa bằng toán học
+Turnkey chuyển đổi mô hình từ tin tưởng tuyệt đối (trust-based) sang mô hình có thể kiểm chứng (verifiable) dựa trên:
+- **Remote Attestation:** AWS cung cấp tài liệu chứng thực mật mã được ký bởi phần cứng nhằm xác minh mã thực thi trong enclave không bị thay đổi hoặc cài cắm mã độc.
+- **Reproducible Builds:** Hệ thống vận hành trên <span class='highlight-code'>QuorumOS</span> - một hệ điều hành tối giản. Các bên độc lập có thể tự biên dịch lại mã nguồn từ đầu để đối chiếu tính toàn vẹn của hệ thống.
+
+## Ứng dụng thực tế
+- **Embedded Wallets:** Tích hợp ví không lưu ký (non-custodial) vào ứng dụng phi tập trung với tiêu chuẩn an toàn cấp doanh nghiệp.
+- **AI Agent Transactions:** Hỗ trợ các tác nhân AI thực thi giao dịch tự động trên chuỗi (on-chain) theo các chính sách thiết lập sẵn mà không làm lộ khóa cấu hình.
+
+### Tổng kết
+Giải pháp của Turnkey tận dụng AWS Nitro Enclaves để thiết lập một quy trình xử lý khóa khép kín trong RAM và tự động giải phóng bộ nhớ sau khi sử dụng. Sự tách biệt hoàn toàn giữa lưu trữ trạng thái (State) và môi trường thực thi phần cứng cô lập (Execution) giúp bảo vệ tài sản số ngay cả khi hạ tầng máy chủ máy ảo bị xâm nhập. Đồng thời, nhờ cơ chế chứng thực từ xa và khả năng tái lập mã nguồn, hệ thống cho phép người dùng kiểm chứng tính toàn vẹn và minh bạch của toàn bộ quy trình mật mã.
