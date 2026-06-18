@@ -1,7 +1,7 @@
 ---
 title: "BÁO CÁO TUẦN 8"
 date: "2026-06-15"
-weight: 1
+weight: 8
 chapter: false
 pre: " <b> 1.8 </b> "
 ---
