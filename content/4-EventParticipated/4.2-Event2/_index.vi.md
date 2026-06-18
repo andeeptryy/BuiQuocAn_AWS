@@ -1,207 +1,82 @@
 ---
-title: "DevOps on AWS Workshop"
-date: "2025-11-17"
+title: "AWS Meetup: First Cloud AI Journey"
+date: "2026-06-13"
 weight: 1
 chapter: false
-pre: " <b> 4.2. </b> "
+pre: " <b> 4.2 </b> "
 ---
 
+# Báo cáo tổng kết: “AWS Meetup: First Cloud AI Journey”
 
-# Summary Report: “DevOps on AWS Workshop”
+### Mục tiêu sự kiện
 
-### Event Objectives
-
-- Giới thiệu tổng quan về DevOps trên AWS, bao gồm văn hóa, nguyên tắc và mindset.  
-- Trình bày chi tiết các dịch vụ DevOps của AWS: **CodeCommit, CodeBuild, CodeDeploy, CodePipeline**.  
-- Hướng dẫn thực hành về **Infrastructure as Code** (CloudFormation & CDK).  
-- Cung cấp kiến thức sâu về container services: **ECR, ECS, EKS, App Runner**.  
-- Thực hành quan sát hệ thống (Observability) với **CloudWatch & X-Ray**.  
-- Tìm hiểu best practices, chiến lược triển khai và lộ trình nghề nghiệp DevOps.
+- Hoạch định lộ trình phát triển sự nghiệp thực tế trong Hệ sinh thái AWS, từ các chương trình dành cho sinh viên đến các vị trí chuyên gia cao cấp như Solutions Architect.
+- Giải mã vai trò thực sự của một kỹ sư DevOps trong môi trường doanh nghiệp, nhấn mạnh vào nền tảng cốt lõi thay vì chạy theo công cụ xu hướng.
+- Tìm hiểu sâu về quy trình tuyển dụng chuẩn mực và văn hóa làm việc đặc thù tại các Tập đoàn Đa quốc gia (MNCs).
+- Mở rộng kết nối (Networking) với các kỹ sư giàu kinh nghiệm và AWS Community Builders để thu hẹp khoảng cách giữa lý thuyết học thuật và thực tiễn ngành IT.
 
 ---
 
 ### Agenda Overview
 
-**Thời gian:** 8:30 AM – 5:00 PM, Thứ Hai ngày 17/11/2025  
-**Địa điểm:** AWS Vietnam Office
+**⏰ Thời gian:** 9:00 AM – 12:00 PM, Thứ Bảy ngày 13/06/2026
+**📍 Địa điểm:** Offline Meetup (TP. HCM)
 
 ---
 
-## Key Highlights
+## Các điểm nhấn chính (Key Highlights)
 
-## Morning Session (8:30 AM – 12:00 PM)
+### 1. Hành trình từ First Cloud AI Journey đến AWS Partner (9:00 – 10:00 AM)
 
-### 1. Welcome & DevOps Mindset (8:30 – 9:00 AM)
+*Diễn giả: Anh Danh Hoàng Hiếu Nghị (AI Engineer, AWS Community Builder)*
 
-- Recap nhanh nội dung buổi AI/ML trước đó.  
-- Giới thiệu văn hóa DevOps và các nguyên tắc cốt lõi.  
-- Trình bày lợi ích DevOps, các chỉ số hiệu suất chính:  
-  - **DORA Metrics**  
-  - **MTTR** (Mean Time to Recovery)  
-  - Deployment frequency  
+Phiên mở đầu phác họa bức tranh toàn cảnh về cách hội nhập vào hệ sinh thái AWS, bắt đầu từ những bước đi cơ bản nhất của thời sinh viên.
+- **Nấc thang cộng đồng AWS:** Chi tiết hóa lộ trình thăng tiến từ việc tham gia *AWS Student Builder Group*, trở thành *AWS Community Builder*, và tiến tới đẳng cấp *AWS Partner*.
+- **Mở rộng định hướng nghề nghiệp:** Nhấn mạnh rằng có được công việc đầu tiên mới chỉ là khởi đầu. Hệ sinh thái đám mây mang đến vô vàn cơ hội trở thành DevOps Engineer, Platform Engineer hay Solutions Architect.
+- **Lời khuyên hành động:** Tích cực tham gia các hoạt động cộng đồng để xây dựng mạng lưới quan hệ chuyên nghiệp và tự tay "viết nên lịch sử của chính mình" trong ngành công nghệ.
 
 ---
 
-### 2. AWS DevOps Services – CI/CD Pipeline (9:00 – 10:30 AM)
+### 2. DevOps Engineer thực tế làm gì? (10:00 – 11:00 AM)
 
-Nội dung tập trung vào xây dựng pipeline CI/CD hoàn chỉnh sử dụng AWS-native services.
+*Diễn giả: Anh Trọng H. Trương (DevOps Engineer @ Endava Vietnam)*
 
-#### **Source Control**
-- **AWS CodeCommit**  
-- Chiến lược quản lý source:  
-  - GitFlow  
-  - Trunk-based development  
-
-#### **Build & Test**
-- **AWS CodeBuild**  
-- Cấu hình buildspec.yml  
-- Thiết kế pipeline testing  
-
-#### **Deployment**
-- **AWS CodeDeploy** hỗ trợ nhiều chiến lược:  
-  - Blue/Green  
-  - Canary  
-  - Rolling updates  
-
-#### **Orchestration**
-- **AWS CodePipeline**  
-- Tự động hóa CI/CD end-to-end  
-
-#### **Live Demo**
-- Walkthrough CI/CD pipeline hoàn chỉnh từ commit → build → test → deploy.
+Một phiên chia sẻ cực kỳ thực chiến, đập tan những hiểu lầm phổ biến về nghề DevOps.
+- **Kỳ vọng vs Thực tế:** Xóa bỏ định kiến cho rằng DevOps chỉ là "người viết kịch bản CI/CD", "chuyên gia Kubernetes" hay "người đi sửa lỗi server lúc nửa đêm".
+- **Giá trị cốt lõi của DevOps:** Khẳng định DevOps thực thụ là người có tư duy hệ thống (System Thinking), biết cách tự động hóa các công việc lặp đi lặp lại và làm cho mọi thứ trở nên rõ ràng, dễ dàng hơn cho toàn bộ đội ngũ phát triển. Giao tiếp là một phần cực kỳ quan trọng của công việc.
+- **Nên học gì trước tiên?** Khuyên sinh viên nên ưu tiên kiến thức nền tảng hơn là các công cụ hào nhoáng. Việc làm chủ Linux, Mạng máy tính cơ bản, Git và một ngôn ngữ lập trình (Python/Golang) là bắt buộc trước khi nhảy vào các hệ thống phức tạp như K8s.
+- **Bài học then chốt:** "Công cụ luôn thay đổi. Nền tảng thì không. Hãy dùng AI làm đòn bẩy kỹ năng, đừng dùng nó để tắt não."
 
 ---
 
-### 3. Break (10:30 – 10:45 AM)
+### 3. Câu chuyện thực tế và Văn hóa tại Tập đoàn Đa quốc gia (11:00 AM – 12:00 PM)
 
----
+*Diễn giả: Anh Cường Nguyễn & Anh Đạt Phạm (Data Analytics Engineers)*
 
-### 4. Infrastructure as Code (IaC) (10:45 AM – 12:00 PM)
-
-#### **AWS CloudFormation**
-- Templates, stacks, change sets  
-- Drift detection  
-
-#### **AWS CDK (Cloud Development Kit)**
-- Constructs  
-- Reusable patterns  
-- Hỗ trợ nhiều ngôn ngữ: TypeScript, Python, Java, C#  
-
-#### **Live Demo**
-- Deploy hạ tầng với CloudFormation & CDK  
-
-#### **Thảo luận**
-- So sánh ưu/nhược điểm của CloudFormation vs CDK  
-- Tình huống chọn công cụ IaC phù hợp  
-
----
-
-### Lunch Break (12:00 – 1:00 PM)
-
----
-
-## Afternoon Session (1:00 PM – 5:00 PM)
-
-### 5. Container Services on AWS (1:00 – 2:30 PM)
-
-#### **Docker Fundamentals**
-- Microservices  
-- Containerization workflow  
-
-#### **Amazon ECR**
-- Image registry  
-- Image scanning  
-- Lifecycle policies  
-
-#### **Amazon ECS & EKS**
-- Deployment strategies  
-- Auto scaling  
-- Orchestration differences  
-  - ECS: AWS-managed  
-  - EKS: Kubernetes-native  
-
-#### **AWS App Runner**
-- Triển khai container đơn giản, fully managed  
-- Tích hợp CI/CD nhanh chóng  
-
-#### **Demo & Case Study**
-- So sánh triển khai microservices trên ECS, EKS và App Runner.
-
----
-
-### 6. Break (2:30 – 2:45 PM)
-
----
-
-### 7. Monitoring & Observability (2:45 – 4:00 PM)
-
-#### **Amazon CloudWatch**
-- Metrics  
-- Logs  
-- Alarms  
-- Dashboard  
-
-#### **AWS X-Ray**
-- Distributed tracing  
-- Hiểu rõ luồng request & điểm nghẽn hiệu năng  
-
-#### **Live Demo**
-- Thiết lập full-stack observability: logs → metrics → traces  
-
-#### **Best Practices**
-- Alerting  
-- Dashboards  
-- On-call workflow  
-
----
-
-### 8. DevOps Best Practices & Case Studies (4:00 – 4:45 PM)
-
-- Deployment strategies  
-  - Feature flags  
-  - A/B testing  
-- Automated testing → CI/CD integration  
-- Incident management & postmortems  
-- Case studies về chuyển đổi DevOps ở startup & enterprise  
-
----
-
-### 9. Q&A & Wrap-up (4:45 – 5:00 PM)
-
-- Định hướng nghề nghiệp DevOps  
-- Lộ trình chứng chỉ AWS dành cho DevOps Engineer (DVA-C02, DOP-C02)
+Phiên cuối cùng mang đến những chiến lược sắc bén cho sinh viên năm 3-4 chuẩn bị bước vào thị trường lao động toàn cầu.
+- **Tư duy thiết yếu:** Đề cao tầm quan trọng của Tư duy phản biện (Critical Thinking), Kỹ năng giải quyết vấn đề và "Kể chuyện bằng dữ liệu" (Data Storytelling). Không chỉ là đưa ra con số, mà phải hiểu được nguyên nhân sâu xa phía sau biến động dữ liệu.
+- **Quy trình tuyển dụng chuẩn MNCs:** Bóc tách 4 vòng tuyển dụng khắt khe: Hệ thống quét hồ sơ (ATS) -> Kiểm tra năng lực logic/kỹ thuật -> Phỏng vấn chuyên môn (áp dụng mô hình STAR) -> Phỏng vấn mức độ hòa hợp văn hóa với quản lý cấp cao.
+- **Giải mã văn hóa doanh nghiệp:** Phân tích sâu văn hóa "No-Blame Post-Mortem" đặc trưng của các MNCs công nghệ. Khi có sự cố nghiêm trọng, toàn đội ngũ tập trung tuyệt đối vào việc tìm ra nguyên nhân gốc rễ để vá lỗi hệ thống, tuyệt đối không đổ lỗi cho cá nhân.
+- **Tư duy toàn cầu:** Khuyến khích sinh viên tự trang bị bộ tiêu chuẩn làm việc ở đẳng cấp quốc tế, rút ra bài học từ sự vươn lên của công nghiệp Nhật Bản hay kỷ nguyên hội nhập Internet của Việt Nam.
 
 ---
 
 ## Key Takeaways
 
-### DevOps Fundamentals
-- DevOps không chỉ là toolset mà là văn hóa hợp tác giữa Dev & Ops.  
-- Các chỉ số như **DORA**, **MTTR**, **lead time** là tiêu chuẩn đánh giá hiệu quả DevOps.
+### Kiến thức nền tảng là ưu tiên số một
+- Công nghệ luôn xoay vần với tốc độ chóng mặt, nhưng một nền tảng vững chắc về hệ điều hành, mạng nội bộ và tư duy lập trình logic mới là chìa khóa tối thượng để chinh phục bất kỳ công cụ DevOps hay Cloud nào mới ra mắt.
 
-### AWS DevOps Services
-- AWS cung cấp bộ công cụ CI/CD mạnh mẽ và có khả năng tự động hóa toàn diện.  
-- CodePipeline + CodeBuild + CodeDeploy = Full CI/CD workflow.
+### Kỹ năng mềm trong thế giới kỹ thuật khô khan
+- Năng lực kỹ thuật phải đi đôi với khả năng giao tiếp rành mạch. Kỹ năng trình bày vấn đề bằng dữ liệu và tinh thần hợp tác trong môi trường "không đổ lỗi" chính là lằn ranh phân biệt một coder trung bình và một kỹ sư xuất sắc.
 
-### Infrastructure as Code
-- IaC là nền tảng bắt buộc cho DevOps hiện đại.  
-- CloudFormation phù hợp enterprise; CDK linh hoạt và nhanh hơn cho development.
-
-### Container Orchestration
-- ECS đơn giản, dễ vận hành.  
-- EKS mạnh cho Kubernetes ecosystem.  
-- App Runner phù hợp startup, MVP, dịch vụ nhỏ.
-
-### Observability
-- CloudWatch & X-Ray cung cấp visibility end-to-end.  
-- Observability giúp giảm MTTR và hỗ trợ on-call hiệu quả.
+### Sức bật từ cộng đồng
+- Việc chủ động hòa mình vào mạng lưới như AWS Student Builder Group mang lại cơ hội được định hướng bởi các chuyên gia, tiếp cận sớm với các tiêu chuẩn của doanh nghiệp lớn và tạo lợi thế cạnh tranh khổng lồ trên thị trường lao động.
 
 ---
 
 ### Some event photos
-*Add your event photos here*
+*Thêm hình ảnh sự kiện của bạn tại đây (Hình check-in, màn hình thuyết trình, hình ảnh networking...)*
 
 ---
 
-> Đây là một workshop toàn diện giúp người tham dự hiểu rõ quy trình DevOps hiện đại trên AWS — từ CI/CD, IaC, container orchestration đến monitoring. Buổi học giúp củng cố tư duy DevOps, kỹ năng kỹ thuật và định hướng nghề nghiệp rõ ràng trong lĩnh vực Cloud & DevOps.
-
+> Sự kiện "First Cloud AI Journey" thực sự là một trải nghiệm mở mang tầm mắt, kết hợp hoàn hảo giữa những chỉ dẫn kỹ thuật chuyên sâu và chiến lược phát triển sự nghiệp. Việc lắng nghe trực tiếp từ các chuyên gia trong ngành về góc khuất của nghề DevOps và những tiêu chuẩn khắt khe tại các MNCs đã giúp tôi định hình lại tư duy và mục tiêu của bản thân trước ngưỡng cửa tốt nghiệp.

@@ -1,204 +1,82 @@
 ---
-title: "DevOps on AWS Workshop"
-date: "2025-11-17"
+title: "AWS Meetup: First Cloud AI Journey"
+date: "2026-06-13"
 weight: 1
 chapter: false
-pre: " <b> 4.2. </b> "
+pre: " <b> 4.2 </b> "
 ---
 
-
-# Summary Report: “DevOps on AWS Workshop”
+# Summary Report: “AWS Meetup: First Cloud AI Journey”
 
 ### Event Objectives
 
-- Provide an overview of DevOps culture, mindset, and principles.  
-- Introduce AWS-native DevOps services: **CodeCommit, CodeBuild, CodeDeploy, CodePipeline**.  
-- Deliver hands-on knowledge on **Infrastructure as Code** using CloudFormation & CDK.  
-- Deep-dive into container platforms including **ECR, ECS, EKS, App Runner**.  
-- Explore monitoring and observability with **CloudWatch & AWS X-Ray**.  
-- Share best practices, deployment strategies, and DevOps career directions.
+- Map out practical career roadmaps within the AWS Ecosystem, from entry-level programs to advanced professional roles like Solutions Architect.
+- Demystify the role of a DevOps Engineer in enterprise environments, focusing on core fundamentals rather than merely chasing trendy tools.
+- Gain deep insights into the standard hiring processes and unique corporate cultures of Multinational Corporations (MNCs).
+- Network with experienced engineers and AWS Community Builders to bridge the gap between academic learning and real-world IT industry demands.
 
 ---
 
 ### Agenda Overview
 
-**Time:** 8:30 AM – 5:00 PM, Monday, November 17, 2025  
-**Location:** AWS Vietnam Office  
+**⏰ Time:** 9:00 AM – 12:00 PM, Saturday, June 13, 2026
+**📍 Location:** Offline Meetup (Ho Chi Minh City)
 
 ---
 
 ## Key Highlights
 
-## Morning Session (8:30 AM – 12:00 PM)
+### 1. From First Cloud AI Journey to AWS Partner (9:00 – 10:00 AM)
 
-### 1. Welcome & DevOps Mindset (8:30 – 9:00 AM)
+*Speaker: Danh Hoang Hieu Nghi (AI Engineer, AWS Community Builder)*
 
-- Short recap of the previous AI/ML session.  
-- Introduction to DevOps culture and core principles.  
-- Benefits of DevOps and key performance metrics:  
-  - **DORA Metrics**  
-  - **MTTR** (Mean Time to Recovery)  
-  - Deployment frequency  
+This opening session mapped out the journey of integrating into the AWS ecosystem, starting from foundational student programs.
+- **The AWS Community Ladder:** Detailed the progression path from joining the *AWS Student Builder Group* to becoming an *AWS Community Builder*, and eventually aiming for *AWS Partner* status.
+- **Career Expansion:** Emphasized that getting the first job is just the beginning. The AWS ecosystem opens doors to diverse roles such as DevOps Engineer, Platform Engineer, and Solutions Architect.
+- **Actionable Advice:** Actively participate in community-driven events to build a strong professional network and "Write your own history!" in the tech industry.
 
 ---
 
-### 2. AWS DevOps Services – CI/CD Pipeline (9:00 – 10:30 AM)
+### 2. What Does a DevOps Engineer Really Do? (10:00 – 11:00 AM)
 
-The session covered a complete CI/CD pipeline built with AWS-native services.
+*Speaker: Trong H. Truong (DevOps Engineer @ Endava Vietnam)*
 
-#### **Source Control**
-- **AWS CodeCommit**  
-- Git strategies:  
-  - GitFlow  
-  - Trunk-based development  
-
-#### **Build & Test**
-- **AWS CodeBuild**  
-- Buildspec configuration  
-- Designing automated testing pipelines  
-
-#### **Deployment**
-- **AWS CodeDeploy** and deployment strategies:  
-  - Blue/Green  
-  - Canary  
-  - Rolling updates  
-
-#### **Orchestration**
-- **AWS CodePipeline** for end-to-end automation  
-
-#### **Live Demo**
-- Full CI/CD pipeline walkthrough from commit → build → test → deploy.
+A highly practical session that debunked common myths surrounding the DevOps profession.
+- **Expectation vs. Reality:** Addressed the misconception that DevOps simply means "the person who writes CI/CD pipelines" or "the Kubernetes guy who fixes production at midnight."
+- **The Core Value of DevOps:** Highlighted that a true DevOps Engineer focuses on system thinking, automating repetitive work, and making things clear and easy for the entire development team. Communication is a massive part of the job.
+- **What to Learn First:** Advised students to prioritize fundamentals over flashy tools. Mastering Linux, Networking basics, Git, and a programming language (Python/Golang) is crucial before jumping into complex orchestration like K8s.
+- **Key Takeaway:** "Tools change. Fundamentals stay. Use AI to leverage your skills, not to switch off your brain."
 
 ---
 
-### 3. Break (10:30 – 10:45 AM)
+### 3. Real-world Stories & Culture in MNCs (11:00 AM – 12:00 PM)
 
----
+*Speakers: Cuong Nguyen & Dat Pham (Data Analytics Engineers)*
 
-### 4. Infrastructure as Code (IaC) (10:45 AM – 12:00 PM)
-
-#### **AWS CloudFormation**
-- Templates, stacks, change sets  
-- Drift detection and management  
-
-#### **AWS CDK (Cloud Development Kit)**
-- Constructs and reusable patterns  
-- Multi-language support: TypeScript, Python, Java, C#  
-
-#### **Live Demo**
-- Deploying infrastructure using CloudFormation & CDK  
-
-#### **Discussion**
-- When to choose CloudFormation vs CDK  
-- Advantages and limitations of each IaC approach  
-
----
-
-### Lunch Break (12:00 – 1:00 PM)
-
----
-
-## Afternoon Session (1:00 PM – 5:00 PM)
-
-### 5. Container Services on AWS (1:00 – 2:30 PM)
-
-#### **Docker Fundamentals**
-- Microservices architecture  
-- Containerization concepts  
-
-#### **Amazon ECR**
-- Container image registry  
-- Image scanning & security  
-- Lifecycle policies  
-
-#### **Amazon ECS & EKS**
-- Deployment strategies  
-- Auto scaling  
-- Key differences:  
-  - ECS: AWS-managed  
-  - EKS: Kubernetes-native  
-
-#### **AWS App Runner**
-- Simplified container deployment  
-- Ideal for quick deployments and small services  
-
-#### **Demo & Case Study**
-- Comparison of microservices deployment on ECS, EKS, and App Runner.
-
----
-
-### 6. Break (2:30 – 2:45 PM)
-
----
-
-### 7. Monitoring & Observability (2:45 – 4:00 PM)
-
-#### **Amazon CloudWatch**
-- Metrics  
-- Logs  
-- Alarms  
-- Custom dashboards  
-
-#### **AWS X-Ray**
-- Distributed tracing  
-- Request flows and performance bottlenecks visibility  
-
-#### **Live Demo**
-- Setting up a full-stack observability pipeline  
-
-#### **Best Practices**
-- Effective alerting  
-- Dashboard design  
-- On-call and incident response workflow  
-
----
-
-### 8. DevOps Best Practices & Case Studies (4:00 – 4:45 PM)
-
-- Deployment strategies:  
-  - Feature flags  
-  - A/B testing  
-- Automated testing integration in CI/CD  
-- Incident management & postmortems  
-- Case studies from startups and enterprise DevOps transformations  
-
----
-
-### 9. Q&A & Wrap-up (4:45 – 5:00 PM)
-
-- DevOps career directions and skill roadmap  
-- AWS DevOps certification pathways (DVA-C02, DOP-C02)
+The final session provided strategic advice for 3rd and 4th-year students preparing to enter the global workforce.
+- **Essential Mindset:** Stressed the importance of Critical Thinking, Problem Solving, and the ability to "Storytell with Data." It’s not just about providing metrics; it's about understanding the "why" behind the numbers.
+- **The Standard MNC Hiring Process:** Broke down the recruitment pipeline: Resume Screening (ATS) -> Competency Testing -> Technical Interview (using the STAR model) -> Cultural Fit Interview with Leadership.
+- **Decoding Corporate Culture:** Explored the concept of "No-Blame Post-Mortem" culture typical in Tech MNCs. When severe system failures occur, engineers focus entirely on finding root causes to improve the system rather than blaming individuals.
+- **Global Mindset:** Encouraged students to adopt a global standard of working, drawing lessons from historical tech and economic developments like Japan's production systems and Vietnam's digital integration.
 
 ---
 
 ## Key Takeaways
 
-### DevOps Fundamentals
-- DevOps is rooted in collaboration, culture, and continuous improvement.  
-- Key metrics such as **DORA** and **MTTR** measure DevOps performance effectively.
+### Foundational Knowledge First
+- The tech landscape shifts rapidly, but a solid grasp of operating systems, networking, and programming logic is the ultimate foundation for mastering any new DevOps or Cloud tool.
 
-### CI/CD on AWS
-- CodePipeline + CodeBuild + CodeDeploy empower scalable, automated pipelines.  
-- CI/CD standardizes delivery and reduces deployment risks.
+### Soft Skills in a Hard Tech World
+- Technical proficiency must be paired with clear communication. The ability to present data logically and collaborate effectively in a "no-blame" environment is what separates average coders from top-tier engineers.
 
-### IaC Principles
-- IaC is essential for modern DevOps workflows.  
-- CloudFormation excels in enterprise templates; CDK offers developer-friendly flexibility.
-
-### Container Orchestration
-- ECS is simple and fully managed; EKS is powerful for Kubernetes workloads.  
-- App Runner is ideal for fast, simplified container deployment.
-
-### Observability
-- CloudWatch & X-Ray provide deep visibility across logs, metrics, and traces.  
-- Strong observability practices improve system reliability and reduce MTTR.
+### The Community Advantage
+- Engaging with communities like the AWS Student Builder Group provides invaluable mentorship, exposure to enterprise standards, and a significant head start in navigating the tech career ladder.
 
 ---
 
 ### Some event photos
-*Add your event photos here*
+*Add your event photos here (Check-in, Speakers presenting, Networking moments)*
 
 ---
 
-> The workshop provided a comprehensive journey through modern DevOps practices on AWS — from CI/CD pipelines and IaC to containers and observability. Participants gained both technical knowledge and practical understanding needed to pursue a DevOps career successfully.
-
+> The "First Cloud AI Journey" meetup was an eye-opening experience that perfectly blended technical guidance with career strategy. Learning directly from industry professionals about the realities of DevOps and the rigorous standards of MNCs has profoundly shaped my mindset and goals as I approach graduation.
