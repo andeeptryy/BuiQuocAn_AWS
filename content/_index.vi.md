@@ -1,6 +1,6 @@
 ---
 title: "Báo cáo thực tập"
-date: "2025-09-08"
+date: "2026-06-26"
 weight: 1
 chapter: false
 ---
@@ -9,19 +9,21 @@ chapter: false
 ### Thông tin sinh viên:
 &emsp; **Họ và tên:** Bùi Quốc An
 
-&emsp; **Số điện thoại:** *(cập nhật số điện thoại)*
+&emsp; **Số điện thoại:** 0985351853
 
-&emsp; **Email:** *(cập nhật email)*
+&emsp; **Email:** anquocbui147@gmail.com
 
-&emsp; **Trường:** *(cập nhật trường)*
+&emsp; **Trường:** Đại học Công nghệ TP.HCM (HUTECH)
 
-&emsp; **Ngành:** *(cập nhật ngành)*
+&emsp; **Ngành:** An toàn thông tin
 
-&emsp; **Lớp:** *(cập nhật lớp)* &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
+&emsp; **Lớp:** 22DATA1
+
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
 
 &emsp; **Vị trí thực tập:** FCJ Cloud Intern
 
-&emsp; **Thời gian thực tập:** *(cập nhật thời gian thực tập)*
+&emsp; **Thời gian thực tập:** 17/04/2026 – 10/07/2026
 
 ![Ảnh đại diện](/AWS_Logo.svg)
 

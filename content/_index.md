@@ -1,6 +1,6 @@
 ---
 title: "Internship Report"
-date: "2025-09-08"
+date: "2026-06-26"
 weight: 1
 chapter: false
 ---
@@ -9,19 +9,21 @@ chapter: false
 ### Student Information:
 &emsp; **Full Name:** Bui Quoc An
 
-&emsp; **Phone Number:** 123
+&emsp; **Phone Number:** 0985351853
 
-&emsp; **Email:** *(update email)*
+&emsp; **Email:** anquocbui147@gmail.com
 
-&emsp; **University:** *(update university)*
+&emsp; **University:** Ho Chi Minh City University of Technology (HUTECH)
 
-&emsp; **Major:** *(update major)*
+&emsp; **Major:** Information Security
 
-&emsp; **Class:** *(update class)* &emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
+&emsp; **Class:** 22DATA1 
+
+&emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
 
 &emsp; **Internship Position:** FCJ Cloud Intern
 
-&emsp; **Internship Duration:** *(update internship period)*
+&emsp; **Internship Duration:** 17/04/2026 – 10/07/2026
 
 ![Profile photo](/AWS_Logo.svg)
 
