@@ -1,8 +1,9 @@
 ---
 title: "Sự kiện 3: FCAJ Community Day - Data Driven, AI Risen"
 date: "2026-06-27"
-weight: 3
-draft: false
+weight: 1
+chapter: false
+pre: " <b> 4.3 </b> "
 ---
 
 ## 📝 1. Thông tin tổng quan
