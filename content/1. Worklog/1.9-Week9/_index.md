@@ -1,6 +1,6 @@
 ---
 title: "WEEK 9 WORKLOG"
-date: "2025-11-10"
+date: "2026-06-21"
 weight: 9
 chapter: false
 pre: " <b> 1.9 </b> "
@@ -10,12 +10,11 @@ pre: " <b> 1.9 </b> "
 
 ### **Week 9 Objectives**
 
-* Learn about Serverless architecture and practice with **AWS Lambda**.
-* Learn about CI/CD (Continuous Integration) tools and practice installing/configuring **Jenkins**.
-* Learn about containerization technology with **Docker**.
-* Write a **Dockerfile** for a Node.js application and practice building/running the container.
-* Learn and practice with the **AWS CodeDeploy** automated deployment service.
-* Learn about monitoring tools for containers (Prometheus, Grafana).
+* Research and complete the in-depth translation of the AWS technical blog on cloud networking and Generative AI.
+* Analyze requirements, finalize the user flow, and kick-off the GenAI Network Architecture Simulator project.
+* Design a Serverless architecture (Amazon API Gateway & AWS Lambda) to fulfill the Cost Optimization requirement.
+* Establish a secure team collaboration environment by configuring access control through AWS IAM.
+* Optimize the storage of network states by utilizing a NoSQL database (Amazon DynamoDB) instead of a traditional relational database.
 
 ---
 
@@ -23,22 +22,19 @@ pre: " <b> 1.9 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **Learn AWS Lambda**: Study Serverless, create a simple Lambda function (S3-triggered), and evaluate its use in CI/CD. | 03/11/2025 | 03/11/2025 | |
-| 2 (Tue) | **Learn CI & Jenkins**: Research CI tools (Jenkins, Travis CI), practice installing and configuring **Jenkins** (creating a pipeline). | 04/11/2025 | 04/11/2025 | |
-| 3 (Wed) | **Learn Docker**: Study container concepts. Practice writing a **Dockerfile** for a Node.js app, building (`docker build`), and running (`docker run`). | 05/11/2025 | 05/11/2025 | |
-| 4 (Thu) | **Learn AWS CodeDeploy**: Study the CodeDeploy service. Practice deploying an app from CodeCommit to EC2 and debugging the scripts. | 06/11/2025 | 06/11/2025 | |
-| 5 (Fri) | **Learn Monitoring & Reporting**: Review CI/CD documentation. Research container monitoring tools (Prometheus, Grafana, cAdvisor). | 07/11/2025 | 07/11/2025 | |
+| 1 (Mon) | **AWS Technical Research**: Read and deeply researched the 2nd AWS technical blog covering cloud networking and GenAI applications. Extracted core concepts. | 15/06/2026 | 15/06/2026 | [AWS Networking Blog](#) |
+| 2 (Tue) | **Technical Translation**: Translated the blog content into Vietnamese, formatted in Markdown, and aligned technical terminologies to ensure academic accuracy. | 16/06/2026 | 16/06/2026 | [AWS Networking Blog](#) |
+| 3 (Wed) | **GenAI Project Kick-off**: Kicked off the group project focusing on building a GenAI-based Network Architecture Simulator. Defined the core user flow. | 17/06/2026 | 17/06/2026 | Project Requirements |
+| 4 (Thu) | **Serverless Architecture Design**: Designed the AWS Cloud Architecture. Transitioned from EC2 instances to a Serverless model (API Gateway & Lambda) to minimize costs. | 18/06/2026 | 18/06/2026 | [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/) |
+| 5 (Fri) | **AWS IAM Configuration**: Set up foundational AWS Identity and Access Management roles and policies for the 5 team members to collaborate securely. | 19/06/2026 | 19/06/2026 | [AWS IAM Documentation](https://docs.aws.amazon.com/iam/) |
+| 6-7 (Sat-Sun) | **System Documentation**: Documented the system design and researched Amazon Bedrock as a potential managed service to power the GenAI engine safely. | 20/06/2026 | 21/06/2026 | [Amazon Bedrock Docs](https://docs.aws.amazon.com/bedrock/) |
 
 ---
 
 ### **Week 9 Achievements**
 
-* Mastered **Serverless** concepts and successfully created a basic **AWS Lambda** function triggered by S3 events.
-* Troubleshot and resolved **IAM Role** permission issues for Lambda-to-S3 access.
-* Mastered Continuous Integration (CI) concepts and the role of tools like **Jenkins**.
-* Successfully installed and configured a basic **Jenkins** server, creating a simple pipeline for automated testing.
-* Mastered the core concepts of **Docker** and containerization.
-* Successfully wrote a **Dockerfile** for a Node.js application, built an image, and ran the application in a container.
-* Mastered and practiced using **AWS CodeDeploy** to automate application deployment from CodeCommit to EC2.
-* Successfully debugged deployment scripts during the CodeDeploy process.
-* Researched an overview of popular container monitoring tools like **Prometheus** and **Grafana**.
+* Successfully completed 100% of the weekly plan, establishing the foundational architecture and team workflow for the new GenAI project.
+* **Completed Project Blueprint**: Successfully finalized the core user flow and cloud architecture for the GenAI Network Simulator project.
+* **Optimized Infrastructure Costs**: Solved the challenge of storing dynamic user-edited network models (JSON format) without incurring high relational database costs by integrating Amazon DynamoDB.
+* **Key Takeaway**: Realized that making critical architectural decisions early, such as choosing NoSQL over relational databases for dynamic states, practically applies the "Cost Optimization" pillar of the AWS Well-Architected Framework and prevents future technical debt.
+* **Next Steps**: Begin writing code to deploy the foundational Serverless infrastructure and initialize the core AWS Lambda functions.

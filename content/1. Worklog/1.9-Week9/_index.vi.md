@@ -1,44 +1,40 @@
 ---
-title: "WEEK 9 WORKLOG"
-date: "2025-11-10"
+title: "BÁO CÁO TUẦN 9"
+date: "2026-06-21"
 weight: 9
 chapter: false
 pre: " <b> 1.9 </b> "
 ---
 
-# **WEEK 9 WORKLOG**
+# **BÁO CÁO TUẦN 9**
 
-### **Week 9 Objectives**
+### **Mục tiêu trong tuần**
 
-* Tìm hiểu về kiến trúc Serverless (phi máy chủ) và thực hành với **AWS Lambda**.
-* Tìm hiểu về các công cụ CI/CD (Continuous Integration) và thực hành cài đặt, cấu hình **Jenkins** để kiểm tra tự động.
-* Tìm hiểu về công nghệ container hóa (containerization) với **Docker**.
-* Viết **Dockerfile** cho ứng dụng (Node.js) và thực hành build/run container.
-* Tìm hiểu và thực hành dịch vụ triển khai tự động **AWS CodeDeploy**.
-* Tìm hiểu về các công cụ giám sát (monitoring) cho container (Prometheus, Grafana).
+* Nghiên cứu và hoàn thiện bản dịch chuyên sâu tài liệu kỹ thuật AWS về mạng đám mây và Generative AI.
+* Phân tích yêu cầu, chốt luồng người dùng (user flow) và khởi động đồ án Hệ thống mô phỏng kiến trúc mạng GenAI.
+* Thiết kế kiến trúc Serverless (Amazon API Gateway & AWS Lambda) để giải quyết bài toán Tối ưu chi phí (Cost Optimization).
+* Thiết lập môi trường cộng tác nhóm an toàn bằng việc phân quyền truy cập thông qua AWS IAM.
+* Tối ưu hóa lưu trữ trạng thái bản vẽ mạng với cơ sở dữ liệu NoSQL (Amazon DynamoDB) thay vì cơ sở dữ liệu quan hệ truyền thống.
 
 ---
 
-### **Tasks to be carried out this week**
+### **Lịch trình công việc chi tiết**
 
-| Day | Task | Start Date | Completion Date | Reference/Material |
+| Ngày | Nội dung công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu / Lab |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Tìm hiểu AWS Lambda**: Nghiên cứu về Serverless, tạo một hàm Lambda đơn giản (kích hoạt từ S3) và đánh giá cách tích hợp vào CI/CD. | 03/11/2025 | 03/11/2025 | |
-| 2 (Thứ Ba) | **Tìm hiểu CI & Jenkins**: Nghiên cứu các công cụ CI (Jenkins, Travis CI), thực hành cài đặt và cấu hình **Jenkins** (tạo pipeline) để kiểm tra tự động. | 04/11/2025 | 04/11/2025 | |
-| 3 (Thứ Tư) | **Tìm hiểu Docker**: Nghiên cứu về container. Thực hành viết **Dockerfile** cho ứng dụng Node.js, build image (`docker build`) và chạy container (`docker run`). | 05/11/2025 | 05/11/2025 | |
-| 4 (Thứ Năm) | **Tìm hiểu AWS CodeDeploy**: Nghiên cứu dịch vụ CodeDeploy. Thực hành triển khai ứng dụng mẫu (từ CodeCommit) lên EC2 và gỡ lỗi tập lệnh (script). | 06/11/2025 | 06/11/2025 | |
-| 5 (Thứ Sáu) | **Tìm hiểu Monitoring & Báo cáo**: Xem lại tài liệu CI/CD. Tìm hiểu về các công cụ giám sát container (Prometheus, Grafana, cAdvisor). | 07/11/2025 | 07/11/2025 | |
+| Thứ Hai (15/06) | **Nghiên cứu Kỹ thuật AWS**: Nghiên cứu chuyên sâu bài blog kỹ thuật số 2 của AWS về chủ đề mạng đám mây và ứng dụng GenAI. Trích xuất các khái niệm cốt lõi. | 15/06/2026 | 15/06/2026 | [AWS Networking Blog](#) |
+| Thứ Ba (16/06) | **Dịch thuật Kỹ thuật**: Dịch thuật nội dung bài blog sang tiếng Việt. Trình bày định dạng Markdown và chuẩn hóa thuật ngữ chuyên môn. | 16/06/2026 | 16/06/2026 | [AWS Networking Blog](#) |
+| Thứ Tư (17/06) | **Khởi động Đồ án GenAI**: Khởi động đồ án nhóm xây dựng Hệ thống mô phỏng kiến trúc mạng dựa trên GenAI. Chốt luồng người dùng cốt lõi. | 17/06/2026 | 17/06/2026 | Yêu cầu Kỹ thuật Đồ án |
+| Thứ Năm (18/06) | **Thiết kế Kiến trúc Serverless**: Thiết kế kiến trúc đám mây AWS. Chuyển từ EC2 sang mô hình Serverless (API Gateway & Lambda) để tối ưu chi phí. | 18/06/2026 | 18/06/2026 | [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/) |
+| Thứ Sáu (19/06) | **Cấu hình AWS IAM**: Thiết lập quyền và chính sách (roles/policies) AWS IAM cho 5 thành viên để cộng tác an toàn trên cùng môi trường AWS. | 19/06/2026 | 19/06/2026 | [AWS IAM Documentation](https://docs.aws.amazon.com/iam/) |
+| Thứ 7 - CN (20-21/06) | **Tài liệu Hệ thống**: Viết tài liệu thiết kế hệ thống và nghiên cứu việc sử dụng Amazon Bedrock để vận hành GenAI engine an toàn. | 20/06/2026 | 21/06/2026 | [Amazon Bedrock Docs](https://docs.aws.amazon.com/bedrock/) |
 
 ---
 
-### **Week 9 Achievements**
+### **Kết quả đạt được (Week 9 Achievements)**
 
-* Nắm vững khái niệm về **Serverless** và thực hành tạo thành công một hàm **AWS Lambda** cơ bản, xử lý sự kiện từ S3.
-* Khắc phục được sự cố về **IAM Role** khi cấu hình quyền cho Lambda truy cập S3.
-* Nắm vững khái niệm về Tích hợp liên tục (CI) và vai trò của các công cụ như **Jenkins**.
-* Cài đặt và cấu hình thành công một máy chủ **Jenkins** cơ bản, tạo một pipeline đơn giản để kiểm tra tự động.
-* Nắm vững khái niệm cốt lõi về **Docker** và containerization.
-* Viết thành công một **Dockerfile** cho ứng dụng Node.js, build image và chạy ứng dụng trong container một cách nhất quán.
-* Nắm vững và thực hành thành công dịch vụ **AWS CodeDeploy**, tự động hóa việc triển khai ứng dụng từ CodeCommit lên EC2.
-* Khắc phục được lỗi tập lệnh (deployment script) trong quá trình triển khai với CodeDeploy.
-* Tìm hiểu tổng quan về các công cụ giám sát container phổ biến như **Prometheus** và **Grafana**.
+* Hoàn thành xuất sắc 100% kế hoạch tuần, thiết lập thành công kiến trúc nền tảng và luồng làm việc nhóm cho đồ án GenAI mới.
+* **Hoàn thiện Thiết kế Hệ thống**: Chốt thành công luồng người dùng cốt lõi và bản vẽ kiến trúc đám mây toàn diện cho đồ án.
+* **Giải quyết bài toán Chi phí**: Khắc phục rào cản lưu trữ trạng thái bản vẽ mạng phức tạp bằng cách triển khai Amazon DynamoDB, giúp truy xuất nhanh dữ liệu JSON mà vẫn tối ưu chi phí.
+* **Kinh nghiệm rút ra**: Nhận thức rõ việc đưa ra quyết định kiến trúc đúng đắn ngay từ đầu (như chọn NoSQL thay vì CSDL quan hệ) là cách thực hành tốt nhất để áp dụng trụ cột "Tối ưu chi phí" của AWS Well-Architected Framework và tránh nợ kỹ thuật sau này.
+* **Định hướng tuần tới**: Bắt đầu viết mã để triển khai hạ tầng Serverless nền tảng và khởi tạo các hàm AWS Lambda cốt lõi.

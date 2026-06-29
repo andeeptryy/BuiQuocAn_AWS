@@ -1,42 +1,40 @@
 ---
-title: "WEEK 10 WORKLOG"
-date: "2025-11-10"
+title: "BÁO CÁO TUẦN 10"
+date: "2026-06-28"
 weight: 10
 chapter: false
 pre: " <b> 1.10 </b> "
 ---
 
-# **WEEK 10 WORKLOG**
+# **BÁO CÁO TUẦN 10**
 
-### **Week 10 Objectives**
+### **Mục tiêu trong tuần**
 
-* Tìm hiểu về hệ thống điều phối container (container orchestration) với **Kubernetes**.
-* Nắm vững các khái niệm cốt lõi của Kubernetes (Cluster, Node, Pod) và cách viết file cấu hình YAML.
-* Thực hành triển khai ứng dụng (Node.js) lên cluster Kubernetes (sử dụng Minikube).
-* Tìm hiểu về các công cụ giám sát (monitoring) cho container (Prometheus, Grafana, cAdvisor).
-* Tìm hiểu về giải pháp sao lưu và phục hồi (backup & disaster recovery) cho Kubernetes bằng **Velero**.
-* Ôn lại tài liệu và chuẩn bị cho buổi báo cáo tổng kết về CI/CD.
+* Triển khai thực tế hạ tầng Serverless trên AWS dựa trên bản thiết kế hệ thống.
+* Phát triển thành công các hàm AWS Lambda và API Gateway để kết nối giao diện người dùng với DynamoDB.
+* Phác thảo logic và xây dựng bộ khung cho module "Validation Engine" nhằm kiểm duyệt tính an toàn của kiến trúc mạng.
+* Tham gia sự kiện FCAJ Community Day để cập nhật kiến thức về tự động hóa vận hành và bảo mật AI trong môi trường doanh nghiệp lớn.
+* Nghiên cứu Giao thức MCP (Model Context Protocol) nhằm xử lý chuẩn xác "ngữ cảnh" cho hệ thống AI, giảm thiểu lỗi ảo giác.
 
 ---
 
-### **Tasks to be carried out this week**
+### **Lịch trình công việc chi tiết**
 
-| Day | Task | Start Date | Completion Date | Reference/Material |
+| Ngày | Nội dung công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu / Lab |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Tìm hiểu Kubernetes**: Học về kiến trúc (Pod, Node, Cluster). Viết file `deployment.yaml` và deploy ứng dụng (`kubectl apply`) lên Minikube. | 10/11/2025 | 10/11/2025 | |
-| 2 (Thứ Ba) | **Tìm hiểu Monitoring & Báo cáo CI/CD**: (Nội dung lặp lại) Ôn tập tài liệu CI/CD. Tìm hiểu về các công cụ giám sát (Prometheus, Grafana). | 11/11/2025 | 11/11/2025 | |
-| 3 (Thứ Tư) | **Tìm hiểu Monitoring & Báo cáo CI/CD**: (Nội dung lặp lại) Ôn tập tài liệu CI/CD. Tìm hiểu về các công cụ giám sát (Prometheus, Grafana). | 12/11/2025 | 12/11/2025 | |
-| 4 (Thứ Năm) | **Tìm hiểu Monitoring & Báo cáo CI/CD**: (Nội dung lặp lại) Ôn tập tài liệu CI/CD. Tìm hiểu về các công cụ giám sát (Prometheus, Grafana). | 13/11/2025 | 13/11/2025 | |
-| 5 (Thứ Sáu) | **Tìm hiểu Backup (Velero)**: Cài đặt và cấu hình **Velero** (dùng Helm). Thực hành sao lưu (`velero backup create`) và phục hồi (`velero restore create`) tài nguyên. | 14/11/2025 | 14/11/2025 | |
+| Thứ Hai (22/06) | **Triển khai Hạ tầng Serverless**: Cấu hình hạ tầng trên AWS dựa trên thiết kế. Thiết lập môi trường lập trình cục bộ (Local) và kết nối với tài khoản AWS. | 22/06/2026 | 22/06/2026 | AWS Console |
+| Thứ Ba (23/06) | **Khởi tạo AWS Lambda**: Lập trình và khởi tạo các hàm AWS Lambda cốt lõi xử lý việc tiếp nhận Prompt và chuẩn bị dữ liệu cho khâu AI tạo mô hình. | 23/06/2026 | 23/06/2026 | [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/) |
+| Thứ Tư, Năm (24-25/06) | **Tích hợp API & Validation Engine**: Xây dựng API endpoints qua API Gateway kết nối frontend với DynamoDB. Lên khung logic cho Validation Engine. | 24/06/2026 | 25/06/2026 | [Amazon API Gateway Docs](https://docs.aws.amazon.com/apigateway/) |
+| Thứ Sáu (26/06) | **Đóng gói Mã nguồn**: Hoàn tất module code, đóng gói mã nguồn dự án. Chuẩn bị tài liệu và câu hỏi chuyên sâu tham gia sự kiện công nghệ. | 26/06/2026 | 26/06/2026 | Project Source Code |
+| Thứ Bảy (27/06) | **Sự kiện FCAJ Community Day**: Tham dự sự kiện "Data Driven, AI Risen". Tập trung nghiên cứu Deep Response Engine và cách xử lý ngữ cảnh AI cấp doanh nghiệp. | 27/06/2026 | 27/06/2026 | [FCAJ Event](#) |
+| Chủ nhật (28/06) | **Nghiên cứu MCP & Báo cáo**: Viết báo cáo tổng kết sự kiện, đề xuất tích hợp Giao thức MCP (Model Context Protocol) vào khâu AI Validation của dự án. | 28/06/2026 | 28/06/2026 | [Model Context Protocol Docs](#) |
 
 ---
 
-### **Week 10 Achievements**
+### **Kết quả đạt được (Week 10 Achievements)**
 
-* Nắm vững các khái niệm cơ bản của **Kubernetes** (K8s) bao gồm **Cluster**, **Node**, và **Pod**.
-* Viết thành công file cấu hình `deployment.yaml` và triển khai một ứng dụng Node.js lên cluster Kubernetes (Minikube) bằng `kubectl apply`.
-* Tìm hiểu và khắc phục được sự cố khi thiết lập môi trường Kubernetes local (sử dụng Minikube để giải quyết vấn đề tài nguyên).
-* Tìm hiểu về các công cụ giám sát (monitoring) và trực quan hóa (visualization) phổ biến trong hệ sinh thái container, bao gồm **Prometheus**, **Grafana**, và **cAdvisor**.
-* Nắm vững khái niệm về sao lưu và phục hồi thảm họa (Disaster Recovery) trong Kubernetes.
-* Cài đặt và sử dụng thành công **Velero** để thực hiện sao lưu (`backup`) và phục hồi (`restore`) các tài nguyên trong cluster.
-* Hoàn thành việc xem lại và chuẩn bị tài liệu cho buổi báo cáo tổng kết về chủ đề CI/CD.
+* Hoàn thành xuất sắc 100% kế hoạch tuần, tiến bước từ thiết kế lý thuyết sang thực hành mã hóa và trau dồi kiến thức từ môi trường doanh nghiệp thực tế.
+* **Tích hợp API thành công**: Triển khai thông suốt hạ tầng Serverless nền tảng, đảm bảo luồng giao tiếp mượt mà giữa Frontend, AWS Lambda và Amazon DynamoDB thông qua API Gateway.
+* **Đột phá trong xử lý Ngữ cảnh AI (Context Engineering)**: Giải quyết vấn đề AI bị ảo giác (hallucination) bằng cách thiết lập cấu trúc định dạng JSON từ DynamoDB thành một bộ ngữ cảnh chặt chẽ.
+* **Kinh nghiệm rút ra**: Nhận ra rằng "Ngữ cảnh là tất cả" đối với việc kiểm tra kiến trúc mạng bằng AI. Cung cấp bộ bối cảnh chặt chẽ là chìa khóa để AI đưa ra các cảnh báo bảo mật chính xác tuyệt đối dựa trên bản vẽ thực tế.
+* **Định hướng tuần tới**: Hoàn thiện khâu AI Validation, tích hợp chính thức giao thức MCP, và chuẩn bị dữ liệu nền tảng cho kịch bản mô phỏng tấn công mạng.
