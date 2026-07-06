@@ -1,10 +1,17 @@
+---
+title : "Giới Thiệu "
+date : "2026-07-06"
+weight : 2
+chapter : false
+pre : " <b> 5.1 </b> "
+---
 # 5.1. Ý Tưởng & Mục Tiêu
 
 ---
 
 ### Bối Cảnh & Bài Toán
 
-**Tiếng Việt:**
+
 Cloud Nexus là nền tảng mô phỏng và phân tích bảo mật mạng (Threat Modeling Platform) dành cho các chuyên gia an ninh mạng và kiến trúc sư hạ tầng. Hệ thống cho phép người dùng vẽ sơ đồ mạng (network topology), sau đó sử dụng AI (Google Gemini) để tự động phát hiện lỗ hổng, mô phỏng đường đi tấn công, và đề xuất biện pháp phòng thủ.
 
 
