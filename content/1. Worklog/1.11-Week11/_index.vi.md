@@ -1,45 +1,38 @@
 ---
-title: "WEEK 11 WORKLOG"
-date: "2025-11-10"
+title: "BÁO CÁO TUẦN 11"
+date: "2026-07-05"
 weight: 11
 chapter: false
 pre: " <b> 1.11 </b> "
 ---
 
-# **WEEK 11 WORKLOG**
+# **BÁO CÁO TUẦN 11**
 
-### **Week 11 Objectives**
+### **Mục tiêu trong tuần**
 
-* Tìm hiểu và thực hành các tính năng nâng cao của **Kubernetes** (K8s) bao gồm quản lý tài nguyên, auto-scaling, và bảo mật.
-* Cấu hình thành công **Horizontal Pod Autoscaler (HPA)** để tự động co giãn Pod.
-* Cấu hình thành công các chính sách bảo mật K8s như **Network Policies** và **RBAC**.
-* Nghiên cứu về các hệ thống giám sát (Monitoring) và quản lý log (Logging) cho K8s (Prometheus, Grafana, ELK, Fluentd).
-* Tìm hiểu và cấu hình tính năng nâng cao của **AWS Application Load Balancer (ALB)**, cụ thể là **Content-based Routing**.
-* Nghiên cứu về hỗ trợ **HTTP/2** trên ALB.
+* Triển khai kiến trúc xử lý bất đồng bộ (asynchronous) cho module "Mô phỏng tấn công" để tránh lỗi timeout của API Gateway.
+* Cấu hình Amazon SQS và AWS Step Functions để điều phối các tác vụ mô phỏng AI phức tạp, chạy ngầm.
+* Xây dựng hệ thống giám sát (Observability) toàn diện bằng Amazon CloudWatch để ghi log và theo dõi chỉ số.
+* Thiết lập hệ thống cảnh báo tự động qua Amazon SNS để gửi thông báo tức thời khi AI phát hiện lỗ hổng mạng nghiêm trọng.
+* Tiến hành kiểm thử API (API Testing) toàn diện và trích xuất log để làm minh chứng cho báo cáo cuối kỳ.
 
 ---
 
-### **Tasks to be carried out this week**
+### **Lịch trình công việc chi tiết**
 
-| Day | Task | Start Date | Completion Date | Reference/Material |
+| Ngày | Nội dung công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu / Lab |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **K8s Quản lý Tài nguyên & Scaling**: Học về Resource Quotas, Limit Ranges. Thực hành cấu hình **Horizontal Pod Autoscaler (HPA)**. | 17/11/2025 | 17/11/2025 | |
-| 2 (Thứ Ba) | **K8s Security (Network)**: Thực hành cấu hình **Network Policies** để kiểm soát lưu lượng mạng giữa các Pod. Nghiên cứu các tool giám sát (Prometheus, Grafana, ELK). | 18/11/2025 | 18/11/2025 | |
-| 3 (Thứ Tư) | **K8s Security (Access)**: Thực hành cấu hình **RBAC** (Roles, RoleBindings) để quản lý quyền truy cập. Nghiên cứu các tool quản lý log (Fluentd, ELK). | 19/11/2025 | 19/11/2025 | |
-| 4 (Thứ Năm) | **Tìm hiểu ALB Content-based Routing**: Nghiên cứu và viết tài liệu chi tiết về cách ALB định tuyến lưu lượng dựa trên nội dung (path, header). | 20/11/2025 | 20/11/2025 | |
-| 5 (Thứ Sáu) | **Cấu hình ALB & HTTP/2**: Thực hành cấu hình **Content-based Routing** (vd: `/api/*`). Gỡ lỗi. Nghiên cứu về hỗ trợ **HTTP/2** trên ALB. | 21/11/2025 | 21/11/2025 | |
+| Thứ Hai (29/06) | **Cấu hình Amazon SQS**: Thiết lập hàng đợi SQS để tiếp nhận và tách rời (decouple) các yêu cầu "Scan Attack" khỏi API Gateway. | 29/06/2026 | 29/06/2026 | [Amazon SQS Docs](https://docs.aws.amazon.com/sqs/) |
+| Thứ Ba (30/06) | **Thiết lập AWS Step Functions**: Xây dựng state machine điều phối nhiều hàm Lambda để chạy luồng mô phỏng tấn công ngầm một cách tuần tự. | 30/06/2026 | 30/06/2026 | [AWS Step Functions Docs](https://docs.aws.amazon.com/step-functions/) |
+| Thứ Tư, Năm (01-02/07) | **Tích hợp CloudWatch**: Cấu hình CloudWatch Logs cho các hàm Lambda. Tạo Dashboard theo dõi độ trễ API và hiệu suất chạy AI. | 01/07/2026 | 02/07/2026 | [Amazon CloudWatch Docs](https://docs.aws.amazon.com/cloudwatch/) |
+| Thứ Sáu (03/07) | **Cảnh báo qua Amazon SNS**: Tạo SNS Topic và cấu hình Lambda trigger để gửi email cảnh báo tức thì khi phát hiện lỗi thiết kế kiến trúc mạng. | 03/07/2026 | 03/07/2026 | [Amazon SNS Docs](https://docs.aws.amazon.com/sns/) |
+| Thứ 7 - CN (04-05/07) | **Kiểm thử API & Thu thập Log**: Dùng Postman để giả lập tải và gửi prompt. Thu thập log CloudWatch và ảnh chụp màn hình email SNS làm minh chứng. | 04/07/2026 | 05/07/2026 | API Testing Tools |
 
 ---
 
-### **Week 11 Achievements**
+### **Kết quả đạt được (Week 11 Achievements)**
 
-* Nắm vững các khái niệm quản lý tài nguyên trong Kubernetes như **Resource Quotas** và **Limit Ranges**.
-* Cấu hình và triển khai thành công **Horizontal Pod Autoscaler (HPA)** bằng file YAML, cho phép hệ thống tự động co giãn (scale) số lượng Pod dựa trên tải CPU.
-* Nắm vững và thực hành thành công các tính năng bảo mật quan trọng trong Kubernetes:
-    * **Network Policies**: Viết và áp dụng file YAML để kiểm soát lưu lượng mạng (ingress) giữa các Pod.
-    * **RBAC (Role-Based Access Control)**: Viết và áp dụng file YAML để tạo **Roles** và **RoleBindings**, quản lý quyền truy cập của người dùng (ví dụ: `pod-reader`).
-* Nghiên cứu tổng quan về các hệ thống giám sát (**Prometheus**, **Grafana**) và quản lý log (**ELK Stack**, **Fluentd**) phổ biến trong hệ sinh thái K8s.
-* Nắm vững và viết tài liệu chi tiết về tính năng **Content-based Routing** của AWS Application Load Balancer (ALB).
-* Cấu hình thành công các quy tắc (rules) trên ALB Listener để định tuyến lưu lượng truy cập đến các Target Group khác nhau dựa trên đường dẫn URL (ví dụ: `/api/*`).
-* Khắc phục được các sự cố cấu hình khi HPA không hoạt động hoặc Network Policy không được áp dụng đúng.
-* Tìm hiểu về lợi ích và cách kích hoạt hỗ trợ **HTTP/2** trên ALB (thông qua listener HTTPS).
+* Hoàn thành xuất sắc 100% kế hoạch, đáp ứng hoàn hảo tiêu chí đánh giá bắt buộc về "Logging & Monitoring" của công ty.
+* **Làm chủ Xử lý Bất đồng bộ**: Tách rời thành công tác vụ chạy AI nặng khỏi luồng request chính bằng Amazon SQS và Step Functions. Điều này giải quyết triệt để rủi ro API Gateway bị timeout, tăng cường độ ổn định cho trải nghiệm người dùng.
+* **Giám sát Chủ động**: Xây dựng thành công vòng lặp giám sát và cảnh báo. Việc kết hợp CloudWatch và SNS đảm bảo mọi lỗi hệ thống hoặc lỗ hổng bảo mật do AI quét được đều báo cáo ngay lập tức cho quản trị viên, thể hiện tư duy vận hành chủ động.
+* **Định hướng tuần tới**: Tập trung bảo mật lớp giao diện (Frontend) với AWS WAF, hoàn thiện tích hợp toàn bộ hệ thống (end-to-end) và chuẩn bị các script dọn dẹp tài nguyên (Clean-up).
