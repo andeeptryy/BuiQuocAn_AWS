@@ -35,8 +35,6 @@ The system utilizes a <span class='highlight-code'>Hierarchical Deterministic Wa
 ## 4. Architecture: Separation of State and Data Flow
 To simplify, Turnkey's architecture is divided into two distinct zones: The External Management Zone (untrusted) and the Internal Compute Zone (strictly trusted).
 
-![Turnkey Architecture](/images/3-Blogs/Blog-3/image_0d024a.png)
-<span class="meta-info">*Figure 1: Turnkey Infrastructure & Data Flow*</span>
 
 - **External (AWS Cloud Infrastructure):** When a user sends a request via API Gateway, an <span class='highlight-code'>Amazon EC2</span> instance (Coordinator) processes it. State data and encrypted root keys are stored in the <span class='highlight-code'>Aurora Database</span>. Background tasks like the Async Queue, Redis, Updater, Heartbeat, and Webhook Notifiers only synchronize the system and send alerts. This zone is entirely oblivious to raw keys.
 - **Internal (AWS Nitro Enclave):** The EC2 server forwards sensitive commands down to the Enclave via an internal <span class='highlight-code'>gRPC/VSOCK</span> channel. Within this isolated environment, processing is fully self-contained across 5 steps:

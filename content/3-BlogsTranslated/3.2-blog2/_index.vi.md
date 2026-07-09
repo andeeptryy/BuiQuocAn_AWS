@@ -35,8 +35,6 @@ Hệ thống sử dụng mô hình ví cây phân cấp (<span class='highlight-
 ## 4. Kiến trúc phân tách trạng thái và luồng dữ liệu hệ thống
 Để dễ hiểu, kiến trúc của Turnkey được chia làm hai phần tách biệt: Phân vùng quản lý bên ngoài (không an toàn tuyệt đối) và Phân vùng tính toán bên trong (an toàn tuyệt đối).
 
-![Turnkey Architecture](/images/3-Blogs/Blog-3/image_0d024a.png)
-<span class="meta-info">*Hình 1: Kiến trúc và Luồng dữ liệu của Turnkey*</span>
 
 - **Bên ngoài (Hạ tầng AWS Cloud):** Khi người dùng gửi yêu cầu qua API Gateway, máy chủ <span class='highlight-code'>Amazon EC2</span> (Coordinator) sẽ tiếp nhận và xử lý. Các dữ liệu trạng thái và bản khóa gốc đã mã hóa được lưu ở <span class='highlight-code'>Aurora Database</span>. Các tác vụ nền khác như hàng đợi bất đồng bộ (Async Queue), Redis, Updater, Heartbeat và Notifier chỉ làm nhiệm vụ đồng bộ hệ thống và gửi thông báo (Webhook Targets). Phân vùng này hoàn toàn không biết khóa thô là gì.
 - **Bên trong (AWS Nitro Enclave):** Máy chủ EC2 chuyển các lệnh nhạy cảm xuống Enclave qua kênh nội bộ <span class='highlight-code'>gRPC/VSOCK</span>. Trong môi trường cô lập này, luồng xử lý diễn ra khép kín qua 5 bước:
