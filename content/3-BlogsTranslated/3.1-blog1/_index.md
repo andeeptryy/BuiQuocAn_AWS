@@ -1,9 +1,9 @@
 ---
-title: "Blog 2: Software Supply Chain Security"
+title: "Blog 1: Software Supply Chain Security"
 date: "2026-06-01"
-weight: 2
+weight: 1
 chapter: false
-pre: " <b> 3.2. </b> "
+pre: " <b> 3.1. </b> "
 ---
 
 # [SECURITY] SOFTWARE SUPPLY CHAIN SECURITY BASED ON AWS WELL-ARCHITECTED FRAMEWORK
