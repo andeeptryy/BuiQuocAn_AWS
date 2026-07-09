@@ -1,45 +1,40 @@
 ---
 title: "Self-evaluation"
-date: "2025-12-16"
+date: "2026-07-09"
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-# Internship Self-evaluation
+# Post-Internship Self-Evaluation
 
-## 1. Knowledge and skills gained
+## 1. Acquired Knowledge and Skills
+Throughout my internship journey with the **First Cloud Journey (FCJ)** program, I have built a solid systems-thinking foundation in cloud computing. Rather than merely skimming through theory, I gained hands-on experience provisioning and operating core AWS services (such as EC2, S3, VPC, IAM, and ALB). Furthermore, I successfully grasped infrastructure automation via IaC (CloudFormation, Terraform) and familiarized myself with agile software deployment methodologies using CI/CD pipelines and Serverless models.
 
-During my internship in the **First Cloud Journey (FCJ)** program, I gained foundational knowledge and hands-on experience with AWS services such as IAM, EC2, VPC, S3, ALB, Auto Scaling, CloudWatch, Lambda, CloudFormation, and Terraform. I also became familiar with cloud deployment workflows, CI/CD, and serverless architecture concepts.
+## 2. Work Ethic and Attitude
+I strongly value self-discipline and accountability. When faced with complex configuration challenges, I prioritize diving deep into official AWS documentation and independently analyzing error logs before consulting mentors. I always embrace constructive feedback with an open and progressive mindset to refine my skills daily.
 
-## 2. Work attitude
+## 3. Notable Strengths
+* Strong self-learning capability, logical thinking, and quick adaptability to new technological workflows.
+* Highly focused on documentation skills: consistently recording and systematizing detailed worklogs, making processes easy to track and reproduce.
+* Strong team spirit: actively interacting, sharing knowledge, and supporting peers during collaborative workshops.
 
-I proactively learned new technologies, met deadlines, and welcomed feedback from mentors to improve. When facing technical challenges, I researched AWS documentation, followed workshops, and discussed solutions with the team.
+## 4. Areas for Growth
+* The mindset for designing large-scale architectures that demand High Availability (HA) and in-depth Cost Optimization needs further sharpening.
+* Proficiency in articulating and drafting technical documentation entirely in English requires upgrading for international work environments.
+* Need to accumulate more practical "flight hours" to react swiftly and reduce troubleshooting time in real-world Production environments.
 
-## 3. Strengths
+## 5. Future Orientation and Goals
+Leveraging this internship as a launchpad, I aim to advance my career path specifically as a **Cloud / DevOps Engineer**. My short-term objective is to conquer professional AWS certifications (such as the Solutions Architect) and seek opportunities to engage directly in enterprise-scale projects for more practical exposure.
 
-- Responsible attitude and strong motivation to learn cloud technologies.
-- Ability to document worklogs and present deployment processes clearly.
-- Active participation in workshops, labs, and team activities.
+## 6. Self-Assessment (10-Point Scale)
 
-## 4. Areas for improvement
+| Evaluation Criteria | Score |
+| :--- | :--- |
+| **Technical/Professional Knowledge** | 8/10 |
+| **Hands-on/Practical Skills** | 8/10 |
+| **Attitude & Sense of Responsibility** | 9/10 |
+| **Communication & Teamwork** | 8.5/10 |
+| **Overall Goal Achievement** | 8.5/10 |
 
-- Need to improve complex system architecture design and AWS cost optimization.
-- Need to strengthen technical writing skills in English.
-- Need faster troubleshooting in production-like environments.
-
-## 5. Career direction
-
-After the internship, I aim to grow as a **Cloud Engineer / DevOps** professional, pursue AWS certifications, and apply my knowledge in real-world projects.
-
-## 6. Self-rating (scale of 10)
-
-| Criteria | Self-rating |
-|----------|-------------|
-| Professional knowledge | 8/10 |
-| Practical skills | 8/10 |
-| Work attitude | 9/10 |
-| Teamwork | 8/10 |
-| Internship goal achievement | 8/10 |
-
-**Summary:** The internship provided a solid AWS foundation and professional work experience, preparing me for the next steps in cloud computing.
+**Summary:** The FCJ journey has truly been a significant milestone, effectively bridging the gap between textbook theory and practical operations. I am now equipped with the confidence and the essential skill set ready to embark on professional Cloud Computing projects in the future.
