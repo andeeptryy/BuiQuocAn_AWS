@@ -1,39 +1,39 @@
 ---
-title: "WEEK 12 WORKLOG"
-date: "2025-11-10"
+title: "BÁO CÁO TUẦN 12"
+date: "2026-07-12"
 weight: 12
 chapter: false
 pre: " <b> 1.12 </b> "
 ---
 
-# **WEEK 12 WORKLOG**
+# **BÁO CÁO TUẦN 12**
 
-### **Week 12 Objectives**
+### **Mục tiêu trong tuần**
 
-* Hoàn thiện và tối ưu hóa cấu hình **AWS Application Load Balancer (ALB)**.
-* Tìm hiểu và cấu hình thành công các tính năng nâng cao của ALB bao gồm **HTTP/2**, **WebSocket**, và **Sticky Sessions**.
-* Thực hiện kiểm tra hiệu suất (Performance Testing) cho ALB để đánh giá khả năng chịu tải.
-* Hoàn thành workshop và chuẩn bị báo cáo tổng kết kỳ thực tập.
+* Triển khai giao diện Web (Drag-Drop UI) lên AWS Amplify và cấu hình định tuyến tên miền bằng Amazon Route 53.
+* Bảo vệ ứng dụng Frontend khỏi các lỗ hổng web phổ biến (như DDoS, Injection) bằng việc cấu hình AWS WAF.
+* Hoàn thiện tích hợp hệ thống End-to-End, đảm bảo luồng hoạt động mượt mà từ xác thực Cognito đến lưu trữ DynamoDB.
+* Rà soát và tinh chỉnh lại toàn bộ quyền IAM của các dịch vụ để tuân thủ tuyệt đối nguyên tắc Đặc quyền tối thiểu (Least Privilege).
+* Viết tài liệu và script hướng dẫn dọn dẹp tài nguyên (Clean-up) để xóa hạ tầng AWS, đáp ứng yêu cầu quản trị chi phí của dự án.
 
 ---
 
-### **Tasks to be carried out this week**
+### **Lịch trình công việc chi tiết**
 
-| Day | Task | Start Date | Completion Date | Reference/Material |
+| Ngày | Nội dung công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu / Lab |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Tìm hiểu & Cấu hình HTTP/2**: Nghiên cứu và cấu hình ALB Listener (HTTPS) để hỗ trợ **HTTP/2**. Nghiên cứu sơ bộ về **WebSocket**. | 24/11/2025 | 24/11/2025 | |
-| 2 (Thứ Ba) | **Cấu hình WebSocket**: Cấu hình ALB Listener để hỗ trợ **WebSocket** và kiểm tra kết nối. Tối ưu hóa cài đặt timeout. | 25/11/2025 | 25/11/2025 | |
-| 3 (Thứ Tư) | **Cấu hình Sticky Sessions (Phần 1)**: Cấu hình **Sticky Sessions** (Target Group Attributes) để duy trì phiên làm việc. Thực hiện **Health Checks**. | 26/11/2025 | 26/11/2025 | |
-| 4 (Thứ Năm) | **Cấu hình Sticky Sessions (Phần 2)**: (Nội dung lặp lại) Kiểm tra và xác nhận tính năng Sticky Sessions hoạt động. | 27/11/2025 | 27/11/2025 | |
-| 5 (Thứ Sáu) | **Kiểm thử Hiệu suất (Performance Testing)**: Sử dụng công cụ (JMeter/Gatling) để kiểm thử tải ALB. Phân tích kết quả và hoàn thành báo cáo. | 28/11/2025 | 28/11/2025 | |
+| Thứ Hai (06/07) | **Triển khai Frontend**: Host giao diện người dùng lên AWS Amplify. Cấu hình phân giải DNS và liên kết tên miền tùy chỉnh thông qua Route 53. | 06/07/2026 | 06/07/2026 | [AWS Amplify Docs](https://docs.aws.amazon.com/amplify/) |
+| Thứ Ba (07/07) | **Cấu hình AWS WAF**: Triển khai tường lửa AWS WAF với các tập luật cơ bản để bảo vệ ứng dụng Amplify khỏi các cuộc tấn công web và giới hạn truy cập. | 07/07/2026 | 07/07/2026 | [AWS WAF Documentation](https://docs.aws.amazon.com/waf/) |
+| Thứ Tư, Năm (08-09/07) | **Tích hợp End-to-End**: Kiểm thử toàn bộ hệ thống. Đảm bảo luồng chạy chuẩn từ xác thực Cognito JWT -> API Gateway -> Lambda -> DynamoDB/S3. | 08/07/2026 | 09/07/2026 | System Architecture Diagram |
+| Thứ Sáu (10/07) | **Tinh chỉnh Quyền IAM**: Audit toàn bộ các IAM Roles của Lambda, Step Functions. Gỡ bỏ các quyền thừa để tuân thủ nguyên tắc Least Privilege. | 10/07/2026 | 10/07/2026 | [AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) |
+| Thứ 7 - CN (11-12/07) | **Tài liệu Clean-up**: Viết hướng dẫn từng bước để xóa bảng DynamoDB, S3 Bucket, và Lambda an toàn, tránh phát sinh chi phí khi không sử dụng. | 11/07/2026 | 12/07/2026 | AWS Cost Optimization Guidelines |
 
 ---
 
-### **Week 12 Achievements**
+### **Kết quả đạt được (Week 12 Achievements)**
 
-* Cấu hình thành công **Application Load Balancer (ALB)** để hỗ trợ giao thức **HTTP/2** (qua listener HTTPS), hiểu rõ lợi ích về hiệu suất của nó.
-* Cấu hình thành công ALB để hỗ trợ kết nối **WebSocket**, cho phép giao tiếp hai chiều (real-time) và khắc phục được sự cố về `idle timeout`.
-* Cấu hình và kiểm tra thành công tính năng **Sticky Sessions** (Application-based cookie) trên Target Group, đảm bảo các yêu cầu từ một client được chuyển hướng đến cùng một instance.
-* Thực hiện thành công các bài kiểm tra **Health Checks** để đảm bảo các instance trong Target Group ở trạng thái khỏe mạnh.
-* Thực hiện **Kiểm thử hiệu suất (Performance Testing)** cho ALB bằng cách sử dụng các công cụ tạo tải (như JMeter), phân tích các chỉ số (thời gian phản hồi, tỷ lệ lỗi) và xác định các điểm cần tối ưu.
-* Hoàn thành workshop cuối cùng và chuẩn bị báo cáo tổng kết cho toàn bộ 12 tuần thực tập.
+* Đưa thành công đồ án Hệ thống mô phỏng GenAI đi vào hoạt động toàn diện, đảm bảo tính bảo mật vòng ngoài và tối ưu chi phí vận hành.
+* **Thiết lập Bảo mật Vòng ngoài**: Củng cố tuyến phòng thủ đầu tiên của hệ thống bằng cách định tuyến qua Route 53 và lọc request độc hại bằng AWS WAF, tạo ra môi trường an toàn cho người sử dụng.
+* **Củng cố Nền tảng Bảo mật**: Hoàn tất việc rà soát IAM, đảm bảo mọi microservice chỉ giao tiếp với quyền hạn vừa đủ. Điều này thể hiện tư duy DevSecOps trưởng thành trong môi trường doanh nghiệp.
+* **Sẵn sàng Vận hành & Dọn dẹp**: Hoàn thiện tài liệu "Clean-up" bắt buộc. Đảm bảo hạ tầng Serverless khổng lồ có thể được gỡ bỏ an toàn sau khi demo, loại trừ hoàn toàn rủi ro bị tính phí AWS ngoài ý muốn.
+* **Tổng kết Thực tập**: Đã chuẩn bị đầy đủ log, metric, sơ đồ kiến trúc và code mẫu (snippet) để tiến hành viết báo cáo thực tập tổng hợp cuối kỳ.

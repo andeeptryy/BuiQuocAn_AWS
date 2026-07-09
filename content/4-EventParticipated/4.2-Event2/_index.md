@@ -75,7 +75,8 @@ The final session provided strategic advice for 3rd and 4th-year students prepar
 ---
 
 ### Some event photos
-*Add your event photos here (Check-in, Speakers presenting, Networking moments)*
+![AWS Meetup: First Cloud AI Journey](/images/Event/event-2.png)
+<span class="meta-info">*Figure 2: AWS Meetup: First Cloud AI Journey event*</span>
 
 ---
 

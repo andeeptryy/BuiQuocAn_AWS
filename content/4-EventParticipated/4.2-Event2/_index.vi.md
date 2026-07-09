@@ -75,7 +75,8 @@ Phiên cuối cùng mang đến những chiến lược sắc bén cho sinh viê
 ---
 
 ### Some event photos
-*Thêm hình ảnh sự kiện của bạn tại đây (Hình check-in, màn hình thuyết trình, hình ảnh networking...)*
+![AWS Meetup: First Cloud AI Journey](/images/Event/event-2.png)
+<span class="meta-info">*Hình 2: Buổi sự kiện AWS Meetup: First Cloud AI Journey*</span>
 
 ---
 

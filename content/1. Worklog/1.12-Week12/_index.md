@@ -1,6 +1,6 @@
 ---
 title: "WEEK 12 WORKLOG"
-date: "2025-11-10"
+date: "2026-07-12"
 weight: 12
 chapter: false
 pre: " <b> 1.12 </b> "
@@ -10,10 +10,11 @@ pre: " <b> 1.12 </b> "
 
 ### **Week 12 Objectives**
 
-* Finalize and optimize the **AWS Application Load Balancer (ALB)** configuration.
-* Learn and successfully configure advanced ALB features: **HTTP/2**, **WebSocket**, and **Sticky Sessions**.
-* Conduct **Performance Testing** on the ALB to evaluate its load-handling capabilities.
-* Complete the final workshop and prepare the final internship report.
+* Deploy the Drag-Drop UI frontend on AWS Amplify and configure domain routing using Amazon Route 53.
+* Secure the frontend application against web exploits (e.g., DDoS, Injection) by deploying AWS WAF (Web Application Firewall).
+* Finalize the end-to-end system integration, ensuring seamless communication from Amazon Cognito authentication to DynamoDB storage.
+* Review and refine all AWS IAM policies across the architecture to strictly enforce the Principle of Least Privilege.
+* Develop detailed Clean-up scripts and documentation to tear down AWS resources, fulfilling project cost-management requirements.
 
 ---
 
@@ -21,19 +22,18 @@ pre: " <b> 1.12 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **Configure HTTP/2**: Set up the ALB Listener (HTTPS) to support **HTTP/2**. Conduct initial research on **WebSocket**. | 24/11/2025 | 24/11/2025 | |
-| 2 (Tue) | **Configure WebSocket**: Configure the ALB Listener to support **WebSocket** and test the connection. Optimize timeout settings. | 25/11/2025 | 25/11/2025 | |
-| 3 (Wed) | **Configure Sticky Sessions (Part 1)**: Configure **Sticky Sessions** (Target Group Attributes) to maintain user sessions. Run **Health Checks**. | 26/11/2025 | 26/11/2025 | |
-| 4 (Thu) | **Configure Sticky Sessions (Part 2)**: (Repeated) Verify and confirm that the Sticky Sessions feature is working correctly. | 27/11/2025 | 27/11/2025 | |
-| 5 (Fri) | **Performance Testing**: Use a tool (JMeter/Gatling) to load test the ALB. Analyze the results and prepare the final report. | 28/11/2025 | 28/11/2025 | |
+| 1 (Mon) | **Frontend Deployment**: Hosted the user interface on AWS Amplify. Configured DNS resolution and custom domain linking via Route 53. | 06/07/2026 | 06/07/2026 | [AWS Amplify Docs](https://docs.aws.amazon.com/amplify/) |
+| 2 (Tue) | **AWS WAF Configuration**: Deployed AWS WAF with basic managed rule groups to protect the Amplify application from common web attacks and rate limiting. | 07/07/2026 | 07/07/2026 | [AWS WAF Documentation](https://docs.aws.amazon.com/waf/) |
+| 3-4 (Wed-Thu) | **End-to-End Integration**: Conducted full system testing. Verified the flow from Cognito JWT authentication -> API Gateway -> Lambda -> DynamoDB/S3. | 08/07/2026 | 09/07/2026 | System Architecture Diagram |
+| 5 (Fri) | **IAM Policy Refinement**: Audited all IAM roles used by Lambda, Step Functions, and API Gateway. Removed overly permissive policies to enforce Least Privilege. | 10/07/2026 | 10/07/2026 | [AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) |
+| 6-7 (Sat-Sun) | **Clean-up Documentation**: Created a step-by-step guide and scripts to systematically delete DynamoDB tables, S3 buckets, and Lambda functions to avoid idle charges. | 11/07/2026 | 12/07/2026 | AWS Cost Optimization Guidelines |
 
 ---
 
 ### **Week 12 Achievements**
 
-* Successfully configured an **Application Load Balancer (ALB)** to support the **HTTP/2** protocol (via an HTTPS listener).
-* Successfully configured the ALB to support **WebSocket** connections for real-time communication and troubleshot `idle timeout` issues.
-* Configured and verified **Sticky Sessions** (Application-based cookie) on the Target Group, ensuring requests from a single client are routed to the same instance.
-* Successfully ran **Health Checks** to ensure all instances in the Target Group were healthy and ready to receive traffic.
-* Conducted **Performance Testing** against the ALB using load-generation tools (like JMeter/Gatling) to analyze key metrics (response time, error rate).
-* Completed the final workshop and prepared the final summary report for the 12-week internship.
+* Successfully brought the GenAI Network Architecture Simulator project to full functionality, securing the perimeter and ensuring cost efficiency.
+* **Perimeter Security Established**: Strengthened the system's frontline defense by successfully routing traffic through Route 53 and filtering malicious requests with AWS WAF, guaranteeing a secure environment for end-users.
+* **Robust Security Posture**: Conducted a thorough IAM audit, ensuring every microservice interacts strictly on a "need-to-know" basis, highlighting a mature DevSecOps mindset.
+* **Operational Readiness**: Completed the mandatory "Clean-up" documentation. This ensures that the massive Serverless infrastructure can be reliably torn down after demonstrations, completely mitigating the risk of unexpected AWS billing.
+* **Finalizing Internship**: Ready to consolidate the logs, metrics, architecture diagrams, and code snippets into the final comprehensive internship report.

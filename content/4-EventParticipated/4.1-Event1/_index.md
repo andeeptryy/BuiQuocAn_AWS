@@ -89,7 +89,8 @@ The remainder of the conference provided rapid-fire insights into various cloud 
 ---
 
 ### Some event photos
-*Add your event photos here (Check-in at Bitexco, Livestream screen, Networking moments)*
+![AWS First Cloud Journey event at Amazon office](/images/Event/event-1.png)
+<span class="meta-info">*Figure 1: Students and mentors at the AWS First Cloud Journey event*</span>
 
 ---
 

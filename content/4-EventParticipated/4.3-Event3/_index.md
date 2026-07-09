@@ -47,4 +47,5 @@ pre: " <b> 4.3 </b> "
 
 ## 📸 4. Event Gallery
 
-![FCAJ Community Day Banner](/images/4-EventParticipated/4.3-Event3/image_55b8a3.jpg)
+![FCAJ Community Day - Data Driven, AI Risen](/images/Event/event-3.png)
+<span class="meta-info">*Figure 3: FCAJ Community Day - Data Driven, AI Risen event*</span>

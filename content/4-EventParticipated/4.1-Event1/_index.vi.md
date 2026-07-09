@@ -89,7 +89,8 @@ Phần còn lại của sự kiện mang đến góc nhìn đa dạng về các 
 ---
 
 ### Some event photos
-*Thêm hình ảnh sự kiện của bạn tại đây (Hình check-in Bitexco, màn hình livestream, hình ảnh networking...)*
+![Sự kiện AWS First Cloud Journey tại văn phòng Amazon](/images/Event/event-1.png)
+<span class="meta-info">*Hình 1: Tập thể sinh viên và mentor tại sự kiện AWS First Cloud Journey*</span>
 
 ---
 
