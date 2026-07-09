@@ -1,7 +1,7 @@
 ---
 title: "AWS Meetup: First Cloud AI Journey"
 date: "2026-06-13"
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 4.2 </b> "
 ---
