@@ -1,14 +1,14 @@
 ---
-title: "WEEK 1 WORKLOG"
+title: "BÁO CÁO TUẦN 1"
 date: "2026-04-23"
 weight: 1
 chapter: false
 pre: " <b> 1.1 </b> "
 ---
 
-# **WEEK 1 WORKLOG**
+# **BÁO CÁO TUẦN 1**
 
-### **Week 1 Objectives**
+### **Mục tiêu trong tuần**
 
 * Nắm bắt giá trị cốt lõi, lộ trình học tập và 6 nguyên tắc nền tảng của chương trình đào tạo First Cloud AI Journey (FCAJ).
 * Làm quen với các khái niệm cơ bản về Điện toán đám mây, Hạ tầng toàn cầu của AWS (Region, AZ, Edge Location) và các dịch vụ chủ chốt.
@@ -18,7 +18,7 @@ pre: " <b> 1.1 </b> "
 
 ---
 
-### **Tasks to be carried out this week**
+### **Lịch trình công việc chi tiết**
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
@@ -32,7 +32,7 @@ pre: " <b> 1.1 </b> "
 
 ---
 
-### **Week 1 Achievements**
+### **Kết quả đạt được (Week 1 Achievements)**
 
 * Thiết lập thành công tài khoản cá nhân và nhận credit, chuẩn bị sẵn sàng cho các bài thực hành (Hands-on Labs) trên hệ thống thực tế.
 * Nắm vững sự chuyển dịch cơ bản từ hạ tầng On-premise sang Điện toán đám mây, đặc biệt là lợi ích chuyển đổi từ chi phí đầu tư (CAPEX) sang chi phí vận hành linh hoạt (OPEX).

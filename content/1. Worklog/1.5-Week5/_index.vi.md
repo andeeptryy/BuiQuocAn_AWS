@@ -1,14 +1,14 @@
 ---
-title: "WEEK 5 WORKLOG"
+title: "BÁO CÁO TUẦN 5"
 date: "2026-05-24"
 weight: 5
 chapter: false
 pre: " <b> 1.5 </b> "
 ---
 
-# **WEEK 5 WORKLOG**
+# **BÁO CÁO TUẦN 5**
 
-### **Week 5 Objectives**
+### **Mục tiêu trong tuần**
 
 * Làm chủ khả năng giám sát toàn diện (observability) thông qua Amazon CloudWatch (Logs, Metrics, Events, Alarms) và công cụ giám sát vi dịch vụ CloudWatch Container Insights.
 * Xây dựng chiến lược tối ưu hóa chi phí EC2 bằng cách kết hợp kịch bản tự động hóa (AWS Lambda) cho các môi trường linh hoạt và cam kết dài hạn (Savings Plans) cho hệ thống ổn định.
@@ -17,7 +17,7 @@ pre: " <b> 1.5 </b> "
 
 ---
 
-### **Tasks to be carried out this week**
+### **Lịch trình công việc chi tiết**
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
@@ -29,7 +29,7 @@ pre: " <b> 1.5 </b> "
 
 ---
 
-### **Week 5 Achievements**
+### **Kết quả đạt được (Week 5 Achievements)**
 
 * Hiểu rõ kiến trúc tổng thể của Amazon CloudWatch, biết cách phân tách và sử dụng Logs, Metrics, Events để xây dựng bảng điều khiển giám sát (Dashboard) tập trung, tránh tình trạng theo dõi rời rạc.
 * Nắm vững kỹ thuật lập trình AWS Lambda (boto3) để can thiệp vào vòng đời hoạt động của EC2, giúp tự động hóa việc tắt/mở máy chủ nhằm giảm thiểu chi phí vận hành.

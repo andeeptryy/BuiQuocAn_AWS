@@ -1,14 +1,14 @@
 ---
-title: "WEEK 3 WORKLOG"
+title: "BÁO CÁO TUẦN 3"
 date: "2026-05-09"
 weight: 3
 chapter: false
 pre: " <b> 1.3 </b> "
 ---
 
-# **WEEK 3 WORKLOG**
+# **BÁO CÁO TUẦN 3**
 
-### **Week 3 Objectives**
+### **Mục tiêu trong tuần**
 
 * Làm chủ các tài nguyên điện toán cốt lõi trên AWS, phân biệt rõ ứng dụng thực tế giữa môi trường tùy biến cao (Amazon EC2) và môi trường triển khai nhanh (Amazon Lightsail).
 * Nghiên cứu chuyên sâu các hệ thống lưu trữ AWS, phân biệt chính xác giữa Lưu trữ khối (EBS), Lưu trữ tệp (EFS, FSx) và Lưu trữ đối tượng (S3).
@@ -17,7 +17,7 @@ pre: " <b> 1.3 </b> "
 
 ---
 
-### **Tasks to be carried out this week**
+### **Lịch trình công việc chi tiết**
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
@@ -27,7 +27,7 @@ pre: " <b> 1.3 </b> "
 
 ---
 
-### **Week 3 Achievements**
+### **Kết quả đạt được (Week 3 Achievements)**
 
 * Hoàn thành 100% tiến độ nghiên cứu lý thuyết và thực hành, nắm vững hệ sinh thái điện toán và lưu trữ toàn diện trên AWS.
 * Phân biệt rõ rệt Amazon EC2 và Amazon Lightsail, có khả năng lựa chọn đúng dịch vụ điện toán dựa trên độ phức tạp và ngân sách của dự án.

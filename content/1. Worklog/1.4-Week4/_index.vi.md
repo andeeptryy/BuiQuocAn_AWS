@@ -1,14 +1,14 @@
 ---
-title: "WEEK 4 WORKLOG"
+title: "BÁO CÁO TUẦN 4"
 date: "2026-05-14"
 weight: 4
 chapter: false
 pre: " <b> 1.4 </b> "
 ---
 
-# **WEEK 4 WORKLOG**
+# **BÁO CÁO TUẦN 4**
 
-### **Week 4 Objectives**
+### **Mục tiêu trong tuần**
 
 * Nắm vững các khái niệm nền tảng về mạng trên AWS, trọng tâm là Amazon Virtual Private Cloud (VPC), các thành phần cốt lõi và cách quản lý địa chỉ IP.
 * Khám phá và triển khai các kiến trúc chịu lỗi, có tính sẵn sàng cao thông qua việc kết hợp Elastic Load Balancing (ELB) và Auto Scaling Group (ASG).
@@ -16,7 +16,7 @@ pre: " <b> 1.4 </b> "
 
 ---
 
-### **Tasks to be carried out this week**
+### **Lịch trình công việc chi tiết**
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
@@ -26,7 +26,7 @@ pre: " <b> 1.4 </b> "
 
 ---
 
-### **Week 4 Achievements**
+### **Kết quả đạt được (Week 4 Achievements)**
 
 * Hiểu rõ cấu trúc tiêu chuẩn của một VPC và nắm bắt best practice trong việc phân chia không gian mạng (Subnetting) và quản lý CIDR.
 * Phân tích và thiết lập thành công định tuyến giữa các subnet qua Route Table; phân biệt rõ cách hoạt động của tường lửa trạng thái (Security Group) và tường lửa không trạng thái (NACL).

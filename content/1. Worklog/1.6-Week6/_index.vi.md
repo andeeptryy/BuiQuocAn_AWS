@@ -1,14 +1,14 @@
 ---
-title: "WEEK 6 WORKLOG"
+title: "BÁO CÁO TUẦN 6"
 date: "2026-05-31"
 weight: 6
 chapter: false
 pre: " <b> 1.6 </b> "
 ---
 
-# **WEEK 6 WORKLOG**
+# **BÁO CÁO TUẦN 6**
 
-### **Week 6 Objectives**
+### **Mục tiêu trong tuần**
 
 * Nắm bắt tư duy tối ưu hóa chi phí trên AWS, sử dụng linh hoạt các mô hình thanh toán (Spot Instances, Serverless) và thiết lập AWS Budgets.
 * Tìm hiểu kiến trúc lưu trữ tệp đám mây Amazon FSx for Windows, đảm bảo tính sẵn sàng cao và khả năng cô lập bảo mật trong mạng VPC.
@@ -17,7 +17,7 @@ pre: " <b> 1.6 </b> "
 
 ---
 
-### **Tasks to be carried out this week**
+### **Lịch trình công việc chi tiết**
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
@@ -28,7 +28,7 @@ pre: " <b> 1.6 </b> "
 
 ---
 
-### **Week 6 Achievements**
+### **Kết quả đạt được (Week 6 Achievements)**
 
 * Đã hoàn thành tốt 100% tiến độ nghiên cứu lý thuyết và thực hành (Lab) trên nền tảng đám mây AWS theo đúng kế hoạch được giao.
 * **Tư duy hệ thống (Cloud Architecture)**: Chuyển đổi linh hoạt từ tư duy quản lý hạ tầng vật lý truyền thống sang quản trị hạ tầng đám mây; ưu tiên tính mở rộng, tự động hóa và mô hình Serverless.

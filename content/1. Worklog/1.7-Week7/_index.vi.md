@@ -1,14 +1,14 @@
 ---
-title: "WEEK 7 WORKLOG"
+title: "BÁO CÁO TUẦN 7"
 date: "2026-06-07"
 weight: 7
 chapter: false
 pre: " <b> 1.7 </b> "
 ---
 
-# **WEEK 7 WORKLOG**
+# **BÁO CÁO TUẦN 7**
 
-### **Week 7 Objectives**
+### **Mục tiêu trong tuần**
 
 * Nghiên cứu các phương pháp bảo mật chuỗi cung ứng phần mềm và chia sẻ kiến thức với cộng đồng.
 * Thực hành trực quan hóa kiến trúc bảo mật và mô phỏng kịch bản phản ứng sự cố mạng (Incident Response) trên AWS.
@@ -17,7 +17,7 @@ pre: " <b> 1.7 </b> "
 
 ---
 
-### **Tasks to be carried out this week**
+### **Lịch trình công việc chi tiết**
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
@@ -28,7 +28,7 @@ pre: " <b> 1.7 </b> "
 
 ---
 
-### **Week 7 Achievements**
+### **Kết quả đạt được (Week 7 Achievements)**
 
 * Hoàn thành xuất sắc 100% kế hoạch nghiên cứu tài liệu, chia sẻ bài viết cộng đồng, vẽ sơ đồ kiến trúc nâng cao và thực hành các bài lab tự động hóa hệ thống theo đúng tiến độ được giao.
 * **Trực quan hóa kiến trúc (Architecture Diagramming)**: Làm chủ công cụ thiết kế sơ đồ hạ tầng để mô tả chi tiết và sinh động luồng xử lý sự cố an ninh mạng (Incident Response) một cách tường minh và chuyên nghiệp.
