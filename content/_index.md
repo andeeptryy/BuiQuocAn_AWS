@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Internship Duration:** 17/04/2026 – 10/07/2026
 
-![Profile photo](/AWS_Logo.svg)
+![Profile photo](/avatarchinh.png)
 
 ### Report Contents
 

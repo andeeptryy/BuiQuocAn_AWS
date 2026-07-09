@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** 17/04/2026 – 10/07/2026
 
-![Ảnh đại diện](/AWS_Logo.svg)
+![Ảnh đại diện](/avatarchinh.png)
 
 ### Nội dung báo cáo
 
